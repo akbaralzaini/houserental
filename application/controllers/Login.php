@@ -42,7 +42,7 @@ class Login extends CI_Controller {
 					redirect('admin/');
 					break;
 				case 2:
-					$_SESSION['namo'] = $datauser->nama;
+					$_SESSION['nama'] = $datauser->nama;
 					$_SESSION['idrental'] = $datauser->id_user;
 					redirect('rental/');
 					break;
