@@ -44,7 +44,7 @@ class Login extends CI_Controller {
 				case 2:
 					$_SESSION['namo'] = $datauser->nama;
 					$_SESSION['idrental'] = $datauser->id_user;
-					redirect('rental/');
+					redirect('rental/'); /////// coabayayay
 					break;
 				case 3:
 					$_SESSION['nama'] = $datauser->nama;

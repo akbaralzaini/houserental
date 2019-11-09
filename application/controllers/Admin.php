@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Page extends CI_Controller {
+class Admin extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('lendinghome');
+		$this->load->view('admin/home');
 	}
 }
 
