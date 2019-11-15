@@ -15,51 +15,33 @@ class Login extends CI_Controller {
 		# code...
 	}
 
+
+	//Halamn LogIN admin
 	public function loginadmin()
 	{
-		# code...
+		$this->load->view('admin/login');
 	}
 
-	public function loginrumah()
+	public function actionloginadmin()
 	{
-		# code...
-	}
+		$username= $_POST['username'];
+		$password = $_POST['password'];
 
-	public function actionlogin()
-	{
-		$email = $_GET['email'];
-		$password = $_GET['password'];
-
-		$users = array('email' => $email,'password'=>$password );
+		$users = array('username' => $username,'password'=>$password );
 		$datacek = $this->Usermodel->getuser($users);
 
 		if ($datacek->num_rows()>0) {
 			$datauser = $datacek->result();
-			switch ($datauser->tipeuser) {
-				case 1:
-					$_SESSION['nama'] = $datauser->nama;
-					$_SESSION['idadmin'] = $datauser->id_user;
-					redirect('admin/');
-					break;
-				case 2:
-					$_SESSION['nama'] = $datauser->nama;
-					$_SESSION['idrental'] = $datauser->id_user;
-					redirect('rental/'); /////// coabayayay
-					break;
-				case 3:
-					$_SESSION['nama'] = $datauser->nama;
-					$_SESSION['idpengguna'] = $datauser->id_user;
-					redirect('page/');
-					break;
-				default:
-					redirect('Login/loginuser');
-					break;
-			}
+			$_SESSION['nama'] = $datauser->nama;
+			$_SESSION['idadmin'] = $datauser->id_user;
+			$_SESSION['level'] = 1;
+			redirect('admin/');	
 		}
-
-
+		else{
+			redirect('Login/loginadmin?msg=error');
+		}
 	}
-
+	
 	public function index()
 	{
 		$this->load->view('welcome_message');
