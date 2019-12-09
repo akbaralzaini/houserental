@@ -5,7 +5,7 @@ class Page extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('lendinghome');
+		$this->load->view('lendingpage');
 	}
 }
 

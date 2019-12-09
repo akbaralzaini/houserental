@@ -58,7 +58,7 @@ class Admin extends CI_Controller {
 	public function viewrumah()
 	{
 		$data['rumah'] = $this->Rumahmodel->getallrumah()->result();
-		$this->load->view('datarumah',$data);
+		$this->load->view('admin/datarumah',$data);
 	}
 
 	#</kelola rumah>----------------------------------------------------------------------------------------------------
@@ -67,8 +67,13 @@ class Admin extends CI_Controller {
 
 	public function viewkreteria()
 	{
-		$data['kereteria'] = $this->Rumahmodel->getallkreteria()->result();
-		$this->load->view('datakreteria',$data);
+		$data['kreteria'] = $this->Rumahmodel->getallkreteria()->result();
+		$this->load->view('admin/datakreteria',$data);
+	}
+
+	public function tambahkreteria()
+	{
+		$this->load->view('admin/formkreteria');
 	}
 
 	#</kelola kreteria>----------------------------------------------------------------------------------------------------

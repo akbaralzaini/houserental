@@ -15,7 +15,7 @@
 							<nav id="menu" class="nav-main" role="navigation">
 								<ul class="nav nav-main">
 									<li class="nav-active">
-										<a href="index.html">
+										<a href="index">
 											<i class="fa fa-tasks" aria-hidden="true"></i>
 											<span>Dashboard</span>
 										</a>
@@ -27,30 +27,30 @@
 										</a>
 										<ul class="nav nav-children">
 											<li>
-												<a href="maps-google-maps.html">
+												<a href="useradmin">
 													 Admin
 												</a>
 											</li>
 											<li>
-												<a href="maps-google-maps-builder.html">
+												<a href="userpemilik">
 													 Pemilik rumah
 												</a>
 											</li>
 											<li>
-												<a href="maps-vector.html">
+												<a href="userpengguna">
 													 Pengguna
 												</a>
 											</li>
 										</ul>
 									</li>
 									<li class="nav">
-										<a href="index.html">
+										<a href="viewkreteria">
 											<i class="fa fa-copy" aria-hidden="true"></i>
 											<span>Kreteria</span>
 										</a>
                                     </li>
                                     <li class="nav">
-										<a href="index.html">
+										<a href="viewrumah">
 											<i class="fa fa-home" aria-hidden="true"></i>
 											<span>Data Rumah</span>
 										</a>
