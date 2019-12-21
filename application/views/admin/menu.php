@@ -1,64 +1,36 @@
-<!-- start: sidebar -->
-				<aside id="sidebar-left" class="sidebar-left">
-				
-					<div class="sidebar-header">
-						<div class="sidebar-title" style="color:cornsilk">
-							Menu
-						</div>
-						<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
-							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
-						</div>
-					</div>
-				
-					<div class="nano">
-						<div class="nano-content">
-							<nav id="menu" class="nav-main" role="navigation">
-								<ul class="nav nav-main">
-									<li class="nav-active">
-										<a href="index">
-											<i class="fa fa-tasks" aria-hidden="true"></i>
-											<span>Dashboard</span>
-										</a>
-                                    </li>
-                                    <li class="nav-parent">
-										<a>
-											<i class="fa fa-user" aria-hidden="true"></i>
-											<span>User</span>
-										</a>
-										<ul class="nav nav-children">
-											<li>
-												<a href="useradmin">
-													 Admin
-												</a>
-											</li>
-											<li>
-												<a href="userpemilik">
-													 Pemilik rumah
-												</a>
-											</li>
-											<li>
-												<a href="userpengguna">
-													 Pengguna
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="nav">
-										<a href="viewkreteria">
-											<i class="fa fa-copy" aria-hidden="true"></i>
-											<span>Kreteria</span>
-										</a>
-                                    </li>
-                                    <li class="nav">
-										<a href="viewrumah">
-											<i class="fa fa-home" aria-hidden="true"></i>
-											<span>Data Rumah</span>
-										</a>
-                                    </li>
-								</ul>
-                            </nav>
-						</div>
-					</div>
-				
-				</aside>
-				<!-- end: sidebar -->
+	<nav class="pcoded-navbar menupos-fixed menu-light ">
+		<div class="navbar-wrapper  ">
+			<div class="navbar-content scroll-div ">
+				<ul class="nav pcoded-inner-navbar ">
+					<li class="nav-item pcoded-menu-caption">
+						<label>Menu</label>
+					</li>
+					<li class="nav-item">
+                        <a href="<?= base_url() ?>admin/index" class="nav-link ">
+                            <span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span>
+                        </a>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">User</span></a>
+						<ul class="pcoded-submenu">
+                            <li><a href="useradmin">Admin</a></li>
+                            <li><a href="userpemilik">Pemilik rumah</a></li>
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Data Rumah</span></a>
+						<ul class="pcoded-submenu">
+                            <li><a href="viewrumah">Data rumah</a></li>
+					    </ul>
+					</li>
+					
+					<li class="nav-item pcoded-hasmenu">
+						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layers"></i></span><span class="pcoded-mtext">Kreteria</span></a>
+						<ul class="pcoded-submenu">
+                            <li><a href="viewkreteria">Data Kreteria</a></li>
+                            <li><a href="tambahkreteria">Input Kreteria</a></li>
+					    </ul>
+				    </li>
+		    </div>
+	    </div>
+    </nav>

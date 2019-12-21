@@ -43,33 +43,30 @@
 				<div class="col-sm-12">
 					<div class="card">
 						<div class="card-header">
-							<h5>Setting Defaults</h5>
+							<h5>Data Admin</h5>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive dt-responsive">
 								<table id="setting-default" class="table table-striped table-bordered nowrap">
 									<thead>
 										<tr>
-											<th>Nama rumah</th>
-											<th>Pemilik rumah</th>
-											<th>Harga</th>
-											<th>Alamat</th>
-											<th>Status</th>
-											<th>Action</th>
+											<th>Username</th>
+											<th>Nama</th>
+											<th>Password</th>
+                                            <th>Rule</th>
+                                            <th>Action</th>
 										</tr>
 									</thead>
 									<tbody>
-										<?php foreach ($rumah as $row){ ?>
+										<?php foreach ($user as $row){ ?>
 										<tr>
-											<td><a href="<?= base_url() ?>admin/rumah?id=<?= $row->id_rumah ?>"><?= $row->nama_rumah ?></a></td>
+											<td><?= $row->username ?></td>
 											<td><?= $row->nama ?></td>
-											<td><?= $row->harga ?></td>
-											<td><?= $row->lokasi ?></td>
-											<td><span class="badge badge-success">verified</span></td>
+											<td><?= $row->password ?></td>
+											<td>Admin</td>
 											<td>
 												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>
 												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
-												
 											</td>
 										</tr>
 										<?php } ?>

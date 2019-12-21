@@ -1,92 +1,57 @@
-<!doctype html>
-<html class="fixed">
+<!DOCTYPE html>
+<html lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-
-		<!-- Basic -->
-		<meta charset="UTF-8">
-
-		<title>Advanced Tables | Okler Themes | Porto-Admin</title>
-		<meta name="keywords" content="HTML5 Admin Template" />
-		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
-		<meta name="author" content="okler.net">
-
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-		<!-- Web Fonts  -->
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
-
-		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/bootstrap/css/bootstrap.css" />
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/font-awesome/css/font-awesome.css" />
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/magnific-popup/magnific-popup.css" />
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/bootstrap-datepicker/css/datepicker3.css" />
-
-		<!-- Specific Page Vendor CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/select2/select2.css" />
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
-
-		<!-- Theme CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/stylesheets/theme.css" />
-
-		<!-- Skin CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/stylesheets/skins/default.css" />
-
-		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/stylesheets/theme-custom.css">
-
-		<!-- Head Libs -->
-		<script src="<?= base_url() ?>asset/admin/vendor/modernizr/modernizr.js"></script>
-
+		<title>Gradient Able bootstrap admin template by codedthemes</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="">
+		<meta name="author" content="Codedthemes" />
+		<link rel="icon" href="<?= base_url() ?>asset/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/plugins/dataTables.bootstrap4.min.css">
+		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
 	</head>
-	<body>
-		<section class="body">
-
-			<!-- start: header -->
-			<?php include "header.php" ?>
-			<!-- end: header -->
-
-			<div class="inner-wrapper">
-				<!-- start: sidebar -->
-				<?php include "menu.php" ?>
-				<!-- end: sidebar -->
-
-				<section role="main" class="content-body">
-					<header class="page-header">
-						<h2>Advanced Tables</h2>
-					
-						<div class="right-wrapper pull-right">
-							<ol class="breadcrumbs">
-								<li>
-									<a href="index.html">
-										<i class="fa fa-home"></i>
-									</a>
-								</li>
-								<li><span>Tables</span></li>
-								<li><span>Advanced</span></li>
-							</ol>
-					
-							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+	<body class="">
+		<div class="loader-bg">
+			<div class="loader-track">
+				<div class="loader-fill"></div>
+			</div>
+		</div>
+		<?php include "menu.php"; ?>
+        <?php include "header.php"; ?>
+	<section class="pcoded-main-container">
+		<div class="pcoded-content">
+			<div class="page-header">
+				<div class="page-block">
+					<div class="row align-items-center">
+						<div class="col-md-12">
+							<div class="page-header-title">
+								<h5 class="m-b-10"><?= $this->uri->segment(2) ?></h5>
+							</div>
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+								<li class="breadcrumb-item"><a href="<?= base_url().$this->uri->segment(1) ?>"><?= $this->uri->segment(1) ?></a></li>
+								<li class="breadcrumb-item"><a href="<?= base_url().$this->uri->segment(1).$this->uri->segment(2) ?>"><?= $this->uri->segment(2) ?></a></li>
+							</ul>
 						</div>
-					</header>
-
-					<!-- start: page -->
-						<section class="panel">
-							<header class="panel-heading">
-						
-								<h2 class="panel-title">Rows with Details</h2>
-							</header>
-							<div class="panel-body">
-                                <div class="row">
-									<div class="col-sm-6">
-										<div class="mb-md">
-											<a href="tambahkreteria"><button id="addToTable" class="btn btn-primary">Add <i class="fa fa-plus"></i></button></a>
-										</div>
-									</div>
-								</div>
-								<table class="table table-bordered table-striped mb-none" id="datatable-details">
-									<thead>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="card">
+						<div class="card-header">
+                            <h5>Data kreteria</h5>
+                            <a href="tambahkreteria"><button id="addToTable" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah data kreteria</button></a>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive dt-responsive">
+								<table id="setting-default" class="table table-striped table-bordered nowrap">
+                                    <thead>
 										<tr>
+                                            <th>Kode</th>
 											<th>nama kreteria</th>
 											<th>bobot</th>
 											<th>tipe pilihan</th>
@@ -96,54 +61,31 @@
 									<tbody>
                                         <?php foreach($kreteria as $ket){ ?>
 										<tr class="gradeX">
+                                            <td><?= $ket->kd_kreteria ?></td>
 											<td><?= $ket->nama_kretria ?></td>
                                             <td><?= $ket->bobot ?></td>
                                             <td><?= $ket->tipe_pilihan ?></td>
 											<td class="actions">
-												<a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
-												<a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
-												<a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-												<a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+                                                <button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>
+												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
 											</td>
                                         </tr>
                                         <?php } ?>
 									</tbody>
 								</table>
-							</div>
-						</section>
-					<!-- end: page -->
-				</section>
+                            </div>
+                        </div>
+                        
+					</div>
+				</div>
 			</div>
-		</section>
-
-		<!-- Vendor -->
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery/jquery.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/bootstrap/js/bootstrap.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/nanoscroller/nanoscroller.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/magnific-popup/magnific-popup.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-		
-		<!-- Specific Page Vendor -->
-		<script src="<?= base_url() ?>asset/admin/vendor/select2/select2.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
-		
-		<!-- Theme Base, Components and Settings -->
-		<script src="<?= base_url() ?>asset/admin/javascripts/theme.js"></script>
-		
-		<!-- Theme Custom -->
-		<script src="<?= base_url() ?>asset/admin/javascripts/theme.custom.js"></script>
-		
-		<!-- Theme Initialization Files -->
-		<script src="<?= base_url() ?>asset/admin/javascripts/theme.init.js"></script>
-
-
-		<!-- Examples -->
-		<script src="<?= base_url() ?>asset/admin/javascripts/tables/examples.datatables.default.js"></script>
-		<script src="<?= base_url() ?>asset/admin/javascripts/tables/examples.datatables.row.with.details.js"></script>
-		<script src="<?= base_url() ?>asset/admin/javascripts/tables/examples.datatables.tabletools.js"></script>
-	</body>
+		</div>
+	</section>
+	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
+	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
+	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>
+	<script src="<?= base_url() ?>asset/assets/js/plugins/jquery.dataTables.min.js"></script>
+	<script src="<?= base_url() ?>asset/assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+	<script src="<?= base_url() ?>asset/assets/js/pages/data-advance-custom.js"></script>
+</body>
 </html>

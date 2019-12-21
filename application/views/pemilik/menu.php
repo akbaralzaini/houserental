@@ -18,8 +18,8 @@
 					<li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Data Rumah</span></a>
 						<ul class="pcoded-submenu">
-                            <li><a href="layout-horizontal.html" target="_blank">Data rumah</a></li>
-                            <li><a href="layout-horizontal-2.html" target="_blank">Tambah rumah</a></li>
+                            <li><a href="datarumah">Data rumah</a></li>
+                            <li><a href="tambahrumah">Tambah rumah</a></li>
 					    </ul>
 				    </li>
 		    </div>

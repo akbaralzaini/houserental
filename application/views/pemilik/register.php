@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	<head>
 		<title>Gradient Able bootstrap admin template by codedthemes</title>
 		<meta charset="utf-8">
@@ -19,23 +19,29 @@
 					<div class="col-md-12">
 						<div class="card-body">
 							<img src="<?= base_url() ?>asset/assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
-                            <h4 class="mb-3 f-w-400">Login</h4>
-                            <form action="actionlogin" method="post">
+                            <h4 class="mb-3 f-w-400">Sign up</h4>
+                            <form action="actionpemilik" method="post">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="feather icon-user"></i></span>
                                     </div>
-                                    <input type="text" name="username" class="form-control" placeholder="username">
+                                    <input type="text" class="form-control" placeholder="Nama">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="feather icon-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username">
                                 </div>
                                 <div class="input-group mb-4">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="feather icon-lock"></i></span>
                                     </div>
-                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                    <input type="password" class="form-control" placeholder="Password">
                                 </div>
-                                <button type="submit" class="btn btn-block btn-primary mb-4">Signin</button>
+                                <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
                             </form>
-							<p class="mb-0 text-muted">Don’t have an account? <a href="registerpemilik" class="f-w-400">Signup</a></p>
+							<p class="mb-2">Already have an account? <a href="loginpemilik" class="f-w-400">Signin</a></p>
 						</div>
 					</div>
 				</div>

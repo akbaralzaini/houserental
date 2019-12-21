@@ -5,7 +5,10 @@ class Rumahmodel extends CI_Model {
 
 	public function getallrumah()
 	{
-		return $this->db->get('rumah');
+		$this->db->select("*");
+		$this->db->from("rumah");
+		$this->db->join("pemilik_kontrakan","pemilik_kontrakan.id_pemilik=rumah.id_pemilik");
+		return $this->db->get();
 	}
 
 	public function getrumah($rumah)

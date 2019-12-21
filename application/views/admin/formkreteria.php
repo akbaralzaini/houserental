@@ -1,117 +1,80 @@
-<!doctype html>
-<html class="fixed">
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:20:48 GMT -->
+	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-
-		<!-- Basic -->
-		<meta charset="UTF-8">
-
-		<title>Basic Forms | Okler Themes | Porto-Admin</title>
-		<meta name="keywords" content="HTML5 Admin Template" />
-		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
-		<meta name="author" content="okler.net">
-
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-		<!-- Web Fonts  -->
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
-
-		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/bootstrap/css/bootstrap.css" />
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/font-awesome/css/font-awesome.css" />
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/magnific-popup/magnific-popup.css" />
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/bootstrap-datepicker/css/datepicker3.css" />
-
-		<!-- Specific Page Vendor CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/vendor/bootstrap-fileupload/bootstrap-fileupload.min.css" />
-
-		<!-- Theme CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/stylesheets/theme.css" />
-
-		<!-- Skin CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/stylesheets/skins/default.css" />
-
-		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="<?= base_url() ?>asset/admin/stylesheets/theme-custom.css">
-
-		<!-- Head Libs -->
-		<script src="<?= base_url() ?>asset/admin/vendor/modernizr/modernizr.js"></script>
-
+		<title>Gradient Able bootstrap admin template by codedthemes</title>
+		<!--[if lt IE 11]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="">
+		<meta name="author" content="Codedthemes" />
+		<link rel="icon" href="<?= base_url() ?>asset/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
 	</head>
-	<body>
-		<section class="body">
-
-			<!-- start: header -->
-			<?= include "header.php" ?>
-			<!-- end: header -->
-
-			<div class="inner-wrapper">
-				<!-- start: sidebar -->
-				<?= include "menu.php" ?>
-				<!-- end: sidebar -->
-
-				<section role="main" class="content-body">
-					<header class="page-header">
-						<h2>Basic Forms</h2>
-					
-						<div class="right-wrapper pull-right">
-							<ol class="breadcrumbs">
-								<li>
-									<a href="index.html">
-										<i class="fa fa-home"></i>
-									</a>
-								</li>
-								<li><span>Forms</span></li>
-								<li><span>Basic</span></li>
-							</ol>
-					
-							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+	<body class="">
+		<div class="loader-bg">
+			<div class="loader-track">
+				<div class="loader-fill"></div>
+			</div>
+		</div>
+		<?php include "menu.php"; ?>
+        <?php include "header.php"; ?>
+	<section class="pcoded-main-container">
+		<div class="pcoded-content">
+			<div class="page-header">
+				<div class="page-block">
+					<div class="row align-items-center">
+						<div class="col-md-12">
+							<div class="page-header-title">
+								<h5 class="m-b-10">Form Wizard</h5>
+							</div>
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+								<li class="breadcrumb-item"><a href="#!">Form Components</a></li>
+								<li class="breadcrumb-item"><a href="#!">Form Wizard</a></li>
+							</ul>
 						</div>
-					</header>
-
-					<!-- start: page -->
-						<div class="row">
-							<div class="col-lg-12">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-										<h2 class="panel-title">Form Kreteria</h2>
-									</header>
-									<form class="form-horizontal form-bordered" method="get">
-										<div class="panel-body">
-											<div class="form-group">
-												<label class="col-md-3 control-label" for="inputDefault">Nama kreteria</label>
-												<div class="col-md-6">
-													<input type="text" name="nama_kreteria" class="form-control" id="inputDefault">
-												</div>
-											</div>
-											<div class="form-group">
-												<label class="col-md-3 control-label" for="inputDefault">Bobot</label>
-												<div class="col-md-6">
-													<input type="text" name="bobot" class="form-control" id="inputDefault">
-												</div>
-											</div>
-											<div class="form-group">
-												<label class="col-md-3 control-label" for="inputSuccess">tipe pilihan</label>
-												<div class="col-md-6">
-													<select class="form-control mb-md">
-														<option>Opsi pilihan</option>
-														<option>opsi range</option>
-														<option>2</option>
-														<option>4</option>
-														<option>5</option>
-													</select>
-												</div>
-											</div>
-						
-											<div class="form-group" >
-												<label class="col-md-3 control-label">Column sizing</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Form Kreteria</h5>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form>
+                                        <div class="form-group">
+											<label for="inputDefault">Nama kreteria</label>
+											<input type="text" name="nama_kreteria" class="form-control" id="inputDefault">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Bobot</label>
+                                            <input type="number" class="form-control" placeholder="bobot">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Tipe pilihan</label>
+                                            <select class="form-control" id="pilihan" name="pilihan">
+                                                <option value="null">-- PILIH TIPE PILIHAN --</option>
+                                                <option value="1">Pilihan</option>
+                                                <option value="2">Range</option>
+                                                <option value="3">multipel select</option>
+                                            </select>
+                                        </div>
+										<!-- -->
+											<div class="form-group" style="display:none;" id="sub1">
+												<label class="control-label">Sub kreteria pilihan</label>
 												<div class="col-sm-8" id="input_fields_wrap">
 													<div class="row" >
-														<div class="col-sm-4">
+														<div>
 															<input type="text" class="form-control" placeholder="data">
 														</div>
 														<div class="visible-xs mb-md"></div>
@@ -124,47 +87,112 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<footer class="panel-footer">
-											<div class="row">
-												<div class="col-sm-9 col-sm-offset-3">
-													<button class="btn btn-primary">Submit</button>
-													<button type="reset" class="btn btn-default">Reset</button>
+
+											<div class="form-group" style="display:none;" id="sub2">
+												<label class="control-label">Sub kreteria Range</label>
+												<div class="col-sm-12" id="input_fields_wrap2">
+													<div class="row" >
+														<div class="col-sm-3">
+															<input type="text" class="form-control" placeholder="dari">
+														</div>
+														-
+														<div class="col-sm-3">
+															<input type="text" class="form-control" placeholder="sampai">
+														</div>
+														<div class="visible-xs mb-md"></div>
+														<div class="col-sm-2">
+															<input type="text" class="form-control" placeholder="bobot">
+														</div>
+														<div class="col-sm-1">
+															<button class="btn btn-primary" id="add_field_button2">add</button>
+														</div>
+													</div>
 												</div>
 											</div>
-										</footer>
-									</form>
-								</section>
-						
-							</div>
-						</div>
-					<!-- end: page -->
-				</section>
-			</div>
-		</section>
 
-		<!-- Vendor -->
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery/jquery.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/bootstrap/js/bootstrap.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/nanoscroller/nanoscroller.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/magnific-popup/magnific-popup.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-		
-		<!-- Specific Page Vendor -->
-		<script src="<?= base_url() ?>asset/admin/vendor/jquery-autosize/jquery.autosize.js"></script>
-		<script src="<?= base_url() ?>asset/admin/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
-		
-		<!-- Theme Base, Components and Settings -->
-		<script src="<?= base_url() ?>asset/admin/javascripts/theme.js"></script>
-		
-		<!-- Theme Custom -->
-		<script src="<?= base_url() ?>asset/admin/javascripts/theme.custom.js"></script>
-		
-		<!-- Theme Initialization Files -->
-		<script src="<?= base_url() ?>asset/admin/javascripts/theme.init.js"></script>
-		<script>
+											<div class="form-group" style="display:none;" id="sub3">
+												<label class="control-label">Sub kreteria</label>
+												<div class="col-sm-8" id="input_fields_wrap3">
+													<div class="row" >
+														<div>
+															<input type="text" class="form-control" placeholder="data">
+														</div>
+														<div class="visible-xs mb-md"></div>
+														<div class="col-sm-2">
+															<input type="text" class="form-control" placeholder="bobot">
+														</div>
+														<div class="col-sm-2">
+															<button class="btn btn-primary" id="add_field_button3">add</button>
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+										<!-- -->
+
+                                        <button type="submit" class="btn  btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</section>
+	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
+	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
+	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>
+	<script src="<?= base_url() ?>asset/assets/js/plugins/jquery.bootstrap.wizard.min.js"></script>
+	<script>
+		$('#pilihan').on('change',function(){
+			if( $(this).val()==="1"){
+				$("#sub1").show();
+				$("#sub2").hide();
+				$("#sub3").hide();
+			}
+			else if( $(this).val()==="2"){
+				$("#sub2").show();
+				$("#sub1").hide();
+				$("#sub3").hide();
+			}
+			else if( $(this).val()==="3"){
+				$("#sub3").show();
+				$("#sub2").hide();
+				$("#sub1").hide();
+			}
+			else{
+				$("#sub1").hide();
+				$("#sub2").hide();
+				$("#sub3").hide();
+			}
+		});
+	</script>
+	<script>
+    $(document).ready(function() {
+        $('#besicwizard').bootstrapWizard({
+            withVisible: false,
+            'nextSelector': '.button-next',
+            'previousSelector': '.button-previous',
+            'firstSelector': '.button-first',
+            'lastSelector': '.button-last'
+        });
+    });
+    </script>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZIWmrKgy4JT8OjF8CwvzknSLWoTfqE5M&callback=initMap" ></script>
+	
+	<script>
 		$(document).ready(function() {
 			var max_fields      = 10; //maximum input boxes allowed
 			var wrapper   		= $("#input_fields_wrap"); //Fields wrapper
@@ -175,13 +203,13 @@
 				e.preventDefault();
 				if(x < max_fields){ //max input box allowed
 					x++; //text box increment
-					$(wrapper).append('<div class="row" style="margin-top:10px"><div class="col-sm-4">'+
+					$(wrapper).append('<div class="row" style="margin-top:10px"><div>'+
 										   '<input type="text" class="form-control" placeholder="data">'+
 									   '</div>'+
 									   '<div class="visible-xs mb-md"></div>'+
 									   '<div class="col-sm-2">'+
 										   '<input type="text" class="form-control" placeholder="bobot">'+
-									   '</div><a href="#" class="remove_field">Remove</a>'); //add input box
+									   '</div><a href="#" class="remove_field2">Remove</a>'); //add input box
 				}
 			});
 			
@@ -189,7 +217,69 @@
 				e.preventDefault(); $(this).parent('div').remove(); x--;
 			})
 		});
-</script>
+	</script>
 
-	</body>
+<script>
+		$(document).ready(function() {
+			var max_fields      = 10; //maximum input boxes allowed
+			var wrapper   		= $("#input_fields_wrap2"); //Fields wrapper
+			var add_button      = $("#add_field_button2"); //Add button ID
+			
+			var x = 1; //initlal text box count
+			$(add_button).click(function(e){ //on add input button click
+				e.preventDefault();
+				if(x < max_fields){ //max input box allowed
+					x++; //text box increment
+					$(wrapper).append('<div class="row" style="margin-top:5px">'+
+														'<div class="col-sm-3">'+
+															'<input type="text" class="form-control" placeholder="dari">'+
+														'</div>-'+
+														
+														'<div class="col-sm-3">'+
+															'<input type="text" class="form-control" placeholder="sampai">'+
+														'</div>'+
+														'<div class="visible-xs mb-md"></div>'+
+														'<div class="col-sm-2">'+
+															'<input type="text" class="form-control" placeholder="bobot">'+
+														'</div>'+
+															'<a href="#" class="remove_field2 col-sm-2">Remove</a>'+
+													'</div>'); //add input box
+				}
+			});
+			
+			$(wrapper).on("click",".remove_field2", function(e){ //user click on remove text
+				e.preventDefault(); $(this).parent('div').remove(); x--;
+			})
+		});
+	</script>
+
+<script>
+		$(document).ready(function() {
+			var max_fields      = 10; //maximum input boxes allowed
+			var wrapper   		= $("#input_fields_wrap3"); //Fields wrapper
+			var add_button      = $("#add_field_button3"); //Add button ID
+			
+			var x = 1; //initlal text box count
+			$(add_button).click(function(e){ //on add input button click
+				e.preventDefault();
+				if(x < max_fields){ //max input box allowed
+					x++; //text box increment
+					$(wrapper).append('<div class="row" style="margin-top:10px"><div>'+
+										   '<input type="text" class="form-control" placeholder="data">'+
+									   '</div>'+
+									   '<div class="visible-xs mb-md"></div>'+
+									   '<div class="col-sm-2">'+
+										   '<input type="text" class="form-control" placeholder="bobot">'+
+									   '</div><a href="#" class="remove_field3">Remove</a>'); //add input box
+				}
+			});
+			
+			$(wrapper).on("click",".remove_field3", function(e){ //user click on remove text
+				e.preventDefault(); $(this).parent('div').remove(); x--;
+			})
+		});
+	</script>
+
+</body>
+<!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:20:49 GMT -->
 </html>

@@ -1,43 +1,76 @@
-<header class="header">
-				<div class="logo-container">
-					<a href="../" class="logo">
-						<img src="<?= base_url(); ?>asset/admin/images/logo.png" height="35" alt="JSOFT Admin" />
-					</a>
-					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
-						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
-					</div>
-				</div>
-			
-				<!-- start: search & user box -->
-				<div class="header-right">
-			
-					<span class="separator"></span>
-			
-					<div id="userbox" class="userbox">
-						<a href="#" data-toggle="dropdown">
-							<figure class="profile-picture">
-								<img src="<?= base_url(); ?>asset/admin/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="<?= base_url(); ?>asset/admin/images/!logged-user.jpg" />
-							</figure>
-							<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
-								<span class="name">John Doe Junior</span>
-								<span class="role">administrator</span>
+<header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed header-blue">
+		<div class="m-header">
+			<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+			<a href="#!" class="b-brand">
+				<img src="<?= base_url() ?>asset/assets/images/logo.png" alt="" class="logo">
+				<img src="<?= base_url() ?>asset/assets/images/logo-icon.png" alt="" class="logo-thumb">
+			</a>
+			<a href="#!" class="mob-toggler">
+				<i class="feather icon-more-vertical"></i>
+			</a>
+		</div>
+			<ul class="navbar-nav ml-auto">
+				<li>
+					<div class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-bell"></i><span class="badge bg-primary"><span class="sr-only"></span></span></a>
+						<div class="dropdown-menu dropdown-menu-right notification">
+							<div class="noti-head">
+								<h6 class="d-inline-block m-b-0">Notifications</h6>
 							</div>
-			
-							<i class="fa custom-caret"></i>
+							<ul class="noti-body">
+								<li class="notification">
+									<div class="media">
+										<img class="img-radius" src="<?= base_url() ?>asset/assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+										<div class="media-body">
+											<p><strong>Admin house rental</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+											<p>rumah kontarakan dua putri anda telah di verifikasi</p>
+										</div>
+									</div>
+								</li>
+								<li class="notification">
+									<div class="media">
+										<img class="img-radius" src="<?= base_url() ?>asset/assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+										<div class="media-body">
+										<p><strong>Admin house rental</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+											<p>rumah kontarakan dua putri anda telah di verifikasi</p>
+										</div>
+									</div>
+								</li>
+								<li class="notification">
+									<div class="media">
+										<img class="img-radius" src="<?= base_url() ?>asset/assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+										<div class="media-body">
+										<p><strong>Admin house rental</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+											<p>rumah kontarakan dua putri anda telah di verifikasi</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="noti-footer">
+								<a href="#!">show all</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="dropdown drp-user">
+						<a href="#!" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="<?= base_url() ?>asset/assets/images/user/avatar-1.jpg" class="img-radius wid-40" alt="User-Profile-Image">
 						</a>
-			
-						<div class="dropdown-menu">
-							<ul class="list-unstyled">
-								<li class="divider"></li>
-								<li>
-									<a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
-								</li>
-								<li>
-									<a role="menuitem" tabindex="-1" href="logout"><i class="fa fa-power-off"></i> Logout</a>
-								</li>
+						<div class="dropdown-menu dropdown-menu-right profile-notification">
+							<div class="pro-head">
+								<img src="<?= base_url() ?>asset/assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+								<span><?= $_SESSION['nama'] ?></span>
+								<a href="<?= base_url() ?>Login/Logout" class="dud-logout" title="Logout">
+									<i class="feather icon-log-out"></i>
+								</a>
+							</div>
+							<ul class="pro-body">
+								<li><a href="user-profile.html" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
 							</ul>
 						</div>
 					</div>
-				</div>
-				<!-- end: search & user box -->
-			</header>
+				</li>
+			</ul>
+		</div>
+	</header>

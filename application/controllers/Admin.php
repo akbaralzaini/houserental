@@ -8,18 +8,16 @@ class Admin extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Usermodel');
 		$this->load->model('Rumahmodel');
-		if (empty($_SESSION['level'])) {
+		if ($_SESSION['level']!= 1) {
 			redirect('Login/loginadmin');
 		}
-		elseif($_SESSION['level'] != 1){
-			redirect('Page');
-		}
-	}
+		
+	} 
 	
 	# <fungsi dasar >
 	public function index()
 	{
-		$this->load->view('admin/home');
+		$this->load->view('admin/dasboard');
 	}
 
 	public function logout()
@@ -38,12 +36,12 @@ class Admin extends CI_Controller {
 	public function useradmin()
 	{
 		$data['user'] = $this->Usermodel->getuser(array('level' => 1))->result();
-		$this->load->view('dataadmin',$data);
+		$this->load->view('admin/dataadmin',$data);
 	}
 	public function userpemilik()
 	{
 		$data['user'] = $this->Usermodel->getuser(array('level' => 2))->result();
-		$this->load->view('datapemilik',$data);
+		$this->load->view('admin/datapemilik',$data);
 	}
 	public function userpengguna()
 	{
@@ -59,6 +57,11 @@ class Admin extends CI_Controller {
 	{
 		$data['rumah'] = $this->Rumahmodel->getallrumah()->result();
 		$this->load->view('admin/datarumah',$data);
+	}
+
+	public function rumah()
+	{
+		$this->load->view('admin/rumahdetail');
 	}
 
 	#</kelola rumah>----------------------------------------------------------------------------------------------------
