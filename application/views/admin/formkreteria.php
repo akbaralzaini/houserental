@@ -3,7 +3,7 @@
 	<!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:20:48 GMT -->
 	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-		<title>Gradient Able bootstrap admin template by codedthemes</title>
+		<title>kontrakan.plg.id</title>
 		<!--[if lt IE 11]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -32,12 +32,12 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10">Form Wizard</h5>
+								<h5 class="m-b-10">Form Tambah Kriteria</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="#!">Form Components</a></li>
-								<li class="breadcrumb-item"><a href="#!">Form Wizard</a></li>
+								<li class="breadcrumb-item"><a href="#!">Kriteria</a></li>
+								<li class="breadcrumb-item"><a href="#!">Input Kriteria</a></li>
 							</ul>
 						</div>
 					</div>
@@ -47,13 +47,13 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5>Form Kreteria</h5>
+                            <h5>Form Kriteria</h5>
                             <hr>
                             <div class="row">
                                 <div class="col-md-12">
                                     <form>
                                         <div class="form-group">
-											<label for="inputDefault">Nama kreteria</label>
+											<label for="inputDefault">Nama Kriteria</label>
 											<input type="text" name="nama_kreteria" class="form-control" id="inputDefault">
                                         </div>
                                         <div class="form-group">
@@ -71,7 +71,7 @@
                                         </div>
 										<!-- -->
 											<div class="form-group" style="display:none;" id="sub1">
-												<label class="control-label">Sub kreteria pilihan</label>
+												<label class="control-label">Sub Kriteria Pilihan</label>
 												<div class="col-sm-8" id="input_fields_wrap">
 													<div class="row" >
 														<div>
@@ -89,7 +89,7 @@
 											</div>
 
 											<div class="form-group" style="display:none;" id="sub2">
-												<label class="control-label">Sub kreteria Range</label>
+												<label class="control-label">Sub Kriteria Range</label>
 												<div class="col-sm-12" id="input_fields_wrap2">
 													<div class="row" >
 														<div class="col-sm-3">
@@ -111,7 +111,7 @@
 											</div>
 
 											<div class="form-group" style="display:none;" id="sub3">
-												<label class="control-label">Sub kreteria</label>
+												<label class="control-label">Sub Kriteria</label>
 												<div class="col-sm-8" id="input_fields_wrap3">
 													<div class="row" >
 														<div>

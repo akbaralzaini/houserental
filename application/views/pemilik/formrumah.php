@@ -3,7 +3,7 @@
 	<!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:20:48 GMT -->
 	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-		<title>Gradient Able bootstrap admin template by codedthemes</title>
+		<title>kontrakan.plg.id</title>
 		<!--[if lt IE 11]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -32,12 +32,12 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10">Form Wizard</h5>
+								<h5 class="m-b-10">Form Tambah Rumah</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="#!">Form Components</a></li>
-								<li class="breadcrumb-item"><a href="#!">Form Wizard</a></li>
+								<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
+								<li class="breadcrumb-item"><a href="#!">Form Tambah Rumah</a></li>
 							</ul>
 						</div>
 					</div>
@@ -53,9 +53,9 @@
 							<div class="bt-wizard" id="besicwizard">
 								<ul class="nav nav-pills nav-fill mb-3">
 									<li class="nav-item"><a href="#b-w-tab1" class="nav-link" data-toggle="tab">Profile rumah</a></li>
-									<li class="nav-item"><a href="#b-w-tab2" class="nav-link" data-toggle="tab">fasilitas</a></li>
-                                    <li class="nav-item"><a href="#b-w-tab3" class="nav-link" data-toggle="tab">lokasi</a></li>
-                                    <li class="nav-item"><a href="#b-w-tab4" class="nav-link" data-toggle="tab">validasi</a></li>
+									<li class="nav-item"><a href="#b-w-tab2" class="nav-link" data-toggle="tab">Fasilitas</a></li>
+                                    <li class="nav-item"><a href="#b-w-tab3" class="nav-link" data-toggle="tab">Lokasi</a></li>
+                                    <li class="nav-item"><a href="#b-w-tab4" class="nav-link" data-toggle="tab">Validasi</a></li>
 								</ul>
 								<div class="tab-content">
 									<div class="tab-pane active show" id="b-w-tab1">

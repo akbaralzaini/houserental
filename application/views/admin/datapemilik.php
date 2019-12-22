@@ -2,7 +2,7 @@
 <html lang="en">
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-		<title>Gradient Able bootstrap admin template by codedthemes</title>
+		<title>kontrakan.plg.id</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,12 +28,12 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10"><?= $this->uri->segment(2) ?></h5>
+								<h5 class="m-b-10">Data Pemilik</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="<?= base_url().$this->uri->segment(1) ?>"><?= $this->uri->segment(1) ?></a></li>
-								<li class="breadcrumb-item"><a href="<?= base_url().$this->uri->segment(1).$this->uri->segment(2) ?>"><?= $this->uri->segment(2) ?></a></li>
+								<li class="breadcrumb-item"><a href="#!">User</a></li>
+								<li class="breadcrumb-item"><a href="#!">Pemilik</a></li>
 							</ul>
 						</div>
 					</div>
