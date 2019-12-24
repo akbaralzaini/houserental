@@ -3,7 +3,7 @@
 	<!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/user-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:19:32 GMT -->
 	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-		<title>Gradient Able bootstrap admin template by codedthemes</title>
+		<title>kontrakan.plg.id</title>
 		<!--[if lt IE 11]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -38,6 +38,7 @@
 				</div>
 				<div class="card-body py-0">
 					<div class="user-about-block m-0">
+					<?php foreach ($pemilik as $row) { ?>
 						<div class="row">
 							<div class="col-md-4 text-center mt-n5">
 								<div class="change-profile text-center">
@@ -45,31 +46,27 @@
 										<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<div class="profile-dp">
 												<div class="position-relative d-inline-block">
-													<img class="img-radius img-fluid wid-100" src="<?= base_url() ?>asset/assets/images/user/avatar-5.jpg" alt="User image">
+													<img class="img-radius img-fluid wid-100" src="<?= base_url().$row->foto ?>" alt="User image">
 												</div>
 											</div>
 										</a>
 									</div>
 								</div>
-								<h5 class="mb-1">Lary Doe</h5>
-								<p class="mb-2 text-muted">UI/UX Designer</p>
+								<h5 class="mb-1"><?= $row->nama ?></h5>
+								<!-- <p class="mb-2 text-muted">UI/UX Designer</p> -->
 							</div>
 							<div class="col-md-8 mt-md-4">
 								<div class="row">
 									<div class="col-md-6">
-										<a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-globe mr-2 f-18"></i>www.Codedthemes.net</a>
+										<a href="#" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i><span class="__cf_email__" data-cfemail="c9adaca4a689ada6a4a8a0a7e7aaa6a4"><?= $row->email ?></span></a>
 										<div class="clearfix"></div>
-										<a href="http://html.codedthemes.com/cdn-cgi/l/email-protection#93f7f6fefcd3f7fcfef2fafdbdf0fcfe" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i><span class="__cf_email__" data-cfemail="c9adaca4a689ada6a4a8a0a7e7aaa6a4">[email&#160;protected]</span></a>
-										<div class="clearfix"></div>
-										<a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-phone mr-2 f-18"></i>+1 9999-999-999</a>
+										<a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-phone mr-2 f-18"></i><?= $row->tlp ?></a>
 									</div>
 									<div class="col-md-6">
 										<div class="media">
 											<i class="feather icon-map-pin mr-2 mt-1 f-18"></i>
 											<div class="media-body">
-												<p class="mb-0 text-muted">4289 Calvin Street</p>
-												<p class="mb-0 text-muted">Baltimore, near MD Tower Maryland,</p>
-												<p class="mb-0 text-muted">Maryland (21201)</p>
+												<?= $row->alamat ?>
 											</div>
 										</div>
 									</div>
@@ -96,80 +93,55 @@
 						<div class="card-body border-top pro-det-edit collapse show" id="pro-det-edit-1">
 							<form>
 								<div class="form-group row">
-										<label class="col-sm-3 col-form-label font-weight-bolder">Full Name</label>
+										<label class="col-sm-3 col-form-label font-weight-bolder">Nama</label>
 										<div class="col-sm-9">
-											Lary Doe
+											<?= $row->nama ?>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-3 col-form-label font-weight-bolder">Gender</label>
+										<label class="col-sm-3 col-form-label font-weight-bolder">Alamat</label>
 										<div class="col-sm-9">
-											Male
+											<?= $row->alamat ?>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-3 col-form-label font-weight-bolder">Birth Date</label>
+										<label class="col-sm-3 col-form-label font-weight-bolder">email</label>
 										<div class="col-sm-9">
-											16-12-1994
+										<?= $row->email ?>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-3 col-form-label font-weight-bolder">Martail Status</label>
+										<label class="col-sm-3 col-form-label font-weight-bolder">telpon</label>
 										<div class="col-sm-9">
-											Unmarried
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-3 col-form-label font-weight-bolder">Location</label>
-										<div class="col-sm-9">
-											<p class="mb-0 text-muted">4289 Calvin Street</p>
-											<p class="mb-0 text-muted">Baltimore, near MD Tower Maryland,</p>
-											<p class="mb-0 text-muted">Maryland (21201)</p>
+										<?= $row->tlp ?>
 										</div>
 									</div>
 							</form>
 						</div>
 						<div class="card-body border-top pro-det-edit collapse " id="pro-det-edit-2">
-							<form>
+							<form action="<?= base_url() ?>pemilik/updatepemilik?id_p=<?= $row->id_pemilik ?>" method="post">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Full Name</label>
+									<label class="col-sm-3 col-form-label font-weight-bolder">Nama</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control" placeholder="Full Name" value="Lary Doe">
+										<input type="text" class="form-control" placeholder="Nama" name="nama" value="<?= $row->nama ?>">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Gender</label>
+									<label class="col-sm-3 col-form-label font-weight-bolder">Alamat</label>
 									<div class="col-sm-9">
-										<div class="custom-control custom-radio custom-control-inline">
-											<input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
-											<label class="custom-control-label" for="customRadioInline1">Male</label>
-										</div>
-										<div class="custom-control custom-radio custom-control-inline">
-											<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-											<label class="custom-control-label" for="customRadioInline2">Female</label>
-										</div>
+										<textarea type="text" class="form-control" placeholder="alamat" name="alamat"> <?= $row->alamat ?> </textarea>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Birth Date</label>
+									<label class="col-sm-3 col-form-label font-weight-bolder">email</label>
 									<div class="col-sm-9">
-										<input type="date" class="form-control" value="1994-12-16">
+										<input type="text" class="form-control" name="email" value="<?= $row->email ?>">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Martail Status</label>
+									<label class="col-sm-3 col-form-label font-weight-bolder">telpon</label>
 									<div class="col-sm-9">
-										<select class="form-control" id="exampleFormControlSelect1">
-											<option>Select Marital Status</option>
-											<option>Married</option>
-											<option selected>Unmarried</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Location</label>
-									<div class="col-sm-9">
-										<textarea class="form-control">4289 Calvin Street,  Baltimore, near MD Tower Maryland, Maryland (21201)</textarea>
+										<input type="text" class="form-control" placeholder="telpon" name="telpon" value="<?= $row->tlp ?>">
 									</div>
 								</div>
 								<div class="form-group row">
@@ -179,149 +151,7 @@
 									</div>
 								</div>
 							</form>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-body d-flex align-items-center justify-content-between">
-							<h5 class="mb-0">Contact Information</h5>
-							<button type="button" class="btn btn-primary btn-sm rounded m-0 float-right" data-toggle="collapse" data-target=".pro-dont-edit" aria-expanded="false" aria-controls="pro-dont-edit-1 pro-dont-edit-2">
-							<i class="feather icon-edit"></i>
-							</button>
-						</div>
-						<div class="card-body border-top pro-dont-edit collapse show" id="pro-dont-edit-1">
-							<form>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Mobile Number</label>
-									<div class="col-sm-9">
-										+1 9999-999-999
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Email Address</label>
-									<div class="col-sm-9">
-										<a href="http://html.codedthemes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2662434b496642494b474f480845494b">[email&#160;protected]</a>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Twitter</label>
-									<div class="col-sm-9">
-										@phonixcoded
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Skype</label>
-									<div class="col-sm-9">
-										@phonixcoded demo
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="card-body border-top pro-dont-edit collapse " id="pro-dont-edit-2">
-							<form>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Mobile Number</label>
-									<div class="col-sm-9">
-										<input type="text" class="form-control" placeholder="Full Name" value="+1 9999-999-999">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Email Address</label>
-									<div class="col-sm-9">
-										<input type="text" class="form-control" placeholder="Ema" value="Demo@domain.com">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Twitter</label>
-									<div class="col-sm-9">
-										<input type="text" class="form-control" placeholder="Full Name" value="@phonixcoded">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Skype</label>
-									<div class="col-sm-9">
-										<input type="text" class="form-control" placeholder="Full Name" value="@phonixcoded demo">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label"></label>
-									<div class="col-sm-9">
-										<button type="submit" class="btn btn-primary">Save</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-body d-flex align-items-center justify-content-between">
-							<h5 class="mb-0">other Information</h5>
-							<button type="button" class="btn btn-primary btn-sm rounded m-0 float-right" data-toggle="collapse" data-target=".pro-wrk-edit" aria-expanded="false" aria-controls="pro-wrk-edit-1 pro-wrk-edit-2">
-							<i class="feather icon-edit"></i>
-							</button>
-						</div>
-						<div class="card-body border-top pro-wrk-edit collapse show" id="pro-wrk-edit-1">
-							<form>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Occupation</label>
-									<div class="col-sm-9">
-										Designer
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Skills</label>
-									<div class="col-sm-9">
-										C#, Javascript, Scss
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Jobs</label>
-									<div class="col-sm-9">
-										Codedthemes
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="card-body border-top pro-wrk-edit collapse " id="pro-wrk-edit-2">
-							<form>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Occupation</label>
-									<div class="col-sm-9">
-										<input type="text" class="form-control" placeholder="Full Name" value="Designer">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Email Address</label>
-									<div class="col-sm-9">
-										<input type="text" class="form-control" placeholder="Ema" value="Demo@domain.com">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Jobs</label>
-									<div class="col-sm-9">
-										<div class="custom-control custom-checkbox form-check d-inline-block mr-2">
-											<input type="checkbox" class="custom-control-input" id="pro-wrk-chk-1" checked>
-											<label class="custom-control-label" for="pro-wrk-chk-1">C#</label>
-										</div>
-										<div class="custom-control custom-checkbox form-check d-inline-block mr-2">
-											<input type="checkbox" class="custom-control-input" id="pro-wrk-chk-2" checked>
-											<label class="custom-control-label" for="pro-wrk-chk-2">Javascript</label>
-										</div>
-										<div class="custom-control custom-checkbox form-check d-inline-block mr-2">
-											<input type="checkbox" class="custom-control-input" id="pro-wrk-chk-3" checked>
-											<label class="custom-control-label" for="pro-wrk-chk-3">Scss</label>
-										</div>
-										<div class="custom-control custom-checkbox form-check d-inline-block mr-2">
-											<input type="checkbox" class="custom-control-input" id="pro-wrk-chk-4">
-											<label class="custom-control-label" for="pro-wrk-chk-4">Html</label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label"></label>
-									<div class="col-sm-9">
-										<button type="submit" class="btn btn-primary">Save</button>
-									</div>
-								</div>
-							</form>
+							<?php } ?>
 						</div>
 					</div>
 				</div>
@@ -337,7 +167,6 @@
 <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 <script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 <script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>
-<script src="<?= base_url() ?>asset/assets/js/menu-setting.min.js"></script>
 <script src="<?= base_url() ?>asset/assets/js/plugins/ekko-lightbox.min.js"></script>
 <script src="<?= base_url() ?>asset/assets/js/plugins/lightbox.min.js"></script>
 <script src="<?= base_url() ?>asset/assets/js/pages/ac-lightbox.js"></script>

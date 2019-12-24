@@ -50,6 +50,27 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('pemilik/register');
 	}
+	public function actionpemilik()
+	{
+		$user = array('username'=>$_POST['username'],
+					'password' => $_POST['password'],
+					'nama'=> $_POST['nama'],
+					'level'=>'2');
+		$this->Usermodel->createuser($user);
+
+		$user = $this->Usermodel->getuser(array('username'=>$_POST['username']))->result();
+		
+		foreach ($user as $row) {
+			$this->db->insert('pemilik_kontrakan',array('id_user'=>$row->id_user,'nama'=>$_POST['nama']));
+			$_SESSION['nama'] = $row->nama;
+			$_SESSION['idpemilik'] = $row->id_user;
+			$_SESSION['level'] = 2;
+		}
+
+		redirect(base_url().'pemilik/index');
+
+		
+	}
 
 	//Halamn LogIN admin
 	public function loginadmin()
@@ -69,5 +90,7 @@ class Login extends CI_Controller {
 		session_destroy();
 		redirect("page/");
 	}
+
+
 }
 

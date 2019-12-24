@@ -61,8 +61,34 @@ class Admin extends CI_Controller {
 
 	public function rumah()
 	{
-		$this->load->view('admin/rumahdetail');
+		$id = $_GET['id'];
+		$rumah = array('id_rumah' => $id );
+
+		$data['rumah'] = $this->Rumahmodel->getrumah($rumah)->result();
+
+		$this->load->view('admin/rumahdetail',$data);
 	}
+
+	public function verifikasirumah()
+	{
+		$id_rumah = $_GET['id_r'];
+
+		$this->db->where('id_rumah',$id_rumah);
+		$this->db->update('rumah',array('status' => 1 ));
+
+		redirect('admin/viewrumah');
+	}
+
+	public function deleterumah()
+	{
+		$id_rumah = $_GET['id_r'];
+
+		$this->db->where('id_rumah',$id_rumah);
+		$this->db->delete('rumah');
+
+		redirect('admin/viewrumah');
+	}
+
 
 	#</kelola rumah>----------------------------------------------------------------------------------------------------
 
@@ -79,6 +105,46 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/formkreteria');
 	}
 
+	public function actionkreteria()
+	{
+		$kreteria = array('kd_kreteria' => $_POST['kode_kreteria'],
+						'nama_kreteria' => $_POST['nama_kreteria'],
+						'bobot' => $_POST['bobot_kreteria'],
+						'tipe_pilihan' => $_POST['tipe_pilihan'] );
+
+		$this->db->insert('kreteria',$kreteria);
+
+		if ($_POST['tipe_pilihan']==1) {
+			$pil = $_POST['pilihan'];
+			$bobot = $_POST['bobot'];
+			for ($i=0; $i < sizeof($pil); $i++) { 
+				$sub = array('kode_kreteria'=>$_POST['kode_kreteria'],'pilihan'=>$pil[$i],'bobot'=>$bobot[$i]);
+				$this->db->insert('kreteria_pilihan',$sub);
+			}
+			
+		} 
+		else if ($_POST['tipe_pilihan']==2) {
+			$pil = $_POST['pilihan_range'];
+			$dari = $_POST['dari'];
+			$sampai = $_POST['sampai'];
+			$bobot = $_POST['bobot_range'];
+			for ($i=0; $i < sizeof($pil); $i++) { 
+				$sub = array('kode_kreteria'=>$_POST['kode_kreteria'],'pilihan'=>$pil[$i],'bobot'=>$bobot[$i],'awal'=>$dari[$i],'akhir'=>$sampai[$i]);
+				$this->db->insert('kreteria_range',$sub);
+			}
+			
+		} else {
+			$pil = $_POST['pilihan2'];
+			$bobot = $_POST['bobot2'];
+			for ($i=0; $i < sizeof($pil); $i++) { 
+				$sub = array('kode_kreteria'=>$_POST['kode_kreteria'],'pilihan'=>$pil[$i],'bobot'=>$bobot);
+				$this->db->insert('kreteria_pilihan',$sub);
+			}
+		}
+		
+		redirect("admin/viewkreteria");
+
+	}
 	#</kelola kreteria>----------------------------------------------------------------------------------------------------
 }
 

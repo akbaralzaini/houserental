@@ -3,7 +3,7 @@
 	<!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:20:48 GMT -->
 	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-		<title>Gradient Able bootstrap admin template by codedthemes</title>
+		<title>kontrakan.plg.id</title>
 		<!--[if lt IE 11]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -32,12 +32,12 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10">Form Wizard</h5>
+								<h5 class="m-b-10">Form Tambah Rumah</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="#!">Form Components</a></li>
-								<li class="breadcrumb-item"><a href="#!">Form Wizard</a></li>
+								<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
+								<li class="breadcrumb-item"><a href="#!">Form Tambah Rumah</a></li>
 							</ul>
 						</div>
 					</div>
@@ -53,79 +53,124 @@
 							<div class="bt-wizard" id="besicwizard">
 								<ul class="nav nav-pills nav-fill mb-3">
 									<li class="nav-item"><a href="#b-w-tab1" class="nav-link" data-toggle="tab">Profile rumah</a></li>
+<<<<<<< HEAD
 									<li class="nav-item"><a href="#b-w-tab2" class="nav-link" data-toggle="tab">fasilitas</a></li>
-                                    <li class="nav-item"><a href="#b-w-tab3" class="nav-link" data-toggle="tab">lokasi</a></li>
-                                    <li class="nav-item"><a href="#b-w-tab4" class="nav-link" data-toggle="tab">validasi</a></li>
+									<li class="nav-item"><a href="#b-w-tab3" class="nav-link" data-toggle="tab">lokasi</a></li>
+									<li class="nav-item"><a href="#b-w-tab4" class="nav-link" data-toggle="tab">Submit</a></li>
+=======
+									<li class="nav-item"><a href="#b-w-tab2" class="nav-link" data-toggle="tab">Fasilitas</a></li>
+                                    <li class="nav-item"><a href="#b-w-tab3" class="nav-link" data-toggle="tab">Lokasi</a></li>
+                                    <li class="nav-item"><a href="#b-w-tab4" class="nav-link" data-toggle="tab">Validasi</a></li>
+>>>>>>> fd373e9ed3e211fc07b8a419f3450a8e9974eff5
 								</ul>
 								<div class="tab-content">
 									<div class="tab-pane active show" id="b-w-tab1">
-										<form>
-											<div class="form-group row">
-												<label for="b-t-name" class="col-sm-3 col-form-label">Nama rumah</label>
-												<div class="col-sm-9">
-													<input type="text" class="form-control" id="b-t-name" placeholder="nama rumah">
-												</div>
+								<form method="post" action="addrumah" enctype="multipart/form-data">
+										<div class="form-group row">
+											<label for="b-t-name" class="col-sm-3 col-form-label">Nama rumah</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control" name="nama" id="b-t-name" placeholder="nama rumah">
 											</div>
-											<div class="form-group row">
-												<label for="b-t-email" class="col-sm-3 col-form-label">Alamat</label>
-												<div class="col-sm-9">
-													<textarea type="text" class="form-control" id="b-t-email" placeholder="Alamat"></textarea>
-												</div>
+										</div>
+										<div class="form-group row">
+											<label for="b-t-email" class="col-sm-3 col-form-label">Alamat</label>
+											<div class="col-sm-9">
+												<textarea type="text" class="form-control" name="alamat" id="b-t-email" placeholder="Alamat"></textarea>
 											</div>
-											<div class="form-group row">
-												<label for="b-t-pwd" class="col-sm-3 col-form-label">Harga</label>
-												<div class="col-sm-9">
-													<input type="text" pattern="[9-0]" class="form-control" id="b-t-pwd" placeholder="harga">
-												</div>
+										</div>
+										<div class="form-group row">
+											<label for="b-t-pwd" class="col-sm-3 col-form-label">Harga</label>
+											<div class="col-sm-9">
+												<input type="text" pattern="[9-0]" name="harga" class="form-control" id="b-t-pwd" placeholder="harga">
 											</div>
-										</form>
+										</div>
+										<h5>UPLOAD BEBERAPA GAMBAR KONTRAKAN</h5>
+										<hr>
+										<div class="input-group mb-3 col-md-4">
+											<div>
+												<input type="file" name="file[]" multiple id="file">
+												<label for="inputGroupFile01"></label>
+											</div>
+										</div>
 									</div>
+									
 									<div class="tab-pane" id="b-w-tab2">
-                                            <div class="form-group row">
-												<label for="b-t-pwd" class="col-sm-3 col-form-label">Jumlah kamar</label>
-												<div class="col-sm-9">
-													<input type="text" pattern="[9-0]" class="form-control" id="b-t-pwd" placeholder="kamar">
-												</div>
+                                        <div class="form-group row">
+											<label for="b-t-pwd" class="col-sm-3 col-form-label">Luas bangunan</label>
+											<div class="col-sm-9">
+												<input type="text" pattern="[9-0]" name="luas" class="form-control" id="b-t-pwd" placeholder="Luas">
+											</div>
+                                        </div>
+                                        <div class="form-group row">
+											<label for="b-t-pwd" class="col-sm-3 col-form-label">Jumlah kamar</label>
+											<div class="col-sm-9">
+												<input type="number" max="2" title="" pattern="[9-0]" name="kamar" class="form-control" id="b-t-pwd" placeholder="kamar">
+											</div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputState" class="col-sm-3 col-form-label" >lisrik</label>
+                                            <div class="col-sm-9">
+                                                <select id="inputState" name="listrik" class="form-control">
+                                                    <option selected="">select</option>
+													<option>Listrik Prabayar</option>
+													<option>Listrik Pascabayar</option>
+                                                </select>
                                             </div>
-                                            <div class="form-group row">
-												<label for="b-t-pwd" class="col-sm-3 col-form-label">Jumlah kamar</label>
-												<div class="col-sm-9">
-													<input type="text" pattern="[9-0]" class="form-control" id="b-t-pwd" placeholder="kamar">
-												</div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputState" class="col-sm-3 col-form-label" >air</label>
+                                            <div class="col-sm-9">
+                                                <select id="inputState" name="air" class="form-control">
+                                                    <option selected="">select</option>
+													<option>Pdam</option>
+													<option>Sumur</option>
+                                                </select>
                                             </div>
-                                            <div class="form-group row">
-                                                <label for="inputState" class="col-sm-3 col-form-label" >lisrik</label>
-                                                <div class="col-sm-9">
-                                                    <select id="inputState" class="form-control">
-                                                        <option selected="">select</option>
-                                                        <option>1200</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="inputState" class="col-sm-3 col-form-label" >air</label>
-                                                <div class="col-sm-9">
-                                                    <select id="inputState" class="form-control">
-                                                        <option selected="">select</option>
-                                                        <option>Pdam</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+										</div>
+										<h5>Lokasi dekat dengan</h5>
+										<hr>
+										<div class="form-group">
+											<div class="checkbox checkbox-primary d-inline">
+												<input type="checkbox" name="lokasi[]" value="Sekolah/Kampus" id="checkbox-p-1" >
+												<label for="checkbox-p-1" class="cr">Sekolah/Kampus</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="checkbox checkbox-primary d-inline">
+												<input type="checkbox" name="lokasi[]" value="Mall/Pasar" id="checkbox-p-2" >
+												<label for="checkbox-p-2" class="cr">Mall/Pasar</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="checkbox checkbox-primary d-inline">
+												<input type="checkbox" name="lokasi[]" value="Kantor" id="checkbox-p-3" >
+												<label for="checkbox-p-3" class="cr">Kantor</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="checkbox checkbox-primary d-inline">
+												<input type="checkbox" name="lokasi[]" value="Rumah Sakit" id="checkbox-p-4" >
+												<label for="checkbox-p-4" class="cr">Rumah Sakit</label>
+											</div>
+										</div>
                                     </div>
                                     <div class="tab-pane" id="b-w-tab3">
-                                    <div id="map" class="set-map" style="height:400px;"></div>
+										<div id="googleMap" style="width:100%;height:380px;"></div>
+										<div class="row" style="margin: 5px">
+											<input type="text" readonly id="lat" style="margin-right:10px" class="form-control col-sm-3"  placeholder="latitude" name="lat" value="">
+											<input type="text" readonly id="lng" class="form-control col-sm-3" name="lng" value="" placeholder="lagitude" >
+										</div>		
 									</div>
 									<div class="tab-pane" id="b-w-tab4">
-										<form class="text-center">
-											<i class="feather icon-check-circle display-3 text-success"></i>
-											<h5 class="mt-3">Registration Done! . .</h5>
-											<p>Lorem Ipsum is simply dummy text of the printing</p>
-											<div class="custom-control custom-checkbox mb-3">
-												<input type="checkbox" class="custom-control-input" id="customCheck1">
-												<label class="custom-control-label" for="customCheck1">Subscribe Newslatter</label>
+										<div class="text-center" style="margin-top:70px">
+											<h5 class="mt-3">Apakah data yang anda masukan sudah benar?</h5>
+											<p>data yang telah dimasukan akan di proses validasi,<br> silkan klik submit untuk menyimpan data</p>
+											<div class="custom-control custom-checkbox mb-3" style="margin-top:70px">
+												<input type="submit" class="btn btn-primary" name="submit" value="Submit data">
 											</div>
-										</form>
+										</div>
 									</div>
+								</form>
 									<div class="row justify-content-between btn-page">
 										<div class="col-sm-6">
 											<a href="#!" class="btn btn-primary button-previous">Previous</a>
@@ -137,6 +182,7 @@
 								</div>
 							</div>
 						</div>
+						
 					</div>
                 </div>
 			</div>
@@ -145,7 +191,6 @@
 	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>
-	<script src="<?= base_url() ?>asset/assets/js/menu-setting.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/plugins/jquery.bootstrap.wizard.min.js"></script>
 	<script>
     $(document).ready(function() {
@@ -157,18 +202,54 @@
             'lastSelector': '.button-last'
         });
     });
-    </script>
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZIWmrKgy4JT8OjF8CwvzknSLWoTfqE5M&callback=initMap" ></script>
     <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZIWmrKgy4JT8OjF8CwvzknSLWoTfqE5M&callback=initMap" ></script>
+		// variabel global marker
+		var marker;
+		
+		function taruhMarker(peta, posisiTitik){
+			
+			if( marker ){
+				// pindahkan marker
+				marker.setPosition(posisiTitik);
+			} else {
+			// buat marker baru
+			marker = new google.maps.Marker({
+				position: posisiTitik,
+				map: peta
+			});
+			}
+		
+			// isi nilai koordinat ke form
+			document.getElementById("lat").value = posisiTitik.lat();
+			document.getElementById("lng").value = posisiTitik.lng();
+			
+		}
+		
+		function initialize() {
+		var propertiPeta = {
+			center:new google.maps.LatLng(-2.976819877570223,104.7540567971414),
+			zoom:13,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		};
+		
+		var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+		
+		// even listner ketika peta diklik
+		google.maps.event.addListener(peta, 'click', function(event) {
+			taruhMarker(this, event.latLng);
+		});
 
+		}
+
+
+		// event jendela di-load  
+		google.maps.event.addDomListener(window, 'load', initialize);
+		
+
+	</script>
+    
 </body>
 <!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:20:49 GMT -->
 </html>

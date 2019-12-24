@@ -2,7 +2,7 @@
 <html lang="en">
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-		<title>Gradient Able bootstrap admin template by codedthemes</title>
+		<title>kontrakan.plg.id</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -64,8 +64,13 @@
 											<td><a href="<?= base_url() ?>pemilik/rumah?id=<?= $row->id_rumah ?>"><?= $row->nama_rumah ?></a></td>
 											<td><?= $row->nama ?></td>
 											<td><?= $row->harga ?></td>
-											<td><?= $row->lokasi ?></td>
-											<td><span class="badge badge-success">verified</span></td>
+											<td><?= $row->alamat ?></td>
+											<td>
+											<?php 
+											 if($row->status==1) { echo "<span class='badge badge-success'>verified</span>"; } 
+											 else { echo "<span class='badge badge-danger'>unverified</span>"; } ;
+											?>
+											</td>
 											<td>
 												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>
 												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>

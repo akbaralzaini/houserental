@@ -3,7 +3,7 @@
 	<!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/sample-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:22:03 GMT -->
 	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-		<title>kontrakan.plg.id</title>
+		<title>Gradient Able bootstrap admin template by codedthemes</title>
 		<!--[if lt IE 11]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

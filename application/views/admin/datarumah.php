@@ -2,7 +2,7 @@
 <html lang="en">
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 	<head>
-		<title>Gradient Able bootstrap admin template by codedthemes</title>
+		<title>kontrakan.plg.id</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,12 +28,12 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10"><?= $this->uri->segment(2) ?></h5>
+								<h5 class="m-b-10">Data Rumah</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="<?= base_url().$this->uri->segment(1) ?>"><?= $this->uri->segment(1) ?></a></li>
-								<li class="breadcrumb-item"><a href="<?= base_url().$this->uri->segment(1).$this->uri->segment(2) ?>"><?= $this->uri->segment(2) ?></a></li>
+							<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
+								<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
 							</ul>
 						</div>
 					</div>
@@ -50,8 +50,8 @@
 								<table id="setting-default" class="table table-striped table-bordered nowrap">
 									<thead>
 										<tr>
-											<th>Nama rumah</th>
-											<th>Pemilik rumah</th>
+											<th>Nama Rumah</th>
+											<th>Pemilik Rumah</th>
 											<th>Harga</th>
 											<th>Alamat</th>
 											<th>Status</th>
@@ -64,11 +64,17 @@
 											<td><a href="<?= base_url() ?>admin/rumah?id=<?= $row->id_rumah ?>"><?= $row->nama_rumah ?></a></td>
 											<td><?= $row->nama ?></td>
 											<td><?= $row->harga ?></td>
-											<td><?= $row->lokasi ?></td>
-											<td><span class="badge badge-success">verified</span></td>
+											<td><?= $row->alamat_kontrak ?></td>
+											<td> <?php if ($row->status==1) {
+												echo "<span class='badge badge-success'>verified</span>";
+											} else{
+												echo "<span class='badge badge-danger'>unverified</span>";
+											} ?>
+												
+											</td>
 											<td>
-												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>
-												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+												<a href="<?= base_url() ?>admin/verifikasirumah?id_r=<?= $row->id_rumah ?>"><button type="button" class="btn  btn-icon btn-primary">Verifikasi</button></a>
+												<a href="<?= base_url() ?>admin/deleterumah?id_r=<?= $row->id_rumah ?>"><button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button></a>
 												
 											</td>
 										</tr>
