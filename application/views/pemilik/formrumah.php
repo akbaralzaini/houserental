@@ -53,21 +53,9 @@
 							<div class="bt-wizard" id="besicwizard">
 								<ul class="nav nav-pills nav-fill mb-3">
 									<li class="nav-item"><a href="#b-w-tab1" class="nav-link" data-toggle="tab">Profile rumah</a></li>
-<<<<<<< HEAD
-<<<<<<< HEAD
 									<li class="nav-item"><a href="#b-w-tab2" class="nav-link" data-toggle="tab">fasilitas</a></li>
 									<li class="nav-item"><a href="#b-w-tab3" class="nav-link" data-toggle="tab">lokasi</a></li>
 									<li class="nav-item"><a href="#b-w-tab4" class="nav-link" data-toggle="tab">Submit</a></li>
-=======
-									<li class="nav-item"><a href="#b-w-tab2" class="nav-link" data-toggle="tab">Fasilitas</a></li>
-                                    <li class="nav-item"><a href="#b-w-tab3" class="nav-link" data-toggle="tab">Lokasi</a></li>
-                                    <li class="nav-item"><a href="#b-w-tab4" class="nav-link" data-toggle="tab">Validasi</a></li>
->>>>>>> fd373e9ed3e211fc07b8a419f3450a8e9974eff5
-=======
-									<li class="nav-item"><a href="#b-w-tab2" class="nav-link" data-toggle="tab">Fasilitas</a></li>
-                                    <li class="nav-item"><a href="#b-w-tab3" class="nav-link" data-toggle="tab">Lokasi</a></li>
-                                    <li class="nav-item"><a href="#b-w-tab4" class="nav-link" data-toggle="tab">Validasi</a></li>
->>>>>>> fd373e9ed3e211fc07b8a419f3450a8e9974eff5
 								</ul>
 								<div class="tab-content">
 									<div class="tab-pane active show" id="b-w-tab1">
