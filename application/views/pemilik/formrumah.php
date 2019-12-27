@@ -55,9 +55,11 @@
 									<li class="nav-item"><a href="#b-w-tab1" class="nav-link" data-toggle="tab">Profile rumah</a></li>
 
 
+
 									<li class="nav-item"><a href="#b-w-tab2" class="nav-link" data-toggle="tab">Fasilitas</a></li>
                                     <li class="nav-item"><a href="#b-w-tab3" class="nav-link" data-toggle="tab">Lokasi</a></li>
                                     <li class="nav-item"><a href="#b-w-tab4" class="nav-link" data-toggle="tab">Validasi</a></li>
+
 
 								</ul>
 								<div class="tab-content">
