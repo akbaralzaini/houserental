@@ -105,13 +105,13 @@
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-3 col-form-label font-weight-bolder">email</label>
+										<label class="col-sm-3 col-form-label font-weight-bolder">Email</label>
 										<div class="col-sm-9">
 										<?= $row->email ?>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-3 col-form-label font-weight-bolder">telpon</label>
+										<label class="col-sm-3 col-form-label font-weight-bolder">Telepon</label>
 										<div class="col-sm-9">
 										<?= $row->tlp ?>
 										</div>
@@ -133,13 +133,13 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">email</label>
+									<label class="col-sm-3 col-form-label font-weight-bolder">Email</label>
 									<div class="col-sm-9">
 										<input type="text" class="form-control" name="email" value="<?= $row->email ?>">
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">telpon</label>
+									<label class="col-sm-3 col-form-label font-weight-bolder">Telepon</label>
 									<div class="col-sm-9">
 										<input type="text" class="form-control" placeholder="telpon" name="telpon" value="<?= $row->tlp ?>">
 									</div>

@@ -9,7 +9,7 @@
 				<i class="feather icon-more-vertical"></i>
 			</a>
 		</div>
-			<ul class="navbar-nav ml-auto">
+			<ul class="navbar-nav ml-auto"><b><span><?= $_SESSION['nama'] ?></span></b><span></span>
 				<li>
 					<div class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-bell"></i><span class="badge bg-primary"><span class="sr-only"></span></span></a>
@@ -60,15 +60,14 @@
 						<div class="dropdown-menu dropdown-menu-right profile-notification">
 							<div class="pro-head">
 								<img src="<?= base_url() ?>asset/assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
-								<span>John Doe</span>
+								<span><?= $_SESSION['nama'] ?></span>
 								<a href="<?= base_url() ?>pemilik/logout" class="dud-logout" title="Logout">
 									<i class="feather icon-log-out"></i>
 								</a>
 							</div>
 							<ul class="pro-body">
 								<li><a href="profil" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
-								<li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
-								<li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+								
 							</ul>
 						</div>
 					</div>

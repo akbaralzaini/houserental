@@ -9,7 +9,7 @@
 				<i class="feather icon-more-vertical"></i>
 			</a>
 		</div>
-			<ul class="navbar-nav ml-auto">
+			<ul class="navbar-nav ml-auto"><b><span><?= $_SESSION['nama'] ?></span></b><span></span>
 				<li>
 					<div class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-bell"></i><span class="badge bg-primary"><span class="sr-only"></span></span></a>
@@ -66,7 +66,7 @@
 								</a>
 							</div>
 							<ul class="pro-body">
-								<li><a href="user-profile.html" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
+								<li><a href="useradmin" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
 							</ul>
 						</div>
 					</div>

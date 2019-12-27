@@ -28,12 +28,12 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10"><?= $this->uri->segment(2) ?></h5>
+								<h5 class="m-b-10">Data Rumah</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="<?= base_url().$this->uri->segment(1) ?>"><?= $this->uri->segment(1) ?></a></li>
-								<li class="breadcrumb-item"><a href="<?= base_url().$this->uri->segment(1).$this->uri->segment(2) ?>"><?= $this->uri->segment(2) ?></a></li>
+									<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
+									<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
 							</ul>
 						</div>
 					</div>

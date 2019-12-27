@@ -49,29 +49,32 @@
 							<div class="table-responsive dt-responsive">
 								<table id="setting-default" class="table table-striped table-bordered nowrap">
 									<thead>
-										<tr>
-											<th>Username</th>
-											<th>Nama</th>
-											<th>Password</th>
-                                            <th>Rule</th>
-                                            <th>Action</th>
-										</tr>
-									</thead>
-									<tbody>
 										<?php foreach ($user as $row){ ?>
 										<tr>
+											<th>Username</th>
 											<td><?= $row->username ?></td>
-											<td><?= $row->nama ?></td>
+										</tr>
+										<tr>
+											<th>Nama</th>
+											<td><?= $row->username ?></td>
+										</tr>
+										<tr>
+											<th>Password</th>
 											<td><?= $row->password ?></td>
-											<td>Admin</td>
-											<td>
+										</tr>
+										<tr>
+                                            <th>Rule</th>
+                                            <td>Admin</td>
+                                        </tr>
+                                            <th>Action</th>
+                                            <td>
 												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>
 												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
 											</td>
 										</tr>
 										<?php } ?>
-										
-									</tbody>
+									</thead>
+									
 								</table>
 							</div>
 						</div>

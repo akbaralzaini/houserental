@@ -229,7 +229,7 @@
 														'</div>'+
 														'<div class="visible-xs mb-md"></div>'+
 														'<div class="col-sm-2">'+
-															'<input type="text" name="bobot_range" class="form-control" placeholder="bobot">'+
+															'<input type="text" name="bobot_range[]" class="form-control" placeholder="bobot">'+
 														'</div>'+
 															'<a href="#" class="remove_field2 col-sm-2">Remove</a>'+
 													'</div>'); //add input box

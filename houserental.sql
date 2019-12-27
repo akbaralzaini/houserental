@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22 Des 2019 pada 14.25
+-- Generation Time: 25 Des 2019 pada 02.44
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -27,19 +27,39 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `kreteria` (
-  `id_kreteria` int(11) NOT NULL,
   `kd_kreteria` varchar(5) NOT NULL,
-  `nama_kretria` text NOT NULL,
+  `nama_kreteria` text NOT NULL,
   `bobot` int(2) NOT NULL,
   `tipe_pilihan` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data untuk tabel `kreteria`
+-- Struktur dari tabel `kreteria_pilihan`
 --
 
-INSERT INTO `kreteria` (`id_kreteria`, `kd_kreteria`, `nama_kretria`, `bobot`, `tipe_pilihan`) VALUES
-(1, 'c3', 'ssss', 3, '2');
+CREATE TABLE `kreteria_pilihan` (
+  `id_pilihan` int(11) NOT NULL,
+  `kode_kreteria` varchar(11) NOT NULL,
+  `pilihan` varchar(30) NOT NULL,
+  `bobot` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `kreteria_range`
+--
+
+CREATE TABLE `kreteria_range` (
+  `id_range` int(11) NOT NULL,
+  `kode_kreteria` varchar(11) NOT NULL,
+  `awal` int(15) NOT NULL,
+  `akhir` int(15) NOT NULL,
+  `pilihan` varchar(30) NOT NULL,
+  `bobot` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -51,10 +71,10 @@ CREATE TABLE `pemilik_kontrakan` (
   `id_pemilik` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
-  `alamat` text NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `tlp` varchar(15) NOT NULL,
-  `foto` text NOT NULL
+  `alamat` text,
+  `email` varchar(50) DEFAULT NULL,
+  `tlp` varchar(15) DEFAULT NULL,
+  `foto` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -62,7 +82,8 @@ CREATE TABLE `pemilik_kontrakan` (
 --
 
 INSERT INTO `pemilik_kontrakan` (`id_pemilik`, `id_user`, `nama`, `alamat`, `email`, `tlp`, `foto`) VALUES
-(3, 1, 'saipul', 'ed', 'dsds', '80786', 'dsds');
+(2, 2, 'saipul', ' jl lintas sumatera jalan varu ulak lebar lahat ', 'akbaralzaini@gmail.com', '80786', 'asset/img/rumah/506009.jpg'),
+(4, 3, 'bbaba', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -84,7 +105,7 @@ CREATE TABLE `rumah` (
   `longitude` varchar(20) NOT NULL,
   `latitude` varchar(20) NOT NULL,
   `image` text NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -92,7 +113,9 @@ CREATE TABLE `rumah` (
 --
 
 INSERT INTO `rumah` (`id_rumah`, `id_pemilik`, `nama_rumah`, `harga`, `alamat`, `jumlah_kamar`, `luas_bangunan`, `listrik`, `air`, `lokasi`, `longitude`, `latitude`, `image`, `status`) VALUES
-(1, 3, 'dsds', 12121, '', 1, 2, '1', 'w', 'ssdf ddada dadada dasasas asas', '1313', '3232', 'dssa', 'd');
+(1, 3, 'dsds', 12121, '', 1, 2, '1', 'w', 'ssdf ddada dadada dasasas asas', '1313', '3232', 'dssa', 'd'),
+(2, 2, 'akka', 242424, 'sasa', 1, 3232, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', ''),
+(3, 2, 'sapirr', 7876876, 'dggud tuyd', 2, 333, 'Listrik Prabayar', 'Pdam', 'a:3:{i:0;s:14:"Sekolah/Kampus";i:1;s:10:"Mall/Pasar";i:2;s:6:"Kantor";}', '104.75360870361328', '-2.9850416818862575', 'a:2:{i:0;s:26:"asset/img/rumah/506009.jpg";i:1;s:26:"asset/img/rumah/506010.jpg";}', '1');
 
 -- --------------------------------------------------------
 
@@ -114,7 +137,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `level`) VALUES
 (1, 'akbaralzaini', 'akbar123', 'akbar alzaini', 1),
-(2, 'ainun', 'ainun123', 'ainun mardlliyah', 2);
+(2, 'ainun', 'ainun123', 'ainun mardlliyah', 2),
+(3, 'admin_rsud@ahmad.com', 'admin123', 'bbaba', 2);
 
 --
 -- Indexes for dumped tables
@@ -124,7 +148,19 @@ INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `level`) VALUES
 -- Indexes for table `kreteria`
 --
 ALTER TABLE `kreteria`
-  ADD PRIMARY KEY (`id_kreteria`);
+  ADD PRIMARY KEY (`kd_kreteria`);
+
+--
+-- Indexes for table `kreteria_pilihan`
+--
+ALTER TABLE `kreteria_pilihan`
+  ADD PRIMARY KEY (`id_pilihan`);
+
+--
+-- Indexes for table `kreteria_range`
+--
+ALTER TABLE `kreteria_range`
+  ADD PRIMARY KEY (`id_range`);
 
 --
 -- Indexes for table `pemilik_kontrakan`
@@ -149,25 +185,30 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `kreteria`
+-- AUTO_INCREMENT for table `kreteria_pilihan`
 --
-ALTER TABLE `kreteria`
-  MODIFY `id_kreteria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `kreteria_pilihan`
+  MODIFY `id_pilihan` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `kreteria_range`
+--
+ALTER TABLE `kreteria_range`
+  MODIFY `id_range` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `pemilik_kontrakan`
 --
 ALTER TABLE `pemilik_kontrakan`
-  MODIFY `id_pemilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pemilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `rumah`
 --
 ALTER TABLE `rumah`
-  MODIFY `id_rumah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_rumah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

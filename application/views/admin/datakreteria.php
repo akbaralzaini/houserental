@@ -53,8 +53,8 @@
 										<tr>
                                             <th>Kode</th>
 											<th>Nama Kriteria</th>
-											<th>Bobot</th>
 											<th>Tipe Pilihan</th>
+											<th>Bobot</th>
 											<th>Action</th>
 										</tr>
 									</thead>
@@ -63,8 +63,8 @@
 										<tr class="gradeX">
                                             <td><?= $ket->kd_kreteria ?></td>
 											<td><?= $ket->nama_kreteria ?></td>
+											<td><?= $ket->tipe_pilihan ?></td>
                                             <td><?= $ket->bobot ?></td>
-                                            <td><?= $ket->tipe_pilihan ?></td>
 											<td class="actions">
                                                 <button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>
 												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
