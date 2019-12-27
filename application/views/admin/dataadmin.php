@@ -51,7 +51,7 @@
 									<thead>
 										<?php foreach ($user as $row){ ?>
 										<tr>
-											<th>Username</th>
+											<th style="width:200px">name</th>
 											<td><?= $row->username ?></td>
 										</tr>
 										<tr>
@@ -69,7 +69,7 @@
                                             <th>Action</th>
                                             <td>
 												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>
-												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+												<!-- <button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button> -->
 											</td>
 										</tr>
 										<?php } ?>
@@ -86,8 +86,6 @@
 	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>
-	<script src="<?= base_url() ?>asset/assets/js/plugins/jquery.dataTables.min.js"></script>
-	<script src="<?= base_url() ?>asset/assets/js/plugins/dataTables.bootstrap4.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pages/data-advance-custom.js"></script>
 </body>
 </html>
