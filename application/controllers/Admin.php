@@ -111,7 +111,7 @@ class Admin extends CI_Controller {
 		$this->db->where('kd_kreteria',$kd_kreteria);
 		$this->db->delete('kreteria');
 
-		redirect('admin/datakreteria');
+		redirect('admin/viewkreteria');
 		
 	}
 	public function actionkreteria()
