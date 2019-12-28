@@ -104,7 +104,16 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/formkreteria');
 	}
+	public function deletekreteria()
+	{
+		$kd_kreteria = $_GET['kd_kreteria'];
 
+		$this->db->where('kd_kreteria',$kd_kreteria);
+		$this->db->delete('kreteria');
+
+		redirect('admin/datakreteria');
+		
+	}
 	public function actionkreteria()
 	{
 		$kreteria = array('kd_kreteria' => $_POST['kode_kreteria'],

@@ -14,7 +14,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="">
 		<meta name="author" content="Codedthemes" />
-		<link rel="icon" href="<?= base_url() ?>asset/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
 	</head>
 	<body class="">
@@ -129,5 +129,6 @@
 	<script src="<?= base_url() ?>asset/assets/js/plugins/gmaps.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pages/google-maps.js"></script>
 </body>
+<?php include "footer.php"; ?>
 <!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/sample-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:22:03 GMT -->
 </html>

@@ -9,7 +9,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="">
 		<meta name="author" content="Codedthemes" />
-		<link rel="icon" href="<?= base_url() ?>asset/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
 	</head>
 	<div class="auth-wrapper">
@@ -18,7 +18,7 @@
 				<div class="row align-items-center text-center">
 					<div class="col-md-12">
 						<div class="card-body">
-							<img src="<?= base_url() ?>asset/assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
+							<img src="<?= base_url() ?>asset/assets/images/newlogodark.png" alt="" class="img-fluid mb-4">
                             <h4 class="mb-3 f-w-400">Sign up</h4>
                             <form action="<?= base_url() ?>login/actionpemilik" method="post">
                                 <div class="input-group mb-3">
@@ -48,6 +48,7 @@
 			</div>
 		</div>
 	</div>
+	<?php include "footer.php"; ?>
 	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/waves.min.js"></script>

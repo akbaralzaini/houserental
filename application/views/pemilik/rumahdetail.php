@@ -14,7 +14,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="">
 		<meta name="author" content="Codedthemes" />
-		<link rel="icon" href="<?= base_url() ?>asset/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
 	</head>
 	<body class="">
@@ -108,6 +108,7 @@
 			</div>
 		</div>
 	</div>
+	<?php include "footer.php"; ?>
 	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>

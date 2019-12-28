@@ -9,7 +9,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="">
 		<meta name="author" content="Codedthemes" />
-		<link rel="icon" href="<?= base_url() ?>asset/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/plugins/dataTables.bootstrap4.min.css">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
 	</head>
@@ -51,11 +51,12 @@
 									<thead>
 										<?php foreach ($user as $row){ ?>
 										<tr>
-											<th style="width:200px">name</th>
-											<td><?= $row->username ?></td>
+											<th style="width:200px">Nama</th>
+											<td><?= $row->nama ?></td>
+											
 										</tr>
 										<tr>
-											<th>Nama</th>
+											<th >Username</th>
 											<td><?= $row->username ?></td>
 										</tr>
 										<tr>
@@ -83,6 +84,7 @@
 			</div>
 		</div>
 	</section>
+	<?php include "footer.php"; ?>
 	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>

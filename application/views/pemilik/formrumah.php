@@ -250,5 +250,6 @@
 	</script>
     
 </body>
+<?php include "footer.php"; ?>
 <!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:20:49 GMT -->
 </html>

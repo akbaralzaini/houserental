@@ -9,7 +9,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="">
 		<meta name="author" content="Codedthemes" />
-		<link rel="icon" href="<?= base_url() ?>asset/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/plugins/dataTables.bootstrap4.min.css">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
 	</head>
@@ -21,6 +21,7 @@
 		</div>
 		<?php include "menu.php"; ?>
         <?php include "header.php"; ?>
+
 	<section class="pcoded-main-container">
 		<div class="pcoded-content">
 			<div class="page-header">
@@ -64,7 +65,7 @@
 											<td><a href="<?= base_url() ?>admin/rumah?id=<?= $row->id_rumah ?>"><?= $row->nama_rumah ?></a></td>
 											<td><?= $row->nama ?></td>
 											<td><?= $row->harga ?></td>
-											<td><?= $row->alamat ?></td>
+											<td><?= $row->alamat_kontrak ?></td>
 											<td> <?php if ($row->status==1) {
 												echo "<span class='badge badge-success'>verified</span>";
 											} else{
@@ -73,8 +74,8 @@
 												
 											</td>
 											<td>
-												<a href="<?= base_url() ?>admin/verifikasirumah?id_r=<?= $row->id_rumah ?>"><button type="button" class="btn  btn-icon btn-primary">Verifikasi</button></a>
-												<a href="<?= base_url() ?>admin/deleterumah?id_r=<?= $row->id_rumah ?>"><button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button></a>
+												<a href="<?= base_url() ?>admin/verifikasirumah?id_r=<?= $row->id_rumah ?>"><button type="button" class="btn  btn-icon btn-primary"><i class="fa fa-check-square"></i> Verifikasi</button></a>
+												<a href="<?= base_url() ?>admin/deleterumah?id_r=<?= $row->id_rumah ?>"><button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i> Hapus</button></a>
 												
 											</td>
 										</tr>
@@ -89,6 +90,7 @@
 			</div>
 		</div>
 	</section>
+	<?php include "footer.php"; ?>
 	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>

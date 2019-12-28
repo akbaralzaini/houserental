@@ -9,7 +9,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="">
 		<meta name="author" content="Codedthemes" />
-		<link rel="icon" href="<?= base_url() ?>asset/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/plugins/dataTables.bootstrap4.min.css">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
 	</head>
@@ -21,6 +21,7 @@
 		</div>
 		<?php include "menu.php"; ?>
         <?php include "header.php"; ?>
+        <?php include "footer.php"; ?>
 	<section class="pcoded-main-container">
 		<div class="pcoded-content">
 			<div class="page-header">
@@ -72,8 +73,8 @@
 											?>
 											</td>
 											<td>
-												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>
-												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+												<a href="<?= base_url() ?>admin/deleterumah?id_r=<?= $row->id_rumah ?>"><button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"> Edit</i></button></a>
+												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"> Hapus</i></button>
 												
 											</td>
 										</tr>
@@ -88,6 +89,7 @@
 			</div>
 		</div>
 	</section>
+	<?php include "footer.php"; ?>
 	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>

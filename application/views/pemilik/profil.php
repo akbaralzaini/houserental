@@ -27,7 +27,6 @@
 		</div>
 		<?php include "menu.php"; ?>
         <?php include "header.php"; ?>
-
 	<div class="pcoded-main-container">
 		<div class="pcoded-content">
 			<div class="user-profile user-card mb-4">
@@ -163,7 +162,7 @@
 </div>
 </div>
 </div>
-
+<?php include "footer.php"; ?>
 <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 <script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 <script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>
