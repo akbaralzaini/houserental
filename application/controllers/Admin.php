@@ -111,6 +111,12 @@ class Admin extends CI_Controller {
 		$this->db->where('kd_kreteria',$kd_kreteria);
 		$this->db->delete('kreteria');
 
+		$this->db->where('kd_kreteria',$kd_kreteria);
+		$this->db->delete('kreteria_range');
+
+		$this->db->where('kd_kreteria',$kd_kreteria);
+		$this->db->delete('kreteria_pilihan');
+
 		redirect('admin/viewkreteria');
 		
 	}
