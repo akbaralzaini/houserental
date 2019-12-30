@@ -63,11 +63,13 @@
 										<tr class="gradeX">
                                             <td align="center"><?= $ket->kd_kreteria ?></td>
 											<td ><?= $ket->nama_kreteria ?></td>
-											<td align="center"><?= $ket->tipe_pilihan ?></td>
+											<td align="center"><?php if($ket->tipe_pilihan=='1'){echo "tipe pilihan"; }
+																		else if($ket->tipe_pilihan=='2'){echo "tipe range"; }
+																		else{ echo "tipe multipel"; } ?></td>
                                             <td align="center"><?= $ket->bobot ?></td>
 											<td class="actions" align="center">
 												<button type="button" class="btn  btn-icon btn-success"><i class="fa fa-eye"></i> Detail</button>
-                                                <button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i> Edit</button>
+                                                <a href="<?= base_url() ?>admin/formupdatekrteria?kd=<?= $ket->kd_kreteria ?>"><button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i> Edit</button></a>
 												<a href="<?= base_url() ?>admin/deletekreteria?kd_kreteria=<?= $ket->kd_kreteria ?>"><button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i> Hapus</button></a>
 											</td>
                                         </tr>

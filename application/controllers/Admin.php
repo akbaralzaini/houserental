@@ -111,10 +111,10 @@ class Admin extends CI_Controller {
 		$this->db->where('kd_kreteria',$kd_kreteria);
 		$this->db->delete('kreteria');
 
-		$this->db->where('kd_kreteria',$kd_kreteria);
+		$this->db->where('kode_kreteria',$kd_kreteria);
 		$this->db->delete('kreteria_range');
 
-		$this->db->where('kd_kreteria',$kd_kreteria);
+		$this->db->where('kode_kreteria',$kd_kreteria);
 		$this->db->delete('kreteria_pilihan');
 
 		redirect('admin/viewkreteria');
@@ -152,7 +152,8 @@ class Admin extends CI_Controller {
 			$pil = $_POST['pilihan2'];
 			$bobot = $_POST['bobot2'];
 			for ($i=0; $i < sizeof($pil); $i++) { 
-				$sub = array('kode_kreteria'=>$_POST['kode_kreteria'],'pilihan'=>$pil[$i],'bobot'=>$bobot);
+				$sub = array('kode_kreteria'=>$_POST['kode_kreteria'],'pilihan'=>$pil[$i],'bobot'=>$bobot[$i]);
+				echo $bobot[$i];
 				$this->db->insert('kreteria_pilihan',$sub);
 			}
 		}
@@ -160,6 +161,87 @@ class Admin extends CI_Controller {
 		redirect("admin/viewkreteria");
 
 	}
+
+	public function formupdatekrteria()
+	{
+		$kd_kreteria = $_GET['kd'];
+
+		$data['kereteria'] = $this->db->get_where('kreteria',array('kd_kreteria'=> $kd_kreteria ))->result();
+		$cek = $this->db->get_where('kreteria',array('kd_kreteria'=> $kd_kreteria ))->result();
+		foreach ($cek as $key ) {
+			switch ($key->tipe_pilihan) {
+				case '1':
+					$data['subkereteria'] = $this->db->get_where('kreteria_pilihan',array('kode_kreteria'=> $kd_kreteria ))->result();
+					break;
+				case '2':
+					$data['subkereteria'] = $this->db->get_where('kreteria_range',array('kode_kreteria'=> $kd_kreteria ))->result();
+				break;
+				case '3':
+					$data['subkereteria'] = $this->db->get_where('kreteria_pilihan',array('kode_kreteria'=> $kd_kreteria ))->result();
+				break;
+				default:
+					# code...
+					break;
+			}
+			
+		}
+		$this->load->view('admin/formupdatekretria',$data);
+	}
+
+	public function actionupdatekreteria()
+	{
+		$kreteria = array('kd_kreteria' => $_POST['kode_kreteria'],
+						'nama_kreteria' => $_POST['nama_kreteria'],
+						'bobot' => $_POST['bobot_kreteria'],
+						'tipe_pilihan' => $_POST['tipe_pilihan'] );
+
+		$this->db->where('kd_kreteria',$_POST['kode_kreteria']);
+		$this->db->update('kreteria',$kreteria);
+
+		if ($_POST['tipe_pilihan']==1) {
+			$this->db->where('kode_kreteria',$_POST['kode_kreteria']);
+			$this->db->delete('kreteria_pilihan');
+
+
+			$pil = $_POST['pilihan'];
+			$bobot = $_POST['bobot'];
+			for ($i=0; $i < sizeof($pil); $i++) { 
+				$sub = array('kode_kreteria'=>$_POST['kode_kreteria'],'pilihan'=>$pil[$i],'bobot'=>$bobot[$i]);
+				$this->db->insert('kreteria_pilihan',$sub);
+			}
+			
+		} 
+		else if ($_POST['tipe_pilihan']==2) {
+
+			$this->db->where('kode_kreteria',$_POST['kode_kreteria']);
+			$this->db->delete('kreteria_range');
+
+
+			$pil = $_POST['pilihan_range'];
+			$dari = $_POST['dari'];
+			$sampai = $_POST['sampai'];
+			$bobot = $_POST['bobot_range'];
+			for ($i=0; $i < sizeof($pil); $i++) { 
+				$sub = array('kode_kreteria'=>$_POST['kode_kreteria'],'pilihan'=>$pil[$i],'bobot'=>$bobot[$i],'awal'=>$dari[$i],'akhir'=>$sampai[$i]);
+				$this->db->insert('kreteria_range',$sub);
+			}
+			
+		} else {
+			$this->db->where('kode_kreteria',$_POST['kode_kreteria']);
+			$this->db->delete('kreteria_pilihan');
+
+			$pil = $_POST['pilihan2'];
+			$bobot = $_POST['bobot2'];
+			for ($i=0; $i < sizeof($pil); $i++) { 
+				$sub = array('kode_kreteria'=>$_POST['kode_kreteria'],'pilihan'=>$pil[$i],'bobot'=>$bobot[$i]);
+				$this->db->insert('kreteria_pilihan',$sub);
+			}
+		}
+		
+		redirect("admin/viewkreteria");
+
+	}
+
 	#</kelola kreteria>----------------------------------------------------------------------------------------------------
 }
 
