@@ -32,166 +32,7 @@
         <!-- ============================================================== -->
         <div id="main-wrapper">
 		
-            <!-- ============================================================== -->
-            <!-- Top header  -->
-            <!-- ============================================================== -->
-            <!-- Start Navigation -->
-			<div class="header header-light nav-left-side">
-				<nav class="headnavbar">
-					<div class="nav-header">
-						<a href="#" class="brand"><img src="<?= base_url(); ?>asset/home/img/logo.png" alt="" /></a>
-						<button class="toggle-bar"><span class="ti-align-justify"></span></button>	
-					</div>								
-					<ul class="menu">
-						<li class="dropdown">
-							<a href="JavaScript:Void(0);">Listings</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown">
-									<a href="JavaScript:Void(0);">List Layouts</a>
-									<ul class="dropdown-menu">
-										<li><a href="list-layout-with-sidebar.html">With Sadebar</a></li>                                    
-										<li><a href="list-layout-with-map.html">With Map</a></li>                                    
-										<li><a href="list-layout-full.html">Full Width</a></li>                                     
-									</ul>                                 
-								</li>
-								<li class="dropdown">
-									<a href="JavaScript:Void(0);">Grid Layouts</a>
-									<ul class="dropdown-menu">
-										<li><a href="grid-layout-with-sidebar.html">With Sidebar</a></li>                                    
-										<li><a href="classical-layout-with-sidebar.html">Classical With Sidebar</a></li>                                    
-										<li><a href="grid-layout-with-map.html">With Map</a></li>                                    
-										<li><a href="grid.html">Full Width</a></li>
-										<li><a href="classical-property.html">Classical Full Width</a></li>										
-									</ul>                                 
-								</li>
-								<li class="dropdown">
-									<a href="JavaScript:Void(0);">With Map Layouts</a>
-									<ul class="dropdown-menu">
-										<li><a href="list-layout-with-map.html">List With Map</a></li>                                    
-										<li><a href="grid-layout-with-map.html">Grid With Map</a></li>                                    
-										<li><a href="classical-layout-with-map.html">Classical With Map</a></li>                                    
-										<li><a href="half-map.html">Half Map Search</a></li>   
-									</ul>                                 
-								</li>
-							</ul>
-						</li>
-						
-						<li class="dropdown">
-							<a href="JavaScript:Void(0);">Features</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown">
-									<a href="JavaScript:Void(0);">Single Property</a>
-									<ul class="dropdown-menu">
-										<li><a href="single-property-1.html">Single Property 1</a></li>                                    
-										<li><a href="single-property-2.html">Single Property 2</a></li>                                    
-										<li><a href="single-property-3.html">Single Property 3</a></li>                                       
-									</ul>                                 
-								</li>
-								<li class="dropdown">
-									<a href="JavaScript:Void(0);">Agencies & Agents</a>
-									<ul class="dropdown-menu">
-										<li><a href="agents.html">Agents List</a></li>                                    
-										<li><a href="agent-page.html">Agent Page</a></li>                                    
-										<li><a href="agencies.html">Agencies List</a></li>                                    
-										<li><a href="agency-page.html">Agency Page</a></li>   
-									</ul>                                
-								</li>
-								<li class="dropdown">
-									<a href="JavaScript:Void(0);">My Account</a>
-									<ul class="dropdown-menu">
-										<li><a href="my-profile.html">My Profile</a></li>                                    
-										<li><a href="my-property.html">Property List</a></li>                                    
-										<li><a href="bookmark-list.html">Bookmarked Listings</a></li>                                    
-										<li><a href="change-password.html">Change Password</a></li>   
-									</ul>                                 
-								</li>
-								<li>
-									<a href="compare-property.html">Compare Property</a>                                
-								</li>
-								<li>
-									<a href="submit-property.html">Submit Property</a>                                
-								</li>
-							</ul>
-						</li>
-						
-						<li class="megamenu" data-width="500">
-							<a href="#">Pages</a>
-							<div class="megamenu-content">
-								<div class="mg-menu">
-									<ul>
-										<li>
-											<a href="blog.html">
-												<div class="mg-menu-items">
-													<i class="ti-layout-grid2"></i>
-													<h5>Blog Page<span>Checkout Our Articles</span></h5>
-												</div>
-											</a>
-										</li>
-										
-										<li>
-											<a href="blog-detail.html">
-												<div class="mg-menu-items">
-													<i class="ti-layout"></i>
-													<h5>Blog Detail<span>Detail Blog Page Design</span></h5>
-												</div>
-											</a>
-										</li>
-										
-										<li>
-											<a href="pricing.html">
-												<div class="mg-menu-items">
-													<i class="ti-credit-card"></i>
-													<h5>Pricing Page<span>Our Latest Offers & Package</span></h5>
-												</div>
-											</a>
-										</li>
-										
-										<li>
-											<a href="contact.html">
-												<div class="mg-menu-items">
-													<i class="ti-location-pin"></i>
-													<h5>Contact Us<span>Need Help? Get In Touch</span></h5>
-												</div>
-											</a>
-										</li>
-										
-										<li>
-											<a href="component.html">
-												<div class="mg-menu-items">
-													<i class="ti-ruler-pencil"></i>
-													<h5>Component<span>List of All Components</span></h5>
-												</div>
-											</a>
-										</li>
-										
-										<li>
-											<a href="404.html">
-												<div class="mg-menu-items">
-													<i class="ti-face-sad"></i>
-													<h5>Error Page<span>Error Page Design</span></h5>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						
-					</ul>
-						
-					<ul class="attributes attributes-desk">
-						<li class="log-icon log-seprate"><a href="#" data-toggle="modal" data-target="#login">Log In</a></li>
-						<li class="log-icon"><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
-						<li class="submit-attri theme-log"><a href="submit-property.html">Submit Property</a></li>
-					</ul>
-					
-				</nav>
-			</div>
-			<!-- End Navigation -->
-			<div class="clearfix"></div>
-			<!-- ============================================================== -->
-			<!-- Top header  -->
-			<!-- ============================================================== -->
+           <?php include "menu.php" ?>
 			
 			
 			<!-- ============================ Hero Banner  Start================================== -->
@@ -201,58 +42,8 @@
 						<div class="hero-search">
 							<h1>Find Your Dream</h1>
 						</div>
-						<div class="hero-search-content">
-							
-							<div class="row">
-							
-								<div class="col-lg-4 col-md-6 col-sm-12">
-									<div class="form-group">
-										<div class="input-with-icon">
-											<input type="text" class="form-control" placeholder="Neighborhood">
-											<i class="ti-search"></i>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-lg-4 col-md-6 col-sm-12">
-									<div class="form-group">
-										<div class="input-with-icon">
-											<select id="cities" class="form-control">
-												<option value="">&nbsp;</option>
-												<option value="1">Los Angeles, CA</option>
-												<option value="2">New York City, NY</option>
-												<option value="3">Chicago, IL</option>
-												<option value="4">Houston, TX</option>
-												<option value="5">Philadelphia, PA</option>
-												<option value="6">San Antonio, TX</option>
-												<option value="7">San Jose, CA</option>
-											</select>
-											<i class="ti-briefcase"></i>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-lg-2 col-md-6 col-sm-6">
-									<div class="form-group">
-										<div class="input-with-icon">
-											<input type="text" class="form-control" placeholder="Minimum">
-											<i class="ti-money"></i>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-lg-2 col-md-6 col-sm-6">
-									<div class="form-group">
-										<div class="input-with-icon">
-											<input type="text" class="form-control" placeholder="Maximum">
-											<i class="ti-money"></i>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-							
-							<div class="collapse" id="advance-search" aria-expanded="false" role="banner">
+						<form action="<?= base_url() ?>page/actioncari" method="POST">
+							<div class="hero-search-content">
 							
 								<!-- row -->
 								<div class="row">
@@ -260,16 +51,14 @@
 									<div class="col-lg-4 col-md-4 col-sm-12">
 										<div class="form-group">
 											<div class="input-with-icon">
-												<select id="ptypes" class="form-control">
+												<select id="Harga" name="harga"  class="form-control">
 													<option value="">&nbsp;</option>
-													<option value="1">Any Type</option>
-													<option value="2">Apartment</option>
-													<option value="3">Villas</option>
-													<option value="4">Commercial</option>
-													<option value="5">Offices</option>
-													<option value="6">Garage</option>
+													<option value="5">5.5 – 6.7 juta / tahun</option>
+													<option value="4">6.8 – 7.9 juta / tahun</option>
+													<option value="3">8 – 9.1  juta /tahun</option>
+													<option value="2">9.2 – 10.3 juta / tahun</option>
+													<option value="1">10.4 – 11.5 juta / tahun</option>
 												</select>
-												<i class="ti-briefcase"></i>
 											</div>
 										</div>
 									</div>
@@ -277,15 +66,11 @@
 									<div class="col-lg-4 col-md-4 col-sm-12">
 										<div class="form-group">
 											<div class="input-with-icon">
-												<select id="bedrooms" class="form-control">
+												<select id="jumlah_kamar" name="jumlah_kamar" class="form-control">
 													<option value="">&nbsp;</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
 												</select>
-												<i class="fas fa-bed"></i>
 											</div>
 										</div>
 									</div>
@@ -293,75 +78,69 @@
 									<div class="col-lg-4 col-md-4 col-sm-12">
 										<div class="form-group">
 											<div class="input-with-icon">
-												<select id="bathrooms" class="form-control">
+												<select id="luas" name="luas" class="form-control">
 													<option value="">&nbsp;</option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
+													<option value="1">6 – 65 m2</option>
+													<option value="2">66 - 124 m2</option>
+													<option value="3">125 - 183 m2</option>
+													<option value="4">184 - 242 m2</option>
+													<option value="5">243 - 300 m2</option>
 												</select>
-												<i class="fas fa-bath"></i>
 											</div>
 										</div>
 									</div>
 									
 								</div>
 								<!-- /row -->
+								<div class="row">
+								
+									<div class="col-lg-4 col-md-4 col-sm-12">
+										<div class="form-group">
+											<div class="input-with-icon">
+												<select id="sumber_air" name="sumber_air" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="1">PDAM</option>
+													<option value="2">Sumur</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-lg-4 col-md-4 col-sm-12">
+										<div class="form-group">
+											<div class="input-with-icon">
+												<select id="listrik" name="listrik" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="1">Pascabayar</option>
+													<option value="2">Prabayar</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									
+								</div>
 								
 								<!-- row -->
 								<div class="row">
 								
 									<div class="col-lg-12 col-md-12 col-sm-12">
-										<h4>Amenities & Features</h4>
+										<h4>Lokasi dekat dengan</h4>
 										<ul class="no-ul-list third-row">
 											<li>
-												<input id="a-1" class="checkbox-custom" name="a-1" type="checkbox">
-												<label for="a-1" class="checkbox-custom-label">Air Condition</label>
+												<input id="a-1" class="checkbox-custom" name="lokasi[]" type="checkbox">
+												<label for="a-1" class="checkbox-custom-label">Sekolah / Kampus</label>
 											</li>
 											<li>
-												<input id="a-2" class="checkbox-custom" name="a-2" type="checkbox">
-												<label for="a-2" class="checkbox-custom-label">Bedding</label>
+												<input id="a-2" class="checkbox-custom" name="lokasi[]" type="checkbox">
+												<label for="a-2" class="checkbox-custom-label">Mall/ Pasar</label>
 											</li>
 											<li>
-												<input id="a-3" class="checkbox-custom" name="a-3" type="checkbox">
-												<label for="a-3" class="checkbox-custom-label">Heating</label>
+												<input id="a-3" class="checkbox-custom" name="lokasi[]" type="checkbox">
+												<label for="a-3" class="checkbox-custom-label">Kantor</label>
 											</li>
 											<li>
-												<input id="a-4" class="checkbox-custom" name="a-4" type="checkbox">
-												<label for="a-4" class="checkbox-custom-label">Internet</label>
-											</li>
-											<li>
-												<input id="a-5" class="checkbox-custom" name="a-5" type="checkbox">
-												<label for="a-5" class="checkbox-custom-label">Microwave</label>
-											</li>
-											<li>
-												<input id="a-6" class="checkbox-custom" name="a-6" type="checkbox">
-												<label for="a-6" class="checkbox-custom-label">Smoking Allow</label>
-											</li>
-											<li>
-												<input id="a-7" class="checkbox-custom" name="a-7" type="checkbox">
-												<label for="a-7" class="checkbox-custom-label">Terrace</label>
-											</li>
-											<li>
-												<input id="a-8" class="checkbox-custom" name="a-8" type="checkbox">
-												<label for="a-8" class="checkbox-custom-label">Balcony</label>
-											</li>
-											<li>
-												<input id="a-9" class="checkbox-custom" name="a-9" type="checkbox">
-												<label for="a-9" class="checkbox-custom-label">Icon</label>
-											</li>
-											<li>
-												<input id="a-10" class="checkbox-custom" name="a-10" type="checkbox">
-												<label for="a-10" class="checkbox-custom-label">Wi-Fi</label>
-											</li>
-											<li>
-												<input id="a-11" class="checkbox-custom" name="a-11" type="checkbox">
-												<label for="a-11" class="checkbox-custom-label">Beach</label>
-											</li>
-											<li>
-												<input id="a-12" class="checkbox-custom" name="a-12" type="checkbox">
-												<label for="a-12" class="checkbox-custom-label">Parking</label>
+												<input id="a-4" class="checkbox-custom" name="lokasi[]" type="checkbox">
+												<label for="a-4" class="checkbox-custom-label">Rumah sakit</label>
 											</li>
 										</ul>
 									</div>
@@ -369,33 +148,32 @@
 								</div>
 								<!-- /row -->
 								
-							</div>
 							
-							<div class="row">
-							
-								<div class="col-lg-4 col-md-6 col-sm-12">
-									<div class="form-group" id="module">
-										<a role="button" class="collapsed" data-toggle="collapse" href="#advance-search" aria-expanded="false" aria-controls="advance-search"></a>
-									</div>
-								</div>
+								<div class="row">
 								
-								<div class="col-lg-4 col-md-6 col-sm-12">
-									<div class="form-group">
+									<div class="col-lg-4 col-md-6 col-sm-12">
 										<div class="form-group">
-											<a href="#" class="btn reset-btn-outline">Search Reset</a>
+										<a type="reset" class="btn reset-btn-outline">Search Reset</a>
 										</div>
 									</div>
-								</div>
-								
-								<div class="col-lg-4 col-md-12 col-sm-12">
-									<div class="form-group">
-										<a href="#" class="btn search-btn-outline">Search Result</a>
+									
+									<div class="col-lg-4 col-md-6 col-sm-12">
+										<div class="form-group">
+											<div class="form-group">
+											</div>
+										</div>
 									</div>
+									
+									<div class="col-lg-4 col-md-12 col-sm-12">
+										<div class="form-group">
+											<button type="submit" class="btn search-btn-outline">Search Result</button>
+										</div>
+									</div>
+									
 								</div>
-								
-							</div>
 							
-						</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -665,80 +443,6 @@
 			</section>
 			<!-- ============================ Property End ================================== -->
 			
-			<!-- ============================ Property Location Start ================================== -->
-			<section class="gray-bg">
-				<div class="container">
-					
-					<div class="row">
-						<div class="col-lg-12 col-md-12">
-							<div class="sec-heading center">
-								<h2>Find By Locations</h2>
-								<p>Top & perfect 200+ location property.</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row">
-					
-						<div class="col-lg-8 col-md-8">
-							<a href="http://themezhub.com/" class="img-wrap">
-									<div class="img-wrap-content visible">
-										<h4>Los Angeles</h4>
-										<span>24 Properties</span>
-									</div>
-								<div class="img-wrap-background" style="background-image: url(<?= base_url(); ?>asset/home/img/tour-1.jpg);"></div>
-							</a>	
-						</div>
-						
-						<div class="col-lg-4 col-md-4">
-							<a href="http://themezhub.com/" class="img-wrap">
-									<div class="img-wrap-content visible">
-										<h4>Los Angeles</h4>
-										<span>24 Properties</span>
-									</div>
-								<div class="img-wrap-background" style="background-image: url(<?= base_url(); ?>asset/home/img/tour-2.jpg);"></div>
-							</a>
-						</div>
-						
-					</div>
-					
-					<div class="row">
-					
-						<div class="col-lg-4 col-md-4">
-							<a href="http://themezhub.com/" class="img-wrap">
-									<div class="img-wrap-content visible">
-										<h4>Los Angeles</h4>
-										<span>24 Properties</span>
-									</div>
-								<div class="img-wrap-background" style="background-image: url(<?= base_url(); ?>asset/home/img/tour-3.jpg);"></div>
-							</a>	
-						</div>
-						
-						<div class="col-lg-4 col-md-4">
-							<a href="http://themezhub.com/" class="img-wrap">
-									<div class="img-wrap-content visible">
-										<h4>Los Angeles</h4>
-										<span>24 Properties</span>
-									</div>
-								<div class="img-wrap-background" style="background-image: url(<?= base_url(); ?>asset/home/img/tour-4.jpg);"></div>
-							</a>
-						</div>
-						
-						<div class="col-lg-4 col-md-4">
-							<a href="http://themezhub.com/" class="img-wrap">
-									<div class="img-wrap-content visible">
-										<h4>Los Angeles</h4>
-										<span>24 Properties</span>
-									</div>
-								<div class="img-wrap-background" style="background-image: url(<?= base_url(); ?>asset/home/img/tour-5.jpg);"></div>
-							</a>
-						</div>
-						
-					</div>
-					
-				</div>
-			</section>
-			<!-- ============================ Property Location End ================================== -->
 			
 			<!-- ============================ Agent Start ================================== -->
 			<section>
@@ -889,207 +593,7 @@
 				</div>
 			</section>
 			<!-- ============================ Agent End ================================== -->
-			
-			<!-- ============================ Smart Testimonials ================================== -->
-			<section class="image-cover pb-0" style="background:#122947 url(<?= base_url(); ?>asset/home/img/pattern.png) no-repeat;">
-				<div class="container">
-					<div class="row align-items-center">
-						
-						<div class="col-lg-6 col-md-7">
-							<h2 class="text-light">What People Says?</h2>
-							
-							<div class="smart-textimonials smart-light" id="smart-textimonials">
-								
-								<!-- Single Item -->
-								<div class="item">
-									<div class="smart-tes-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-									</div>
-									
-									<div class="smart-tes-author">
-										<div class="st-author-box">
-											<div class="st-author-thumb">
-												<img src="<?= base_url(); ?>asset/home/img/user-3.jpg" class="img-fluid" alt="" />
-											</div>
-											<div class="st-author-info">
-												<h4 class="st-author-title">Adam Williams</h4>
-												<span class="st-author-subtitle">CEO Of Microwoft</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<!-- Single Item -->
-								<div class="item">
-									<div class="smart-tes-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-									</div>
-									
-									<div class="smart-tes-author">
-										<div class="st-author-box">
-											<div class="st-author-thumb">
-												<img src="<?= base_url(); ?>asset/home/img/user-8.jpg" class="img-fluid" alt="" />
-											</div>
-											<div class="st-author-info">
-												<h4 class="st-author-title">Rita Deluxea</h4>
-												<span class="st-author-subtitle">CEO Of Microwoft</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<!-- Single Item -->
-								<div class="item">
-									<div class="smart-tes-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-									</div>
-									
-									<div class="smart-tes-author">
-										<div class="st-author-box">
-											<div class="st-author-thumb">
-												<img src="<?= base_url(); ?>asset/home/img/user-4.jpg" class="img-fluid" alt="" />
-											</div>
-											<div class="st-author-info">
-												<h4 class="st-author-title">Adam Gilwarm</h4>
-												<span class="st-author-subtitle">CEO Of Applioa</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<!-- Single Item -->
-								<div class="item">
-									<div class="smart-tes-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-									</div>
-									
-									<div class="smart-tes-author">
-										<div class="st-author-box">
-											<div class="st-author-thumb">
-												<img src="<?= base_url(); ?>asset/home/img/user-5.jpg" class="img-fluid" alt="" />
-											</div>
-											<div class="st-author-info">
-												<h4 class="st-author-title">Adam Williams</h4>
-												<span class="st-author-subtitle">CEO Of Missward</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<!-- Single Item -->
-								<div class="item">
-									<div class="smart-tes-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-									</div>
-									
-									<div class="smart-tes-author">
-										<div class="st-author-box">
-											<div class="st-author-thumb">
-												<img src="<?= base_url(); ?>asset/home/img/user-6.jpg" class="img-fluid" alt="" />
-											</div>
-											<div class="st-author-info">
-												<h4 class="st-author-title">Shilpa Srivastava</h4>
-												<span class="st-author-subtitle">CEO Of Microwoft</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						
-						<div class="col-lg-6 col-md-5">
-							<img src="<?= base_url(); ?>asset/home/img/avatar-large-1.png" class="img-fluid" alt="">
-						</div>
-						
-					</div>
-				</div>
-			</section>
-			<!-- ============================ Smart Testimonials End ================================== -->
-			
-			<!-- ================= Blog Grid ================= -->
-			<section>
-				<div class="container">
-				
-					<div class="row">
-						<div class="col text-center">
-							<div class="sec-heading center">
-								<h2>Trending Articles</h2>
-								<p>We post regulary most powerful articles for help and support.</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row">
-						
-						<!-- Single blog Grid -->
-						<div class="col-lg-4 col-md-6">
-							<div class="blog-wrap-grid">
-								
-								<div class="blog-thumb">
-									<a href="blog-detail.html"><img src="<?= base_url(); ?>asset/home/img/p-11.jpg" class="img-fluid" alt="" /></a>
-								</div>
-								
-								<div class="blog-info">
-									<span class="post-date"><i class="ti-calendar"></i>30 july 2018</span>
-								</div>
-								
-								<div class="blog-body">
-									<h4 class="bl-title"><a href="blog-detail.html">Why people choose listio for own properties</a></h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. </p>
-									<a href="http://themezhub.com/" class="bl-continue">Continue</a>
-								</div>
-								
-							</div>
-						</div>
-						
-						<!-- Single blog Grid -->
-						<div class="col-lg-4 col-md-6">
-							<div class="blog-wrap-grid">
-								
-								<div class="blog-thumb">
-									<a href="blog-detail.html"><img src="<?= base_url(); ?>asset/home/img/p-8.jpg" class="img-fluid" alt="" /></a>
-								</div>
-								
-								<div class="blog-info">
-									<span class="post-date"><i class="ti-calendar"></i>10 August 2018</span>
-								</div>
-								
-								<div class="blog-body">
-									<h4 class="bl-title"><a href="blog-detail.html">List of benifits and impressive listeo services</a></h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. </p>
-									<a href="http://themezhub.com/" class="bl-continue">Continue</a>
-								</div>
-								
-							</div>
-						</div>
-						
-						<!-- Single blog Grid -->
-						<div class="col-lg-4 col-md-6">
-							<div class="blog-wrap-grid">
-								
-								<div class="blog-thumb">
-									<a href="blog-detail.html"><img src="<?= base_url(); ?>asset/home/img/p-10.jpg" class="img-fluid" alt="" /></a>
-								</div>
-								
-								<div class="blog-info">
-									<span class="post-date"><i class="ti-calendar"></i>30 Sep 2018</span>
-								</div>
-								
-								<div class="blog-body">
-									<h4 class="bl-title"><a href="blog-detail.html">What people says about listio properties</a></h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. </p>
-									<a href="http://themezhub.com/" class="bl-continue">Continue</a>
-								</div>
-								
-							</div>
-						</div>
-						
-					</div>
-					
-				</div>		
-			</section>
-			<!-- ================= Blog Grid End ================= -->
+		
 			
 			<!-- ============================ Footer Start ================================== -->
 			<footer class="dark-footer skin-dark-footer">
@@ -1185,148 +689,6 @@
 			</footer>
 			<!-- ============================ Footer End ================================== -->
 			
-			<!-- Log In Modal -->
-			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
-					<div class="modal-content" id="registermodal">
-						<span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
-						<div class="modal-body">
-							<h4 class="modal-header-title">Log In</h4>
-							<div class="login-form">
-								<form>
-								
-									<div class="form-group">
-										<label>User Name</label>
-										<div class="input-with-icon">
-											<input type="text" class="form-control" placeholder="Username">
-											<i class="ti-user"></i>
-										</div>
-									</div>
-									
-									<div class="form-group">
-										<label>Password</label>
-										<div class="input-with-icon">
-											<input type="password" class="form-control" placeholder="*******">
-											<i class="ti-unlock"></i>
-										</div>
-									</div>
-									
-									<div class="form-group">
-										<button type="submit" class="btn btn-md full-width pop-login">Login</button>
-									</div>
-								
-								</form>
-							</div>
-							<div class="modal-divider"><span>Or login via</span></div>
-							<div class="social-login mb-3">
-								<ul>
-									<li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
-									<li><a href="#" class="btn connect-twitter"><i class="ti-twitter"></i>Twitter</a></li>
-								</ul>
-							</div>
-							<div class="text-center">
-								<p class="mt-5"><a href="#" class="link">Forgot password?</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Modal -->
-			
-			<!-- Sign Up Modal -->
-			<div class="modal fade signup" id="signup" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
-					<div class="modal-content" id="sign-up">
-						<span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
-						<div class="modal-body">
-							<h4 class="modal-header-title">Sign Up</h4>
-							<div class="login-form">
-								<form>
-									
-									<div class="row">
-										
-										<div class="col-lg-6 col-md-6">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<input type="text" class="form-control" placeholder="Full Name">
-													<i class="ti-user"></i>
-												</div>
-											</div>
-										</div>
-										
-										<div class="col-lg-6 col-md-6">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<input type="email" class="form-control" placeholder="Email">
-													<i class="ti-email"></i>
-												</div>
-											</div>
-										</div>
-										
-										<div class="col-lg-6 col-md-6">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<input type="text" class="form-control" placeholder="Username">
-													<i class="ti-user"></i>
-												</div>
-											</div>
-										</div>
-										
-										<div class="col-lg-6 col-md-6">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<input type="password" class="form-control" placeholder="*******">
-													<i class="ti-unlock"></i>
-												</div>
-											</div>
-										</div>
-										
-										<div class="col-lg-6 col-md-6">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<input type="password" class="form-control" placeholder="123 546 5847">
-													<i class="lni-phone-handset"></i>
-												</div>
-											</div>
-										</div>
-										
-										<div class="col-lg-6 col-md-6">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<select class="form-control">
-														<option>As a Customer</option>
-														<option>As a Agent</option>
-														<option>As a Agency</option>
-													</select>
-													<i class="ti-briefcase"></i>
-												</div>
-											</div>
-										</div>
-										
-									</div>
-									
-									<div class="form-group">
-										<button type="submit" class="btn btn-md full-width pop-login">Sign Up</button>
-									</div>
-								
-								</form>
-							</div>
-							<div class="modal-divider"><span>Or login via</span></div>
-							<div class="social-login mb-3">
-								<ul>
-									<li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
-									<li><a href="#" class="btn connect-twitter"><i class="ti-twitter"></i>Twitter</a></li>
-								</ul>
-							</div>
-							<div class="text-center">
-								<p class="mt-5"><i class="ti-user mr-1"></i>Already Have An Account? <a href="#" class="link">Go For LogIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Modal -->
-			
 			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 			
 
@@ -1335,24 +697,6 @@
 		<!-- End Wrapper -->
 		<!-- ============================================================== -->
 		
-		<!-- Color Switcher -->
-		<div class="style-switcher">
-			<div class="css-trigger"><a href="#"><i class="ti-settings"></i></a></div>
-			<div>
-				<ul id="themecolors" class="m-t-20">
-					<li><a href="javascript:void(0)" data-skin="default-skin" class="default-theme">1</a></li>
-					<li><a href="javascript:void(0)" data-skin="red-skin" class="red-theme">2</a></li>
-					<li><a href="javascript:void(0)" data-skin="green-skin" class="green-theme">3</a></li>
-					<li><a href="javascript:void(0)" data-skin="blue-skin" class="blue-theme">4</a></li>
-					<li><a href="javascript:void(0)" data-skin="yellow-skin" class="yellow-theme">5</a></li>
-					<li><a href="javascript:void(0)" data-skin="purple-skin" class="purple-theme">6</a></li>
-					<li><a href="javascript:void(0)" data-skin="oceangreen-skin" class="oceangreen-theme">7</a></li>
-					<li><a href="javascript:void(0)" data-skin="goodgreen-skin" class="goodgreen-theme">8</a></li>
-					<li><a href="javascript:void(0)" data-skin="goodred-skin" class="goodred-theme">9</a></li>
-					<li><a href="javascript:void(0)" data-skin="blue2-skin" class="blue2-theme">10</a></li>				
-				</ul>
-			</div>
-		</div>
 
 		<!-- ============================================================== -->
 		<!-- All Jquery -->
@@ -1372,6 +716,33 @@
 		<script src="<?= base_url(); ?>asset/home/js/isotope.min.js"></script>
 		<script src="<?= base_url(); ?>asset/home/js/coreNavigation.js"></script>
 		<script src="<?= base_url(); ?>asset/home/js/custom.js"></script><script src="<?= base_url(); ?>asset/home/js/cl-switch.js"></script>
+		<script>
+		// Select Bedrooms
+		$('#Harga').select2({
+			placeholder: "Harga",
+			allowClear: true
+		});
+
+		$('#jumlah_kamar').select2({
+			placeholder: "Jumlah kamar",
+			allowClear: true
+		});
+
+		$('#luas').select2({
+			placeholder: "Luas kontrakan",
+			allowClear: true
+		});
+
+		$('#sumber_air').select2({
+			placeholder: "sumber air",
+			allowClear: true
+		});
+
+		$('#listrik').select2({
+			placeholder: "Listrik",
+			allowClear: true
+		});
+		</script>
 		<!-- ============================================================== -->
 		<!-- This page plugins -->
 		<!-- ============================================================== -->

@@ -36,7 +36,8 @@ class Pemilik extends CI_Controller {
 	public function datarumah()
 	{
 		$data['title'] = "Data rumah";
-		$data['rumah'] = $this->Rumahmodel->getallrumah()->result();
+		$id_pemilik = $_SESSION['idpemilik'];
+		$data['rumah'] = $this->Rumahmodel->getrumah($id_pemilik)->result();
 		$this->load->view('pemilik/daftarrumah',$data);
 	}
 
@@ -80,7 +81,7 @@ class Pemilik extends CI_Controller {
 	public function rumah()
 	{
 		$id = $_GET['id'];
-		$rumah = array('id_rumah' => $id );
+		$rumah = $id;
 
 		$data['rumah'] = $this->Rumahmodel->getrumah($rumah)->result();
 
