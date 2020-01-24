@@ -68,7 +68,7 @@
 																		else{ echo "tipe multipel"; } ?></td>
                                             <td align="center"><?= $ket->bobot ?></td>
 											<td class="actions" align="center">
-												<button type="button" class="btn  btn-icon btn-success"><i class="fa fa-eye"></i> Detail</button>
+												<a href="<?= base_url() ?>admin/detailkriteria?kd_kreteria=<?= $ket->kd_kreteria ?>"><button type="button" class="btn  btn-icon btn-success"><i class="fa fa-eye"></i> Detail</button></a>
                                                 <a href="<?= base_url() ?>admin/formupdatekrteria?kd=<?= $ket->kd_kreteria ?>"><button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i> Edit</button></a>
 												<a href="<?= base_url() ?>admin/deletekreteria?kd_kreteria=<?= $ket->kd_kreteria ?>"><button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i> Hapus</button></a>
 											</td>

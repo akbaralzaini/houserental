@@ -6,9 +6,11 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
-        <title>Rikada - Powerful Residence Real Estate Template</title>
+     
+        <title>kontrakan.plg.id</title>
 		
         <!-- All Plugins Css -->
+        <link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
         <link rel="stylesheet" href="<?= base_url(); ?>asset/home/css/plugins.css">
 		<link rel="stylesheet" href="<?= base_url(); ?>asset/home/css/nav.css" />
 		
@@ -35,24 +37,16 @@
 			<?php include "menu.php" ?>
 			
 			<!-- ============================ Page Title Start================================== -->
-			<div class="page-title">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12">
-							
-							<h2 class="ipt-title">Property List</h2>
-							<span class="ipn-subtitle">Property List With Sidebar</span>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- ============================ Page Title End ================================== -->
 			
+			<!-- ============================ Page Title End ================================== -->
+
 			<!-- ============================ All Property ================================== -->
 			<section>
+
 			
 				<div class="container">
+								<h2 class="ipt-title">Hasil Pencarian</h2>
+								<br><br>
 					<div class="row">
 						
 						<div class="col-lg-8 col-md-12 list-layout">

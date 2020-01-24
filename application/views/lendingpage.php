@@ -6,9 +6,10 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
-        <title>Rikada - Powerful Residence Real Estate Template</title>
+        <title>kontrakan.plg.id</title>
 		
         <!-- All Plugins Css -->
+        <link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
         <link rel="stylesheet" href="<?= base_url(); ?>asset/home/css/plugins.css">
 		<link rel="stylesheet" href="<?= base_url(); ?>asset/home/css/nav.css" />
 		
@@ -40,7 +41,7 @@
 				<div class="container">
 					<div class="full-search-2">
 						<div class="hero-search">
-							<h1>Find Your Dream</h1>
+							<h1>Temukan Rumahmu!</h1>
 						</div>
 						<form action="<?= base_url() ?>page/actioncari" method="POST">
 							<div class="hero-search-content">
@@ -153,7 +154,7 @@
 								
 									<div class="col-lg-4 col-md-6 col-sm-12">
 										<div class="form-group">
-										<a type="reset" class="btn reset-btn-outline">Search Reset</a>
+										<a type="reset" class="btn reset-btn-outline">Reset</a>
 										</div>
 									</div>
 									
@@ -166,7 +167,7 @@
 									
 									<div class="col-lg-4 col-md-12 col-sm-12">
 										<div class="form-group">
-											<button type="submit" class="btn search-btn-outline">Search Result</button>
+											<button type="submit" class="btn search-btn-outline">Cari</button>
 										</div>
 									</div>
 									
@@ -680,7 +681,7 @@
 						<div class="row align-items-center">
 							
 							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">© 2019 Rikada. Designd By <a href="https://themezhub.com/">Themez Hub</a> All Rights Reserved</p>
+								<p class="mb-0">© Designed By <a href="#">Ainun Mardliyyah</a> Fakultas Ilmu Komputer Universitas Sriwijaya 2019 </p>
 							</div>
 							
 						</div>

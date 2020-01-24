@@ -99,6 +99,30 @@ class Admin extends CI_Controller {
 		$data['kreteria'] = $this->Rumahmodel->getallkreteria()->result();
 		$this->load->view('admin/datakreteria',$data);
 	}
+	public function detailkriteria()
+	{
+		$kd_kreteria = $_GET['kd_kreteria'];
+		$data['kereteria'] = $this->db->get_where('kreteria',array('kd_kreteria'=> $kd_kreteria ))->result();
+		$cek = $this->db->get_where('kreteria',array('kd_kreteria'=> $kd_kreteria ))->result();
+		foreach ($cek as $key ) {
+			switch ($key->tipe_pilihan) {
+				case '1':
+					$data['subkereteria'] = $this->db->get_where('kreteria_pilihan',array('kode_kreteria'=> $kd_kreteria ))->result();
+					break;
+				case '2':
+					$data['subkereteria'] = $this->db->get_where('kreteria_range',array('kode_kreteria'=> $kd_kreteria ))->result();
+				break;
+				case '3':
+					$data['subkereteria'] = $this->db->get_where('kreteria_pilihan',array('kode_kreteria'=> $kd_kreteria ))->result();
+				break;
+				default:
+					# code...
+					break;
+			}
+			
+		}
+		$this->load->view('admin/detailkriteria',$data);
+	}
 
 	public function tambahkreteria()
 	{

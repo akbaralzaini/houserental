@@ -33,9 +33,9 @@
                                     </div>
                                     <input type="password" name="password" class="form-control" placeholder="Password">
                                 </div>
-                                <button type="submit" class="btn btn-block btn-primary mb-4">Signin</button>
+                                <button type="submit" class="btn btn-block btn-primary mb-4">Sign In</button>
                             </form>
-							<p class="mb-0 text-muted">Don’t have an account? <a href="registerpemilik" class="f-w-400">Signup</a></p>
+							<p class="mb-0 text-muted">Don’t have an account? <a href="registerpemilik" class="f-w-400">Sign up</a></p>
 						</div>
 					</div>
 				</div>

@@ -5,7 +5,7 @@
 			<div class="header header-light nav-left-side">
 				<nav class="headnavbar">
 					<div class="nav-header">
-						<a href="#" class="brand"><img src="<?= base_url(); ?>asset/home/img/logo.png" alt="" /></a>
+						<a href="#" class="brand"><img src="<?= base_url(); ?>asset/home/img/newlogodark.png" alt="" /></a>
 						<button class="toggle-bar"><span class="ti-align-justify"></span></button>	
 					</div>								
 					<ul class="menu">
@@ -147,7 +147,7 @@
 						
 					<ul class="attributes attributes-desk">
 						<li class="log-icon log-seprate"><a href="<?= base_url() ?>login/loginpemilik" data-target="#login">Log In</a></li>
-						<li class="submit-attri theme-log"><a href="<?= base_url() ?>login/reegisterpemilik">Daftarkan kontrakan</a></li>
+						<li class="submit-attri theme-log"><a href="<?= base_url() ?>login/registerpemilik">Daftarkan kontrakan</a></li>
 					</ul>
 					
 				</nav>

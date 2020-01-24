@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 25 Des 2019 pada 02.44
+-- Generation Time: 05 Jan 2020 pada 11.19
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -33,6 +33,14 @@ CREATE TABLE `kreteria` (
   `tipe_pilihan` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `kreteria`
+--
+
+INSERT INTO `kreteria` (`kd_kreteria`, `nama_kreteria`, `bobot`, `tipe_pilihan`) VALUES
+('K3D', 'akkaka', 3, '1'),
+('DX3', 'dfd s ', 4, '3');
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +53,21 @@ CREATE TABLE `kreteria_pilihan` (
   `pilihan` varchar(30) NOT NULL,
   `bobot` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `kreteria_pilihan`
+--
+
+INSERT INTO `kreteria_pilihan` (`id_pilihan`, `kode_kreteria`, `pilihan`, `bobot`) VALUES
+(7, 'K3D', 'sdds', 3),
+(8, 'K3D', '2dsds', 4),
+(9, 'K3D', '2eed', 55),
+(10, 'K3D', 'bbbbb', 33),
+(11, 'erv44', '4dd', 4),
+(12, 'erv44', 'cc', 5),
+(18, 'DX3', 'dd', 33),
+(19, 'DX3', 'ssa', 34),
+(20, 'DX3', 'ccc', 33);
 
 -- --------------------------------------------------------
 
@@ -82,7 +105,7 @@ CREATE TABLE `pemilik_kontrakan` (
 --
 
 INSERT INTO `pemilik_kontrakan` (`id_pemilik`, `id_user`, `nama`, `alamat`, `email`, `tlp`, `foto`) VALUES
-(2, 2, 'saipul', ' jl lintas sumatera jalan varu ulak lebar lahat ', 'akbaralzaini@gmail.com', '80786', 'asset/img/rumah/506009.jpg'),
+(2, 2, 'ainuon', '   jl lintas sumatera jalan varu ulak lebar lahat   ', 'nononono@gmail.com', '80786', 'asset/img/rumah/506009.jpg'),
 (4, 3, 'bbaba', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -113,9 +136,10 @@ CREATE TABLE `rumah` (
 --
 
 INSERT INTO `rumah` (`id_rumah`, `id_pemilik`, `nama_rumah`, `harga`, `alamat`, `jumlah_kamar`, `luas_bangunan`, `listrik`, `air`, `lokasi`, `longitude`, `latitude`, `image`, `status`) VALUES
-(1, 3, 'dsds', 12121, '', 1, 2, '1', 'w', 'ssdf ddada dadada dasasas asas', '1313', '3232', 'dssa', 'd'),
-(2, 2, 'akka', 242424, 'sasa', 1, 3232, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', ''),
-(3, 2, 'sapirr', 7876876, 'dggud tuyd', 2, 333, 'Listrik Prabayar', 'Pdam', 'a:3:{i:0;s:14:"Sekolah/Kampus";i:1;s:10:"Mall/Pasar";i:2;s:6:"Kantor";}', '104.75360870361328', '-2.9850416818862575', 'a:2:{i:0;s:26:"asset/img/rumah/506009.jpg";i:1;s:26:"asset/img/rumah/506010.jpg";}', '1');
+(5, 2, 'akka', 9000000, 'sasa', 2, 300, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', '1'),
+(2, 2, 'akka', 6000000, 'sasa', 1, 20, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', '1'),
+(7, 2, 'akka', 5500000, 'sasa', 2, 250, 'Listrik Pascabayar', 'sumur', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', '1'),
+(6, 2, 'akka', 11500000, 'sasa', 2, 100, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', '1');
 
 -- --------------------------------------------------------
 
@@ -188,7 +212,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `kreteria_pilihan`
 --
 ALTER TABLE `kreteria_pilihan`
-  MODIFY `id_pilihan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pilihan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `kreteria_range`
 --
@@ -203,7 +227,7 @@ ALTER TABLE `pemilik_kontrakan`
 -- AUTO_INCREMENT for table `rumah`
 --
 ALTER TABLE `rumah`
-  MODIFY `id_rumah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_rumah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `user`
 --

@@ -21,7 +21,6 @@
 		</div>
 		<?php include "menu.php"; ?>
         <?php include "header.php"; ?>
-        <?php include "footer.php"; ?>
 	<section class="pcoded-main-container">
 		<div class="pcoded-content">
 			<div class="page-header">
@@ -29,12 +28,12 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10">Data Rumah</h5>
+							<h5 class="m-b-10">Detail Kriteria</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-									<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
-									<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
+								<li class="breadcrumb-item"><a href="#!">Kriteria</a></li>
+								<li class="breadcrumb-item"><a href="#!">Data Kriteria</a></li>
 							</ul>
 						</div>
 					</div>
@@ -44,44 +43,87 @@
 				<div class="col-sm-12">
 					<div class="card">
 						<div class="card-header">
-							<h5>Setting Defaults</h5>
+							<h5>Detail Kriteria</h5>
+
 						</div>
 						<div class="card-body">
 							<div class="table-responsive dt-responsive">
 								<table id="setting-default" class="table table-striped table-bordered nowrap">
 									<thead>
+										<?php foreach ($kereteria as $key) { ?>
 										<tr>
-											<th>Nama rumah</th>
-											<th>Pemilik rumah</th>
-											<th>Harga</th>
-											<th>Alamat</th>
-											<th>Status</th>
-											<th>Action</th>
+											<th style="width:200px">Kode Kriteria</th>
+											<td><?= $key->kd_kreteria ?></td>
+											
 										</tr>
+										<tr>
+											<th >Nama Kriteria</th>
+											<td><?= $key->nama_kreteria ?></td>
+										</tr>
+										<tr>
+											<th>Bobot</th>
+											<td><?= $key->bobot ?></td>
+										</tr>
+										<tr>
+											<th>Tipe Pilihan</th>
+											<td><?= $key->tipe_pilihan ?></td>
+										</tr>
+										  
+										
+										<?php } ?>
+									</thead>
+								</table>
+
+								<br>
+							<h6>Sub Kriteria <?= $key->nama_kreteria ?> </h6><br>
+								<?php if ($key->tipe_pilihan == '1') {?>
+									<table id="setting-default" class="table table-striped table-bordered nowrap">
+									<thead>
+										  <tr align ="center">
+										  	<th><?= $key->nama_kreteria ?></th>
+										  	<th>Nilai</th>
+										  </tr>
 									</thead>
 									<tbody>
-										<?php foreach ($rumah as $row){ ?>
-										<tr>
-											<td><a href="<?= base_url() ?>pemilik/rumah?id=<?= $row->id_rumah ?>"><?= $row->nama_rumah ?></a></td>
-											<td><?= $row->nama ?></td>
-											<td><?= $row->harga ?></td>
-											<td><?= $row->alamat ?></td>
+										<?php foreach ($subkereteria as $value) {?>
+										<tr class="gradeX" align ="center">
 											<td>
-											<?php 
-											 if($row->status==1) { echo "<span class='badge badge-success'>verified</span>"; } 
-											 else { echo "<span class='badge badge-danger'>unverified</span>"; } ;
-											?>
+												<?= $value->pilihan ?>
 											</td>
+
 											<td>
-												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"> Edit</i></button></a>
-												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"> Hapus</i></button>
-												
+												<?= $value->bobot ?>
 											</td>
 										</tr>
 										<?php } ?>
-										
 									</tbody>
 								</table>
+								<?php } ?>
+
+								<?php if ($key->tipe_pilihan == '2') {?>
+									<table id="setting-default" class="table table-striped table-bordered nowrap">
+									<thead>
+										  <tr align ="center">
+										  	<th><?= $key->nama_kreteria ?></th>
+										  	<th>Nilai</th>
+										  </tr>
+									</thead>
+									<tbody>
+										<?php foreach ($subkereteria as $value) {?>
+										<tr class="gradeX" align ="center">
+											<td>
+												<?= $value->awal ?> - <?= $value->akhir ?>
+											</td>
+
+											<td>
+												<?= $value->bobot ?>
+											</td>
+										</tr>
+										<?php } ?>
+									</tbody>
+								</table>
+								<?php } ?>
+
 							</div>
 						</div>
 					</div>
@@ -93,8 +135,6 @@
 	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>
-	<script src="<?= base_url() ?>asset/assets/js/plugins/jquery.dataTables.min.js"></script>
-	<script src="<?= base_url() ?>asset/assets/js/plugins/dataTables.bootstrap4.min.js"></script>
 	<script src="<?= base_url() ?>asset/assets/js/pages/data-advance-custom.js"></script>
 </body>
 </html>
