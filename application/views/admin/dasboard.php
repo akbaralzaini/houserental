@@ -25,7 +25,7 @@
 				<div class="card bg-c-blue order-card">
 					<div class="card-body">
 						<a href="viewrumah">
-						<h1 class="text-left text-white">10<i class="feather icon-home float-right"></i></h1>
+						<h1 class="text-left text-white"><?= $jumlahr ?><i class="feather icon-home float-right"></i></h1>
 						<p class="m-b-0 text-white"><b>Daftar Rumah Kontrakan</b></p></a>
 					</div>
 				</div>
@@ -35,7 +35,7 @@
 				<div class="card bg-c-red order-card">
 					<div class="card-body">
 						<a href="viewkreteria">
-						<h1 class="text-left text-white">6<i class="feather icon-list float-right"></i></h1>
+						<h1 class="text-left text-white"><?= $jumlahk ?><i class="feather icon-list float-right"></i></h1>
 						<p class="m-b-0 text-white"><b>Daftar Kriteria</b></p></a>
 					</div>
 				</div>

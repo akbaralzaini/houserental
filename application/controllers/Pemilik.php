@@ -88,6 +88,15 @@ class Pemilik extends CI_Controller {
 		$this->load->view('pemilik/rumahdetail',$data);
 	}
 
+	public function updaterumah()
+	{
+		$id_rumah = $_GET['id_rumah'];
+		$this->db->where('id_rumah',$id_rumah);
+		$data['rumah']=$this->db->get('rumah')->result();
+
+		$this->load->view('pemilik/formupdaterumah',$data);
+	}
+
 	public function updatepemilik()
 	{
 		$id = $_GET['id_p'];
@@ -99,6 +108,66 @@ class Pemilik extends CI_Controller {
 		redirect('pemilik/profil');
 	}
 
+	public function hapus_foto()
+	{
+		$this->db->where('id_rumah',$_GET['id_rumah']);
+		$rumah = $this->db->get('rumah')->result();
+		foreach ($rumah as $bb) { $key = $bb; }
+
+		$id_f = $_GET['id_foto'];
+
+		$foto = unserialize($key->image);
+		array_splice($foto,$id_f,1);
+		$newarray = serialize($foto);
+		$fotobaru = array('image' => $newarray );
+		
+		print_r($foto);
+
+		$this->db->where('id_rumah',$_GET['id_rumah']);
+		$this->db->update('rumah',$fotobaru);
+	}
+
+	public function actupdaterumah()
+	{
+		if(isset($_POST['submit'])){
+			$this->db->where('id_rumah',$_GET['id_rumah']);
+			$rumah = $this->db->get('rumah')->result();
+			foreach ($rumah as $bb) { $key = $bb; }
+
+			$foto = unserialize($key->image);
+			$i = 0;
+			foreach ($_FILES['file']['name'] as $filename) {
+				$uploaddir= 'asset/img/rumah/';
+				$alamatfile=$uploaddir.$filename;
+				array_push($foto,$alamatfile);
+				move_uploaded_file($_FILES['file']['tmp_name'][$i],$alamatfile);
+				$i++;
+			}
+		}
+		$home = array('id_pemilik' => $_SESSION['idpemilik'], 
+				'nama_rumah'=>$_POST['nama'],
+				'alamat'=>$_POST['alamat'],
+				'harga'=>$_POST['harga'], 
+				'luas_bangunan'=>$_POST['luas'],
+				'listrik'=>$_POST['listrik'],
+				'jumlah_kamar'=>$_POST['kamar'],
+				'air'=>$_POST['air'],
+				'lokasi'=> serialize($_POST['lokasi']),
+				'image' => serialize($foto),
+				'longitude' => $_POST['lng'],
+				'latitude' => $_POST['lat']);
+
+		$this->db->where('id_rumah',$_GET['id_rumah']);
+		$this->db->update('rumah',$home);
+		redirect(base_url().'pemilik/datarumah');	
+	}
 	
+	public function deleterumah()
+	{
+		$this->db->where('id_rumah',$_GET['id_rumah']);
+		$this->db->delete('rumah');
+
+		redirect(base_url().'pemilik/datarumah');	
+	}
 }
 

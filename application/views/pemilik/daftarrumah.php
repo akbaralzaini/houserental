@@ -54,7 +54,7 @@
 											<th>Nama rumah</th>
 											<th>Pemilik rumah</th>
 											<th>Harga</th>
-											<th>Alamat</th>
+											<th style="width: 10%">Alamat</th>
 											<th>Status</th>
 											<th>Action</th>
 										</tr>
@@ -73,8 +73,8 @@
 											?>
 											</td>
 											<td>
-												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"> Edit</i></button></a>
-												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"> Hapus</i></button>
+												<a href="<?= base_url().'pemilik/updaterumah?id_rumah='.$row->id_rumah ?>"><button type="button" class="btn btn-icon btn-primary"><i class="feather icon-edit"> Edit</i></button></a>
+												<a href="<?= base_url().'pemilik/deleterumah?id_rumah='.$row->id_rumah ?>"><button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"> Hapus</i></button></a>
 												
 											</td>
 										</tr>

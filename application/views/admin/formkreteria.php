@@ -196,7 +196,7 @@
 									   '<div class="visible-xs mb-md"></div>'+
 									   '<div class="col-sm-2">'+
 										   '<input type="text" name="bobot[]" class="form-control" placeholder="bobot">'+
-									   '</div><a href="#" class="remove_field2">Remove</a>'); //add input box
+									   '</div><a href="#" class="remove_field">Remove</a>'); //add input box
 				}
 			});
 			

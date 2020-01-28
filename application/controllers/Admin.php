@@ -17,7 +17,10 @@ class Admin extends CI_Controller {
 	# <fungsi dasar >
 	public function index()
 	{
-		$this->load->view('admin/dasboard');
+		$data['jumlahk']= $this->db->get('kreteria')->num_rows();
+		$data['jumlahr']= $this->db->get('rumah')->num_rows();
+		
+		$this->load->view('admin/dasboard',$data);
 	}
 
 	public function logout()
