@@ -83,7 +83,7 @@ class Pemilik extends CI_Controller {
 		$id = $_GET['id'];
 		$rumah = $id;
 
-		$data['rumah'] = $this->Rumahmodel->getrumah($rumah)->result();
+		$data['rumah'] = $this->Rumahmodel->getrumahdetail($rumah)->result();
 
 		$this->load->view('pemilik/rumahdetail',$data);
 	}

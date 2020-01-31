@@ -28,7 +28,7 @@ class Login extends CI_Controller {
 				}
 				else{
 					$this->db->where('id_user',$key->id_user);
-					$pemilik = $this->db->get('pemilik')->result();
+					$pemilik = $this->db->get('pemilik_kontrakan')->result();
 					foreach($pemilik as $rows){
 						$_SESSION['idpemilik'] = $rows->id_pemilik;
 					}
