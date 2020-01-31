@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 05 Jan 2020 pada 11.19
+-- Generation Time: 29 Jan 2020 pada 14.59
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -136,10 +136,10 @@ CREATE TABLE `rumah` (
 --
 
 INSERT INTO `rumah` (`id_rumah`, `id_pemilik`, `nama_rumah`, `harga`, `alamat`, `jumlah_kamar`, `luas_bangunan`, `listrik`, `air`, `lokasi`, `longitude`, `latitude`, `image`, `status`) VALUES
-(5, 2, 'akka', 9000000, 'sasa', 2, 300, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', '1'),
-(2, 2, 'akka', 6000000, 'sasa', 1, 20, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', '1'),
-(7, 2, 'akka', 5500000, 'sasa', 2, 250, 'Listrik Pascabayar', 'sumur', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', '1'),
-(6, 2, 'akka', 11500000, 'sasa', 2, 100, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:31:"asset/img/rumah/marker copy.jpg";i:1;s:26:"asset/img/rumah/marker.jpg";i:2;s:25:"asset/img/rumah/plane.jpg";}', '1');
+(5, 2, 'akka', 9000000, 'sasa', 2, 300, 'Listrik Prabayar', 'Pdam', 'a:2:{i:0;s:14:"Sekolah/Kampus";i:1;s:10:"Mall/Pasar";}', '104.75360870361328', '-2.9850416818862575', 'a:3:{i:0;s:21:"asset/img/rumah/1.jpg";i:1;s:52:"asset/img/rumah/428dde17fcf2d004a042a36febaffa54.jpg";i:2;s:52:"asset/img/rumah/55631eda99100715fffe0a419cd33ce2.jpg";}', '1'),
+(2, 2, 'akka', 6000000, 'sasa', 1, 20, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:1:{i:0;s:26:"asset/img/rumah/marker.jpg";}', '1'),
+(7, 2, 'akka', 5500000, 'sasa', 2, 250, 'Listrik Pascabayar', 'sumur', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:0:{}', '1'),
+(6, 2, 'akka', 11500000, 'sasa', 2, 100, 'Listrik Prabayar', 'Pdam', 'a:1:{i:0;s:14:"Sekolah/Kampus";}', '104.75360870361328', '-2.9850416818862575', 'a:1:{i:0;s:26:"asset/img/rumah/marker.jpg";}', '1');
 
 -- --------------------------------------------------------
 
@@ -227,7 +227,7 @@ ALTER TABLE `pemilik_kontrakan`
 -- AUTO_INCREMENT for table `rumah`
 --
 ALTER TABLE `rumah`
-  MODIFY `id_rumah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_rumah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `user`
 --

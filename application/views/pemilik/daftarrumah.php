@@ -44,7 +44,8 @@
 				<div class="col-sm-12">
 					<div class="card">
 						<div class="card-header">
-							<h5>Setting Defaults</h5>
+							<h5>Daftar Rumah</h5>
+							<a href="tambahrumah"><button id="addToTable" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Rumah</button></a>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive dt-responsive">
@@ -63,7 +64,7 @@
 										<?php foreach ($rumah as $row){ ?>
 										<tr>
 											<td><a href="<?= base_url() ?>pemilik/rumah?id=<?= $row->id_rumah ?>"><?= $row->nama_rumah ?></a></td>
-											<td><?= $row->nama ?></td>
+											<td><?= $_SESSION['nama'] ?></td>
 											<td><?= $row->harga ?></td>
 											<td><?= $row->alamat ?></td>
 											<td>

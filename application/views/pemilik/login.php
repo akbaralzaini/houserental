@@ -12,7 +12,7 @@
 		<link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
 	</head>
-	<div class="auth-wrapper">
+	<div class="auth-wrapper"  style="background:url(<?= base_url(); ?>asset/home/img/b.jpg">
 		<div class="auth-content">
 			<div class="card">
 				<div class="row align-items-center text-center">
