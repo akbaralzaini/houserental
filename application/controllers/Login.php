@@ -27,8 +27,13 @@ class Login extends CI_Controller {
 					redirect('admin/');	
 				}
 				else{
+					$this->db->where('id_user',$key->id_user);
+					$pemilik = $this->db->get('pemilik')->result();
+					foreach($pemilik as $rows){
+						$_SESSION['idpemilik'] = $rows->id_pemilik;
+					}
 					$_SESSION['nama'] = $key->nama;
-					$_SESSION['idpemilik'] = $key->id_user;
+					$_SESSION['id_userpemilik'] = $key->id_user;
 					$_SESSION['level'] = 2;
 					redirect('pemilik/');	
 				}
