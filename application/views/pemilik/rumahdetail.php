@@ -36,7 +36,8 @@
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="#!">Detail rumah</a></li>
+								<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
+								<li class="breadcrumb-item"><a href="#!">Detail Rumah</a></li>
 							</ul>
 						</div>
 					</div>
@@ -47,7 +48,7 @@
 					<div class="card">
                         <?php foreach($rumah as $row){ ?>
 						<div class="card-header">
-							<h5>Rumah dua putri</h5>
+							<h5><?= $row->nama_rumah ?></h5>
 						</div>
 						<div class="card-body">
                             <div class="row">

@@ -43,20 +43,21 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="feather icon-lock"></i></span>
                                     </div>
+                                    <input type="alamat" name="alamat" class="form-control" placeholder="Alamat">
+                                </div>
+                                 <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="feather icon-lock"></i></span>
+                                    </div>
                                     <input type="email" name="email" class="form-control" placeholder="E-mail">
                                 </div>
                                  <div class="input-group mb-4">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="feather icon-lock"></i></span>
                                     </div>
-                                    <input type="telepon" name="telepon" class="form-control" placeholder="Telepon">
+                                    <input type="tlp" name="tlp" class="form-control" placeholder="Telepon">
                                 </div>
-                                 <div class="input-group mb-4">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="feather icon-lock"></i></span>
-                                    </div>
-                                    <input type="alamat" name="alamat" class="form-control" placeholder="Alamat">
-                                </div>
+                                
                                 <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
                             </form>
 							<p class="mb-2">Already have an account? <a href="loginpemilik" class="f-w-400">Signin</a></p>

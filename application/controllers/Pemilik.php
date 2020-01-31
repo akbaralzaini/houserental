@@ -13,6 +13,14 @@ class Pemilik extends CI_Controller {
 		}
 	}
 
+	public function index()
+	{
+
+		$data['jumlahr']= $this->db->get('rumah')->num_rows();
+		
+		$this->load->view('pemilik/dasboard',$data);
+	}
+
 	public function logout()
 	{
 		session_unset();
@@ -22,10 +30,7 @@ class Pemilik extends CI_Controller {
 	}
 
 	
-	public function index()
-	{
-		$this->load->view('pemilik/dasboard');
-    }
+	
     
     public function profil()
 	{

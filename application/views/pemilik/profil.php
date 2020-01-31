@@ -14,7 +14,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="">
 		<meta name="author" content="Codedthemes" />
-		<link rel="icon" href="<?= base_url() ?>asset/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/plugins/ekko-lightbox.css">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/plugins/lightbox.min.css">
 		<link rel="stylesheet" href="<?= base_url() ?>asset/assets/css/style.css">
@@ -30,53 +30,12 @@
 	<div class="pcoded-main-container">
 		<div class="pcoded-content">
 			<div class="user-profile user-card mb-4">
-				<div class="card-header border-0 p-0 pb-0">
-					<div class="cover-img-block">
-						<img src="<?= base_url() ?>asset/assets/images/profile/cover.jpg" alt="" class="img-fluid">
-					</div>
-				</div>
+				
 				<div class="card-body py-0">
 					<div class="user-about-block m-0">
 					<?php foreach ($pemilik as $row) { ?>
-						<div class="row">
-							<div class="col-md-4 text-center mt-n5">
-								<div class="change-profile text-center">
-									<div class="dropdown w-auto d-inline-block">
-										<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<div class="profile-dp">
-												<div class="position-relative d-inline-block">
-													<img class="img-radius img-fluid wid-100" src="<?= base_url().$row->foto ?>" alt="User image">
-												</div>
-											</div>
-										</a>
-									</div>
-								</div>
-								<h5 class="mb-1"><?= $row->nama ?></h5>
-								<!-- <p class="mb-2 text-muted">UI/UX Designer</p> -->
-							</div>
-							<div class="col-md-8 mt-md-4">
-								<div class="row">
-									<div class="col-md-6">
-										<a href="#" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i><span class="__cf_email__" data-cfemail="c9adaca4a689ada6a4a8a0a7e7aaa6a4"><?= $row->email ?></span></a>
-										<div class="clearfix"></div>
-										<a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-phone mr-2 f-18"></i><?= $row->tlp ?></a>
-									</div>
-									<div class="col-md-6">
-										<div class="media">
-											<i class="feather icon-map-pin mr-2 mt-1 f-18"></i>
-											<div class="media-body">
-												<?= $row->alamat ?>
-											</div>
-										</div>
-									</div>
-								</div>
-								<ul class="nav nav-tabs profile-tabs nav-fill" id="myTab" role="tablist">
-									<li class="nav-item">
-										<a class="nav-link text-reset active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="feather icon-user mr-2"></i>Profile</a>
-									</li>
-								</ul>
-							</div>
-						</div>
+						
+						
 					</div>
 				</div>
 			</div>
