@@ -18,6 +18,15 @@ class Rumahmodel extends CI_Model {
 		$this->db->join("pemilik_kontrakan","pemilik_kontrakan.id_pemilik=rumah.id_pemilik");
 		$this->db->where('rumah.id_pemilik',$rumah);
 		return $this->db->get();
+	}
+	
+	public function getrumahdetail($rumah)
+	{
+		$this->db->select("*,rumah.alamat as 'alamat_kontrak'");
+		$this->db->from("rumah");
+		$this->db->join("pemilik_kontrakan","pemilik_kontrakan.id_pemilik=rumah.id_pemilik");
+		$this->db->where('rumah.id_rumah',$rumah);
+		return $this->db->get();
     }
     
     public function getallkreteria()

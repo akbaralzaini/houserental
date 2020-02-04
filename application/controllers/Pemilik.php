@@ -35,7 +35,7 @@ class Pemilik extends CI_Controller {
     
     public function profil()
 	{
-		$data['pemilik'] = $this->Usermodel->getpemilik(array('id_user'=>$_SESSION['iduserpemilik']))->result();
+		$data['pemilik'] = $this->Usermodel->getpemilik(array('id_user'=>$_SESSION['id_userpemilik']))->result();
 		$this->load->view('pemilik/profil',$data);
 	}
 
@@ -89,7 +89,7 @@ class Pemilik extends CI_Controller {
 		$id = $_GET['id'];
 		$rumah = $id;
 
-		$data['rumah'] = $this->Rumahmodel->getrumah($rumah)->result();
+		$data['rumah'] = $this->Rumahmodel->getrumahdetail($rumah)->result();
 
 		$this->load->view('pemilik/rumahdetail',$data);
 	}
