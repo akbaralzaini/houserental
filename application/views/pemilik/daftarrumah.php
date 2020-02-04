@@ -64,7 +64,7 @@
 										<?php foreach ($rumah as $row){ ?>
 										<tr>
 											<td><a href="<?= base_url() ?>pemilik/rumah?id=<?= $row->id_rumah ?>"><?= $row->nama_rumah ?></a></td>
-											<td><?= $_SESSION['nama'] ?></td>
+											<td><?= $row->nama ?></td>
 											<td><?= $row->harga ?></td>
 											<td><?= $row->alamat ?></td>
 											<td>

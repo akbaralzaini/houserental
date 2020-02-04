@@ -49,7 +49,7 @@
 							<div class="table-responsive dt-responsive">
 								<table id="setting-default" class="table table-striped table-bordered nowrap">
 									<thead>
-										<tr>
+										<tr align="center">
 											<th>Username</th>
 											<th>Nama</th>
 											<th>Password</th>

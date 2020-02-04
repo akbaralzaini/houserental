@@ -24,7 +24,7 @@
 			<div class="col-md-6 col-xl-3">
 				<div class="card bg-c-blue order-card">
 					<div class="card-body">
-						<a href="rumah">
+						<a href="datarumah">
 						<h1 class="text-left text-white"><?= $jumlahr ?><i class="feather icon-home float-right"></i></h1>
 						<p class="m-b-0 text-white"><b>Daftar Rumah Kontrakan</b></p></a>
 					</div>

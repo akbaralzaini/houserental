@@ -15,8 +15,9 @@ class Pemilik extends CI_Controller {
 
 	public function index()
 	{
+		$id_pemilik = $_SESSION['idpemilik'];
 
-		$data['jumlahr']= $this->db->get('rumah')->num_rows();
+		$data['jumlahr']= $this->Rumahmodel->getrumah($id_pemilik)->num_rows();
 		
 		$this->load->view('pemilik/dasboard',$data);
 	}

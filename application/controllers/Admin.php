@@ -64,8 +64,8 @@ class Admin extends CI_Controller {
 
 	public function rumah()
 	{
-		$id = $_GET['id'];
-		$rumah = array('id_rumah' => $id );
+		$id_rumah = $_GET['id_rumah'];
+		$rumah = array('id_rumah' => $id_rumah );
 
 		$data['rumah'] = $this->Rumahmodel->getrumah($rumah)->result();
 
