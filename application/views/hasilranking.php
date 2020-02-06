@@ -45,8 +45,8 @@
 
 			
 				<div class="container">
-								<h2 class="ipt-title">Hasil Pencarian</h2>
-								<br><br>
+					<h2 class="ipt-title">Hasil Pencarian</h2>
+					<br><br>
 					<div class="row">
 						
 						<div class="col-lg-8 col-md-12 list-layout">
@@ -60,7 +60,7 @@
 										<div class="listing-img-wrapper">
 											<a href="single-property-2.html">
 												<?php $foto = unserialize($value['image']); ?>
-												<img src="<?= base_url().$foto[0]; ?>" class="img-fluid mx-auto" alt="" />
+												<img src="<?= base_url().$foto[0]; ?>" class="img-fluid mx-auto" alt="fotorumah" />
 											</a>
 											<span class="property-type">For Sale</span>
 										</div>
@@ -69,7 +69,7 @@
 										
 											<div class="listing-detail-wrapper">
 												<div class="listing-short-detail">
-													<h4 class="listing-name"><a href="single-property-2.html"><?= $value['nama_rumah'] ?></a></h4>
+													<h4 class="listing-name"><a href="<?= base_url()."Page/homedetail?id_rumah=".$value['id_rumah'] ?>"><?= $value['nama_rumah'] ?></a></h4>
 													<span class="listing-location"><i class="ti-location-pin"></i><?= $value['alamat'] ?></span>
 												</div>
 												<div class="list-author">
@@ -90,7 +90,7 @@
 													<h4 class="list-pr">Rp. <?= $value['harga'] ?></h4>
 												</div>
 												<div class="listing-detail-btn">
-													<a href="single-property-2.html" class="more-btn">More Info</a>
+													<a href="<?= base_url()."Page/homedetail?id_rumah=".$value['id_rumah'] ?>" class="more-btn">More Info</a>
 												</div>
 											</div>
 											
@@ -115,7 +115,7 @@
 									
 									<h4>Find New Property</h4>
 									
-						<form action="<?= base_url() ?>page/actioncari" method="POST">
+								<form action="<?= base_url() ?>page/actioncari" method="POST">
 									<div class="form-group">
 										<div class="input-with-icon">
 											<select id="Harga" name="harga"  class="form-control">

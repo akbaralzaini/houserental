@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends CI_Controller {
 
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Usermodel');
+		$this->load->model('Rumahmodel');
+		
+	} 
 	//Pembagi Normalisasi
 	function pembagiNM($matrik){
 
@@ -349,6 +356,16 @@ class Page extends CI_Controller {
 		$data['rank'] = $hasil;
 
 		$this->load->view('hasilranking',$data);
+	}
+
+	public function homedetail()
+	{
+		$id_rumah = $_GET['id_rumah'];
+
+		$data['rumah'] = $this->Rumahmodel->getrumahdetail($id_rumah)->result();
+
+
+		$this->load->view('detailrumah',$data);
 	}
 
 	
