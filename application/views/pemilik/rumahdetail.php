@@ -81,11 +81,11 @@
 								<div class="w-100"></div>
 								<div class="col-6 col-sm-2"><b> Alamat </b></div> <div class="col-6 col-sm-3">: <?= $row->alamat ?></div>
                                 <div class="w-100"></div>
-                                <div class="col-6 col-sm-2"><b> Lokasi </b></div> 
+                                <div class="col-6 col-sm-2"><b> Lokasi dekat dengan : </b></div> 
                                 <?php $lokasi = unserialize($row->lokasi);
                                 $i = 1;
                                 foreach ($lokasi as $loc ) { ?>
-                                    <div class="col-6 col-sm-12"><?= $i." ".$loc ?></div>
+                                    <div class="col-6 col-sm-12"><?= $loc ?></div>
                                 <?php $i++; } ?>
 								<div class="w-100"></div>
 

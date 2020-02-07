@@ -32,12 +32,12 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10">Form Tambah Kriteria</h5>
+								<h5 class="m-b-10">Form Update Kriteria</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
 								<li class="breadcrumb-item"><a href="#!">Kriteria</a></li>
-								<li class="breadcrumb-item"><a href="#!">Input Kriteria</a></li>
+								<li class="breadcrumb-item"><a href="#!">Update Kriteria</a></li>
 							</ul>
 						</div>
 					</div>
@@ -47,7 +47,7 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5>Form Kriteria</h5>
+                            <h5>Form Update Kriteria</h5>
                             <hr>
                             <div class="row">
                                 <div class="col-md-12">

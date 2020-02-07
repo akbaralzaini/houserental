@@ -6,9 +6,10 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
-        <title>Rikada - Powerful Residence Real Estate Template</title>
+        <title>kontrakan.plg.id</title>
 		
         <!-- All Plugins Css -->
+        <link rel="icon" href="<?= base_url() ?>asset/assets/images/newlogoicon.png" type="image/x-icon">
         <link rel="stylesheet" href="<?= base_url(); ?>asset/home/css/plugins.css">
 		<link rel="stylesheet" href="<?= base_url(); ?>asset/home/css/nav.css" />
 		
@@ -38,92 +39,58 @@
                 $detail = $home;
             } ?>
 			
-			<!-- ============================ Hero Banner  Start================================== -->
-			<div class="single-advance-property gray">
-				<div class="container-fluid p-0">
-					<div class="row align-items-center">
-					
-						<div class="col-lg-7 col-md-7 col-sm-12">
-							<div class="slider-for">
-                                <?php $foto = unserialize($detail->image); 
-                                foreach($foto as $f) { ?>
-								<a href="<?= base_url().$f; ?>" class="item-slick"><img style="height:400px; width : 100%" src="<?= base_url().$f; ?>" alt="Alt"></a>
-                                <?php } ?>
-							</div>
-							
-						</div>
-						
-						<div class="col-lg-5 col-md-5 col-sm-12">
-							<div class="single-advance-caption">
-							
-								<div class="property-name-info">
-									<h4 class="property-name"><?= $detail->nama_rumah ?></h4>
-									<p class="property-desc"><?= $detail->alamat ?></p>
-								</div>
-								
-								<div class="property-price-info">
-									<h4 class="property-price">Rp. <?= $detail->harga ?></h4>
-									<p class="property-sqa"><?= $detail->luas_bangunan ?><sup>m2</sup></p>
-								</div>
-								
-								<div class="property-statement">
-									<ul>
-										<li>
-											<i class="lni-apartment"></i>
-											<div class="ps-trep">
-												<span>Pemilik</span>
-												<h5 class="ps-type"><?= $detail->nama ?></h5>
-											</div>
-										</li>
-										
-									</ul>
-								</div>
-								
-							</div>
-						</div>
-					
-					</div>
-					
-					<div class="row">
-						<div class="col-lg-12 col-md-12">
-							<div class="slider-nav">
-                            <?php $foto = unserialize($detail->image); 
-                                foreach($foto as $f) { ?>
-								<div class="item-slick"><img style="height:100px; width : 100%" src="<?= base_url().$f; ?>" alt="Alt"></div>
-                                <?php } ?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			
-			<section class="spd-wrap">
-				<div class="container">
-					<div class="row">
-						
-						<div class="col-lg-12 col-md-12">
-						
-							<div class="slide-property-detail">
-								
-								<div class="slide-property-first">
-									<div class="pr-price-into">
-										<h2>Rp. <?= $detail->harga ?></i></h2>
-										<span><i class="lni-map-marker"></i> <?= $detail->alamat ?></span>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</section>
+			
+	
 			<!-- ============================ Hero Banner End ================================== -->
 			
 			<!-- ============================ Property Detail Start ================================== -->
 			<section class="gray">
 				<div class="container">
 					<div class="row">
+						<div class="block-wrap">
+								
+								<div class="block-header">
+									<h4 class="property-name"><?= $detail->nama_rumah ?></h4>
+									<i class="lni-map-marker"></i> <?= $detail->alamat ?><br><br>
+								</div>
+
+								
+								<div class="block-body" align="center">
+									<div class="col-lg-7 col-md-7 col-sm-12">
+										
+										<div class="slider-for">
+                                			<?php $foto = unserialize($detail->image); 
+                                			foreach($foto as $f) { ?>
+											<a href="<?= base_url().$f; ?>" class="item-slick"><img style="height:400px; width : 100%" src="<?= base_url().$f; ?>" alt="Alt"></a>
+                                			<?php } ?>
+										</div>
+
+							
+									</div>
 						
+									
+
+								<div class="col-lg-12 col-md-12">
+									<div class="slider-nav" align="center">
+                           			 <?php $foto = unserialize($detail->image); 
+                                	foreach($foto as $f) { ?>
+										<div class="item-slick"><img align="center" style="height:100px; width : 100%" src="<?= base_url().$f; ?>" alt="Alt"></div>
+                               			 <?php } ?>
+										</div>
+									</div>
+
+								<br><br></div>
+
+								<div class="slide-property-first">
+									<div class="pr-price-into">
+										<h5>Harga Sewa Rumah Kontrakan</h5>
+										<span> <b>Rp. <?= $detail->harga ?> / tahun</b></span>
+									</div>
+								</div>
+                      			
+                      		</div>
+
 						<!-- property main detail -->
 						<div class="col-lg-8 col-md-12 col-sm-12">
 							
@@ -136,6 +103,7 @@
 								
 								<div class="block-body">
 									<ul class="dw-proprty-info">
+
 										<li><strong>Jumlah kamar</strong><?= $detail->jumlah_kamar ?></li>
 										<li><strong>Luas bangunan</strong><?= $detail->luas_bangunan ?></li>
 										<li><strong>Listrik</strong><?= $detail->listrik ?></li>
@@ -192,25 +160,22 @@
 								
 								<!-- Agent Detail -->
 								<div class="agent-widget">
-									<div class="agent-title">
-										<div class="agent-photo"><img src="<?= base_url().$detail->foto; ?>" alt=""></div>
+									<div class="block-header" >
+									<h6 class="block-title" align="center">Hubungi Pemilik</h6>
+								</div>
+									<div class="agent-title"><br>
+										
 										<div class="agent-details">
-											<h4><a href="#"><?= $detail->nama ?></a></h4>
-											<span><i class="lni-phone-handset"></i><?= $detail->tlp ?></span>
-										</div>
-										<div class="clearfix"></div>
+											<div class="agent-photo" align="center">
+												<br><br><br><br><br><img src="<?= base_url().$detail->foto; ?>" alt=""><br><br>
+												<h6><a href="#"><?= $detail->nama ?></a></h6>
+												<span><i class="lni-phone-handset"></i><?= $detail->tlp ?></span></div><br><br><br><br>
+											
+											</div>
+									
 									</div>
                                     
-									<!-- <div class="form-group">
-										<input type="text" class="form-control" placeholder="Your Email">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Your Phone">
-									</div>
-									<div class="form-group">
-										<textarea class="form-control">I'm interested in this property.</textarea>
-									</div>
-									<button class="btn btn-theme full-width">Send Message</button> -->
+									<br><br><br><br>
 								</div>
 								
 								

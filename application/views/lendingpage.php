@@ -540,7 +540,7 @@
 								</div>
 								
 								<div class="fr-grid-footer">
-									<a href="#" class="btn btn-outline-theme full-width">View Profile<i class="ti-arrow-right ml-1"></i></a>
+									<a href="#" class="btn btn-outline-theme full-width">Lihat Rumah Kontrakan<i class="ti-arrow-right ml-1"></i></a>
 								</div>
 								
 							</div>

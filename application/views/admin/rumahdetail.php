@@ -32,11 +32,12 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10">Detail rumah</h5>
+								<h5 class="m-b-10">Detail Rumah</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="#!">Detail rumah</a></li>
+								<li class="breadcrumb-item"><a href="#!">Data Rumah</a></li>
+								<li class="breadcrumb-item"><a href="#!">Detail Rumah</a></li>
 							</ul>
 						</div>
 					</div>
@@ -47,7 +48,7 @@
 					<div class="card">
                         <?php foreach($rumah as $row){ ?>
 						<div class="card-header">
-							<h5>Rumah dua putri</h5>
+							<h5><?= $row->nama_rumah ?></h5>
 						</div>
 						<div class="card-body">
                             <div class="row">
@@ -80,11 +81,11 @@
 								<div class="w-100"></div>
 								<div class="col-6 col-sm-2"><b> Alamat </b></div> <div class="col-6 col-sm-3">: <?= $row->alamat ?></div>
                                 <div class="w-100"></div>
-                                <div class="col-6 col-sm-2"><b> Lokasi </b></div> 
+                                <div class="col-6 col-sm-2"><b> Lokasi dekat dengan:</b></div> 
                                 <?php $lokasi = unserialize($row->lokasi);
                                 $i = 1;
                                 foreach ($lokasi as $loc ) { ?>
-                                    <div class="col-6 col-sm-12"><?= $i." ".$loc ?></div>
+                                    <div class="col-6 col-sm-12"><?= $loc ?></div>
                                 <?php $i++; } ?>
 								<div class="w-100"></div>
 
