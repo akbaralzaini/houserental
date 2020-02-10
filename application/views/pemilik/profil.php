@@ -43,7 +43,7 @@
 				<div class="tab-pane fade show active" id="profile" style="width:100% !important" role="tabpanel" aria-labelledby="profile-tab">
 					<div class="card" >
 						<div class="card-body d-flex align-items-center justify-content-between">
-							<h5 class="mb-0">Personal details</h5>
+							<h5 class="mb-0">Data Diri</h5>
 							<button type="button" class="btn btn-primary btn-sm rounded m-0 float-right" data-toggle="collapse" data-target=".pro-det-edit" aria-expanded="false" aria-controls="pro-det-edit-1 pro-det-edit-2">
 							<i class="feather icon-edit"></i>
 							</button>

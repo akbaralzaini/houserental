@@ -19,48 +19,48 @@
 					<div class="col-md-12">
 						<div class="card-body">
 							<img src="<?= base_url() ?>asset/assets/images/newlogodark.png" alt="" class="img-fluid mb-4">
-                            <h4 class="mb-3 f-w-400">Sign up</h4>
+                            <h4 class="mb-3 f-w-400">Daftar</h4>
                             <form action="<?= base_url() ?>login/actionpemilik" method="post">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="feather icon-user"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
                                     </div>
                                     <input type="text" name="nama" class="form-control" placeholder="Nama">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="feather icon-user"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-user-secret"></i></span>
                                     </div>
                                     <input type="text" name="username" class="form-control" placeholder="Username">
                                 </div>
                                 <div class="input-group mb-4">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="feather icon-lock"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-lock"></i></span>
                                     </div>
                                     <input type="password" name="password" class="form-control" placeholder="Password">
                                 </div>
                                  <div class="input-group mb-4">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="feather icon-lock"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-fax"></i></span>
                                     </div>
                                     <input type="alamat" name="alamat" class="form-control" placeholder="Alamat">
                                 </div>
                                  <div class="input-group mb-4">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="feather icon-lock"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                                     </div>
                                     <input type="email" name="email" class="form-control" placeholder="E-mail">
                                 </div>
                                  <div class="input-group mb-4">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="feather icon-lock"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-phone"></i></span>
                                     </div>
                                     <input type="tlp" name="tlp" class="form-control" placeholder="Telepon">
                                 </div>
                                 
-                                <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+                                <button type="submit" class="btn btn-primary btn-block mb-4">Daftar</button>
                             </form>
-							<p class="mb-2">Already have an account? <a href="loginpemilik" class="f-w-400">Signin</a></p>
+							<p class="mb-2">Sudah punya akun? <a href="loginpemilik" class="f-w-400">Login</a></p>
 						</div>
 					</div>
 				</div>

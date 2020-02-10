@@ -7,7 +7,7 @@
 					</li>
 					<li class="nav-item">
                         <a href="<?= base_url() ?>/pemilik/index" class="nav-link ">
-                            <span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span>
+                            <span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Beranda</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -16,7 +16,7 @@
                         </a>
                     </li>
 					<li class="nav-item pcoded-hasmenu">
-						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Data Rumah</span></a>
+						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fa fa-home"></i></span><span class="pcoded-mtext">Data Rumah</span></a>
 						<ul class="pcoded-submenu">
                             <li><a href="datarumah">Data Rumah</a></li>
                             <li><a href="tambahrumah">Tambah Rumah</a></li>

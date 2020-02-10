@@ -19,7 +19,7 @@
 					<div class="col-md-12">
 						<div class="card-body">
 							<img src="<?= base_url() ?>asset/assets/images/newlogodark.png" alt="" class="img-fluid mb-4">
-                            <h4 class="mb-3 f-w-400">Login</h4>
+                            <h4 class="mb-3 f-w-400">LOGIN</h4>
                             <form action="actionlogin" method="post">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -33,9 +33,9 @@
                                     </div>
                                     <input type="password" name="password" class="form-control" placeholder="Password">
                                 </div>
-                                <button type="submit" class="btn btn-block btn-primary mb-4">Sign In</button>
+                                <button type="submit" class="btn btn-block btn-primary mb-4">LOGIN</button>
                             </form>
-							<p class="mb-0 text-muted">Don’t have an account? <a href="registerpemilik" class="f-w-400">Sign up</a></p>
+							<p class="mb-0 text-muted">Tidak memiliki akun? <a href="registerpemilik" class="f-w-400">Daftar</a></p>
 						</div>
 					</div>
 				</div>
