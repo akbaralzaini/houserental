@@ -35,7 +35,7 @@ class Pemilik extends CI_Controller {
     
     public function profil()
 	{
-		$data['pemilik'] = $this->Usermodel->getpemilik(array('id_user'=>$_SESSION['id_userpemilik']))->result();
+		$data['pemilik'] = $this->Usermodel->getpemilik(array('pemilik_kontrakan.id_user'=>$_SESSION['id_userpemilik']))->result();
 		$this->load->view('pemilik/profil',$data);
 	}
 
@@ -106,10 +106,23 @@ class Pemilik extends CI_Controller {
 	public function updatepemilik()
 	{
 		$id = $_GET['id_p'];
-
-		$pemilik = array('nama' => $_POST['nama'],'alamat' => $_POST['alamat'],'email' => $_POST['email'],'tlp' => $_POST['telpon'] );
-
+		$id_u = $_GET['id_u'];
+		if ($_FILES['file']['name'] != "") {
+			if($filename = $_FILES['file']['name']) {
+				$uploaddir= 'asset/img/profil/';
+				$alamatfile=$uploaddir.$filename;
+				move_uploaded_file($_FILES['file']['tmp_name'],$alamatfile);
+			}
+			$pemilik = array('nama' => $_POST['nama'],'alamat' => $_POST['alamat'],'email' => $_POST['email'],'tlp' => $_POST['telpon'],'foto'=> $alamatfile );
+		}
+		else{
+			$pemilik = array('nama' => $_POST['nama'],'alamat' => $_POST['alamat'],'email' => $_POST['email'],'tlp' => $_POST['telpon'] );
+		}
 		$this->Usermodel->updatepemilik($pemilik,$id);
+
+		$user = array('username' => $_POST['username'],'password'=> $_POST['password']);
+
+		$this->Usermodel->updateuser($user,$id_u);
 
 		redirect('pemilik/profil');
 	}

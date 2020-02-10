@@ -38,7 +38,7 @@
 			
 			<!-- ============================ Hero Banner  Start================================== -->
 			<div class="image-cover large-banner" style="background:url(<?= base_url(); ?>asset/home/img/b.jpg) no-repeat;">
-				<div class="container">
+				<div class="container" id="atasss">
 					<div class="full-search-2">
 						<div class="hero-search">
 							<h1>Temukan Rumahmu!</h1>
@@ -194,6 +194,7 @@
 					</div>
 					
 					<div class="row">
+						<?php foreach ($rumah as $r ) {?>
 						<!-- Single Property -->
 						<div class="col-lg-4 col-md-6 col-sm-12">
 							<div class="property-listing property-2">
@@ -201,30 +202,30 @@
 								<div class="listing-img-wrapper">
 									<div class="list-img-slide">
 										<div class="click">
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-1.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-2.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-3.jpg" class="img-fluid mx-auto" alt="" /></a></div>
+											<?php $foto = unserialize($r->image);
+											foreach ($foto as $key) {?>
+											<div><a href="<?= base_url().'page/homedetail?id_rumah='.$r->id_rumah ?>"><img src="<?= base_url().$key; ?>" class="img-fluid mx-auto" alt="" /></a></div>
+											<?php } ?>
 										</div>
 									</div>
-									<span class="property-type">For Rent</span>
 								</div>
 								
 								<div class="listing-detail-wrapper pb-0">
 									<div class="listing-short-detail">
-										<h4 class="listing-name"><a href="single-property-1.html">New Clue Apartment</a><i class="list-status ti-check"></i></h4>
+										<h4 class="listing-name"><a href="<?= base_url().'page/homedetail?id_rumah='.$r->id_rumah ?>"><?= $r->nama_rumah ?></a><i class="list-status ti-check"></i></h4>
 									</div>
 								</div>
 								
 								<div class="price-features-wrapper">
 									<div class="listing-price-fx">
-										<h6 class="listing-card-info-price price-prefix">10,547<span class="price-suffix">/mo</span></h6>
+										<h6 class="listing-card-info-price">Rp. <?= $r->harga ?><span class="price-suffix">/tahun</span></h6>
 									</div>
 									<div class="list-fx-features">
 										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bed">3 Beds</span>
+											<span class="inc-fleat inc-bed"><?= $r->jumlah_kamar ?> kamar</span>
 										</div>
 										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bath">1 Bath</span>
+											<?= $r->luas_bangunan ?> M<sup>2</sup>
 										</div>
 									</div>
 								</div>
@@ -232,210 +233,14 @@
 							</div>
 						</div>
 						<!-- End Single Property -->
+						<?php } ?>
 						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-4.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-5.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-6.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-									<div class="listing-price">
-										<h4 class="list-pr">$2,580</h4>
-									</div>
-									<span class="property-type">For Sale</span>
-								</div>
-								
-								<div class="listing-detail-wrapper pb-0">
-									<div class="listing-short-detail">
-										<h4 class="listing-name"><a href="single-property-1.html">Resort Valley Ocs</a><i class="list-status ti-check"></i></h4>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="listing-price-fx">
-										<h6 class="listing-card-info-price price-prefix">85,470</h6>
-									</div>
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bed">2 Beds</span>
-										</div>
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bath">2 Bath</span>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
-						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-7.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-9.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-8.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-									<span class="property-type">For Rent</span>
-								</div>
-								
-								<div class="listing-detail-wrapper pb-0">
-									<div class="listing-short-detail">
-										<h4 class="listing-name"><a href="single-property-1.html">Luxury Home in Manhattan</a><i class="list-status ti-check"></i></h4>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="listing-price-fx">
-										<h6 class="listing-card-info-price price-prefix">11,584<span class="price-suffix">/mo</span></h6>
-									</div>
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bed">3 Beds</span>
-										</div>
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bath">2 Bath</span>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
-						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-10.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-11.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-12.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-									<span class="property-type">For Rent</span>
-								</div>
-								
-								<div class="listing-detail-wrapper pb-0">
-									<div class="listing-short-detail">
-										<h4 class="listing-name"><a href="single-property-1.html">Energy Certificate for EU</a><i class="list-status ti-check"></i></h4>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="listing-price-fx">
-										<h6 class="listing-card-info-price price-prefix">5,750<span class="price-suffix">/mo</span></h6>
-									</div>
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bed">2 Beds</span>
-										</div>
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bath">1 Bath</span>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
-						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-13.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-14.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-15.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-									<span class="property-type">For Sale</span>
-								</div>
-								
-								<div class="listing-detail-wrapper pb-0">
-									<div class="listing-short-detail">
-										<h4 class="listing-name"><a href="single-property-1.html">Office Space New York</a><i class="list-status ti-check"></i></h4>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="listing-price-fx">
-										<h6 class="listing-card-info-price price-prefix">187,895</h6>
-									</div>
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bed">3 Beds</span>
-										</div>
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bath">2 Bath</span>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
-						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-16.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-17.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="<?= base_url(); ?>asset/home/img/p-18.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-									<span class="property-type">For Rent</span>
-								</div>
-								
-								<div class="listing-detail-wrapper pb-0">
-									<div class="listing-short-detail">
-										<h4 class="listing-name"><a href="single-property-1.html">Apartment to rent in Queens</a><i class="list-status ti-check"></i></h4>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="listing-price-fx">
-										<h6 class="listing-card-info-price price-prefix">9,587<span class="price-suffix">/mo</span></h6>
-									</div>
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bed">3 Beds</span>
-										</div>
-										<div class="listing-card-info-icon">
-											<span class="inc-fleat inc-bath">2 Bath</span>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
 					</div>
 					
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<div class="text-center mt-4">
-								<a href="#" class="btn btn-theme-2">Browse More Property</a>
+								<a href="#atasss" class="btn btn-theme-2">Browse More Property</a>
 							</div>
 						</div>
 					</div>
@@ -444,156 +249,6 @@
 			</section>
 			<!-- ============================ Property End ================================== -->
 			
-			
-			<!-- ============================ Agent Start ================================== -->
-			<section>
-				<div class="container">
-					
-					<div class="row">
-						<div class="col-lg-12 col-md-12">
-							<div class="sec-heading center">
-								<h2>Our Featured Agent</h2>
-								<p>Find new & featured property for you.</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row">
-						
-						<!-- Single Agent -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="agents-grid">
-								
-								<div class="jb-bookmark"><a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Bookmark"><i class="ti-bookmark"></i></a></div>
-								<div class="agent-call"><a href="#"><i class="lni-phone-handset"></i></a></div>
-								<div class="agents-grid-wrap">
-									
-									<div class="fr-grid-thumb">
-										<a href="http://themezhub.com/">
-											<div class="overall-rate">4.4</div>
-											<img src="<?= base_url(); ?>asset/home/img/user-1.jpg" class="img-fluid mx-auto" alt="" />
-										</a>
-									</div>
-									<div class="fr-grid-deatil">
-										<h5 class="fr-can-name"><a href="#">Colin H. Renda</a></h5>
-										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
-										<div class="fr-can-rating">
-											<i class="ti-star filled"></i>
-											<i class="ti-star filled"></i>
-											<i class="ti-star filled"></i>
-											<i class="ti-star filled"></i>
-											<i class="ti-star"></i>
-										</div>
-									</div>
-									
-								</div>
-								
-								<div class="fr-grid-info">
-									<ul>
-										<li>Property<span>306</span></li>
-										<li>Email<span>colin@gmail.com</span></li>
-										<li>Phone<span>91 123 456 7859</span></li>
-									</ul>
-								</div>
-								
-								<div class="fr-grid-footer">
-									<a href="#" class="btn btn-outline-theme full-width">View Profile<i class="ti-arrow-right ml-1"></i></a>
-								</div>
-								
-							</div>
-						</div>
-						
-						<!-- Single Agent -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="agents-grid">
-								
-								<div class="jb-bookmark"><a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Bookmark"><i class="ti-bookmark"></i></a></div>
-								<div class="agent-call"><a href="#"><i class="lni-phone-handset"></i></a></div>
-								<div class="agents-grid-wrap">
-									
-									<div class="fr-grid-thumb">
-										<a href="http://themezhub.com/">
-											<div class="overall-rate">4.3</div>
-											<img src="<?= base_url(); ?>asset/home/img/user-2.jpg" class="img-fluid mx-auto" alt="" />
-										</a>
-									</div>
-									<div class="fr-grid-deatil">
-										<h5 class="fr-can-name"><a href="#">James N. Green</a></h5>
-										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
-										<div class="fr-can-rating">
-											<i class="ti-star filled"></i>
-											<i class="ti-star filled"></i>
-											<i class="ti-star filled"></i>
-											<i class="ti-star filled"></i>
-											<i class="ti-star"></i>
-										</div>
-									</div>
-									
-								</div>
-								
-								<div class="fr-grid-info">
-									<ul>
-										<li>Property<span>306</span></li>
-										<li>Email<span>James58@gmail.com</span></li>
-										<li>Phone<span>91 123 456 7859</span></li>
-									</ul>
-								</div>
-								
-								<div class="fr-grid-footer">
-									<a href="#" class="btn btn-outline-theme full-width">View Profile<i class="ti-arrow-right ml-1"></i></a>
-								</div>
-								
-							</div>
-						</div>
-						
-						<!-- Single Agent -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="agents-grid">
-								
-								<div class="jb-bookmark"><a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Bookmark"><i class="ti-bookmark"></i></a></div>
-								<div class="agent-call"><a href="#"><i class="lni-phone-handset"></i></a></div>
-								<div class="agents-grid-wrap">
-									
-									<div class="fr-grid-thumb">
-										<a href="http://themezhub.com/">
-											<div class="overall-rate">4.5</div>
-											<img src="<?= base_url(); ?>asset/home/img/user-3.jpg" class="img-fluid mx-auto" alt="" />
-										</a>
-									</div>
-									<div class="fr-grid-deatil">
-										<h5 class="fr-can-name"><a href="http://themezhub.com/">Colin H. Renda</a></h5>
-										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
-										<div class="fr-can-rating">
-											<i class="ti-star filled"></i>
-											<i class="ti-star filled"></i>
-											<i class="ti-star filled"></i>
-											<i class="ti-star filled"></i>
-											<i class="ti-star"></i>
-										</div>
-									</div>
-									
-								</div>
-								
-								<div class="fr-grid-info">
-									<ul>
-										<li>Property<span>306</span></li>
-										<li>Email<span>colin@gmail.com</span></li>
-										<li>Phone<span>91 123 456 7859</span></li>
-									</ul>
-								</div>
-								
-								<div class="fr-grid-footer">
-									<a href="http://themezhub.com/" class="btn btn-outline-theme full-width">View Profile<i class="ti-arrow-right ml-1"></i></a>
-								</div>
-								
-							</div>
-						</div>
-						
-					</div>
-					
-				</div>
-			</section>
-			<!-- ============================ Agent End ================================== -->
 		
 			
 			<!-- ============================ Footer Start ================================== -->
