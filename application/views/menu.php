@@ -5,7 +5,7 @@
 			<div class="header header-ligjt nav-left-side">
 				<nav class="headnavbar" >
 					<div class="nav-header">
-						<a href="#" class="brand"><img src="<?= base_url(); ?>asset/home/img/newlogodark.png" alt="" /></a>
+						<a href="<?= base_url() ?>" class="brand"><img src="<?= base_url(); ?>asset/home/img/newlogodark.png" alt="" /></a>
 						<button class="toggle-bar"><span class="ti-align-justify"></span></button>	
 					</div>								
 					<ul class="menu">

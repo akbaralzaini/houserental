@@ -57,7 +57,10 @@ class Page extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('lendingpage');
+		$this->db->where("status",1);
+		$this->db->limit(6);
+		$data['rumah'] = $this->db->get('rumah')->result();
+		$this->load->view('lendingpage',$data);
 	}
 
 	public function actioncari()

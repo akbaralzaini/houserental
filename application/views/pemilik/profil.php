@@ -50,7 +50,19 @@
 						</div>
 						<div class="card-body border-top pro-det-edit collapse show" id="pro-det-edit-1">
 							<form>
-								<div class="form-group row">
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Username</label>
+										<div class="col-sm-9">
+											<?= $row->username ?>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Password</label>
+										<div class="col-sm-9">
+											<?= substr($row->password,0,3)."****"; ?>
+										</div>
+									</div>
+									<div class="form-group row">
 										<label class="col-sm-3 col-form-label font-weight-bolder">Nama</label>
 										<div class="col-sm-9">
 											<?= $row->nama ?>
@@ -77,7 +89,19 @@
 							</form>
 						</div>
 						<div class="card-body border-top pro-det-edit collapse " id="pro-det-edit-2">
-							<form action="<?= base_url() ?>pemilik/updatepemilik?id_p=<?= $row->id_pemilik ?>" method="post">
+							<form action="<?= base_url() ?>pemilik/updatepemilik?id_p=<?= $row->id_pemilik.'&id_u='.$row->id_user ?>" enctype="multipart/form-data" method="post">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label font-weight-bolder">Username</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" placeholder="Username" name="username" value="<?= $row->username ?>">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label font-weight-bolder">Paaword</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" placeholder="Password" name="password" value="<?= $row->password ?>">
+									</div>
+								</div>
 								<div class="form-group row">
 									<label class="col-sm-3 col-form-label font-weight-bolder">Nama</label>
 									<div class="col-sm-9">
@@ -103,11 +127,19 @@
 									</div>
 								</div>
 								<div class="form-group row">
+									<label class="col-sm-3 col-form-label font-weight-bolder">Foto</label>
+									<div class="col-sm-9">
+										<input type="file" class="form-control" name="file" id="file">
+									</div>
+								</div>
+								<div class="form-group row">
 									<label class="col-sm-3 col-form-label"></label>
 									<div class="col-sm-9">
 										<button type="submit" class="btn btn-primary">Save</button>
 									</div>
 								</div>
+								
+
 							</form>
 							<?php } ?>
 						</div>

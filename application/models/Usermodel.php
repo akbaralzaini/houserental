@@ -20,13 +20,22 @@ class Usermodel extends CI_Model {
 
 	public function getpemilik($user)
 	{
-		return $this->db->get_where('pemilik_kontrakan',$user);
+		$this->db->select("*");
+		$this->db->from('pemilik_kontrakan');
+		$this->db->join('user','pemilik_kontrakan.id_user=user.id_user');
+		$this->db->where($user);
+		return $this->db->get();
 	}
 
 	public function updatepemilik($pemilik,$id)
 	{
 		$this->db->where('id_pemilik',$id);
 		$this->db->update('pemilik_kontrakan',$pemilik);
+	}
+	public function updateuser($user,$id_user)
+	{
+		$this->db->where('id_user',$id_user);
+		$this->db->update('user',$user);
 	}
 }
 
