@@ -65,6 +65,7 @@
                                         </div>
                                     </div>
                                 <?php $i++; } ?>
+                               
                                 
                                 <div class="w-100"></div>
 								<div class="col-6 col-sm-2"><b> Nama Rumah </b></div><div class="col-6 col-sm-3">: <?= $row->nama_rumah ?></div>

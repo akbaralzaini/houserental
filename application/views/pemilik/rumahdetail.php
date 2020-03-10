@@ -66,7 +66,18 @@
                                     </div>
                                 <?php $i++; } ?>
                                 
-                                <div class="w-100"></div>
+                               
+
+							</div>
+						</div>
+					</div>
+					<div class="card"> 
+						<div class="card-header">
+							<h5>Info Rumah</h5>
+						</div>
+						<div class="row">
+						 <div class="w-100"></div>
+						
 								<div class="col-6 col-sm-2"><b> Nama Rumah </b></div><div class="col-6 col-sm-3">: <?= $row->nama_rumah ?></div>
 								<div class="w-100"></div>
 								<div class="col-6 col-sm-2"><b> Harga </b></div> <div class="col-6 col-sm-3">: <?= $row->harga ?></div>
@@ -87,11 +98,8 @@
                                 foreach ($lokasi as $loc ) { ?>
                                     <div class="col-6 col-sm-12"><?= $loc ?></div>
                                 <?php $i++; } ?>
-								<div class="w-100"></div>
-
-							</div>
-						</div>
-					</div>
+								<div class="w-100"></div></div>
+				</div>
 
 					<div class="card">
 						<div class="card-header">

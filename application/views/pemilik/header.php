@@ -13,7 +13,7 @@
 				<li>
 					<div class="dropdown drp-user">
 						<a href="#!" class="dropdown-toggle" data-toggle="dropdown">
-							<img src= class="img-radius wid-40" alt="<?= $_SESSION['nama'] ?>">
+							<?= $_SESSION['nama'] ?>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right profile-notification">
 							<ul class="pro-body">

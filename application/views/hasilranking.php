@@ -73,15 +73,15 @@
 													<span class="listing-location"><i class="ti-location-pin"></i><?= $value['alamat'] ?></span>
 												</div>
 												<div class="list-author">
-													<a href="#"><img src="<?= base_url(); ?>asset/home/img/add-user.png" class="img-fluid img-circle avater-30" alt=""></a>
+													
 												</div>
 											</div>
 										
 											<div class="listing-features-info">
 												<ul>
-													<li><strong>Jumalah kamar:</strong><?= $value['jumlah_kamar'] ?></li><br>
+													<li><strong>Jumlah kamar:</strong><br><?= $value['jumlah_kamar'] ?> Kamar</li><br>
 													<li><strong></strong></li>
-													<li><strong>Luas :</strong><?= $value['luas_bangunan'] ?></li>
+													<li><strong>Luas Bangunan:</strong><br><?= $value['luas_bangunan'] ?> m2</li><br>
 												</ul>
 											</div>
 										
