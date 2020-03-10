@@ -77,7 +77,7 @@
 										<div class="form-group row">
 											<label for="b-t-pwd" class="col-sm-3 col-form-label">Harga</label>
 											<div class="col-sm-9">
-												<input type="text" pattern="[9-0]" name="harga" class="form-control" id="b-t-pwd" placeholder="harga">
+												<input type="number" max="11500000" min="5500000" pattern="[9-0]" name="harga" class="form-control" id="b-t-pwd" placeholder="harga">
 											</div>
 										</div>
 										<h5>UPLOAD BEBERAPA GAMBAR KONTRAKAN</h5>

@@ -59,10 +59,21 @@ class Pemilik extends CI_Controller {
 			$foto = array();
 			$i = 0;
 			foreach ($_FILES['file']['name'] as $filename) {
-				$uploaddir= 'asset/img/rumah/';
-				$alamatfile=$uploaddir.$filename;
-				array_push($foto,$alamatfile);
-				move_uploaded_file($_FILES['file']['tmp_name'][$i],$alamatfile);
+
+				$idfoto = rand();
+				$namagambar=$_FILES['file']['tmp_name'][$i];
+
+				$extension = explode("/", $_FILES['file']['type'][$i]);
+				$name = "asset/img/rumah/".$_SESSION['id_pemilik'].$idfoto.".".$extension[1];
+
+				move_uploaded_file($namagambar,$name);
+
+				$fotoini = $name;
+
+				// $uploaddir= 'asset/img/rumah/';
+				// $alamatfile=$uploaddir.$filename;
+				 array_push($foto,$fotoini);
+				// move_uploaded_file($namagambar,$name);
 				$i++;
 			}
 		}
@@ -86,7 +97,7 @@ class Pemilik extends CI_Controller {
 
 	public function rumah()
 	{
-		$id = $_GET['id_rumah'];
+		$id = $_GET['id'];
 		$rumah = $id;
 
 		$data['rumah'] = $this->Rumahmodel->getrumahdetail($rumah)->result();
