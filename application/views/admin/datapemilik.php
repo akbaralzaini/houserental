@@ -28,7 +28,7 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10">Data Pemilik</h5>
+								<h5 class="m-b-10">Data Pemilik Rumah</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
@@ -43,7 +43,7 @@
 				<div class="col-sm-12">
 					<div class="card">
 						<div class="card-header">
-							<h5>Data Admin</h5>
+							<h5>Data Pemilik Rumah</h5>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive dt-responsive">
@@ -52,7 +52,6 @@
 										<tr align="center">
 											<th>Username</th>
 											<th>Nama</th>
-											<th>Password</th>
                                             <th>Rule</th>
                                             <th>Action</th>
 										</tr>
@@ -62,7 +61,6 @@
 										<tr>
 											<td><?= $row->username ?></td>
 											<td><?= $row->nama ?></td>
-											<td><?= $row->password ?></td>
 											<td>Pemilik Kontrakan</td>
 											<td>
 												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>

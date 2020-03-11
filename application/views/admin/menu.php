@@ -14,13 +14,13 @@
 						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fa fa-users"></i></span><span class="pcoded-mtext">User</span></a>
 						<ul class="pcoded-submenu">
                             <li><a href="useradmin">Admin</a></li>
-                            <li><a href="userpemilik">Pemilik rumah</a></li>
+                            <li><a href="userpemilik">Pemilik Rumah</a></li>
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fa fa-home"></i></span><span class="pcoded-mtext">Data Rumah</span></a>
 						<ul class="pcoded-submenu">
-                            <li><a href="viewrumah">Data rumah</a></li>
+                            <li><a href="viewrumah">Data Rumah</a></li>
 					    </ul>
 					</li>
 					

@@ -32,7 +32,7 @@
 					<div class="row align-items-center">
 						<div class="col-md-12">
 							<div class="page-header-title">
-								<h5 class="m-b-10">Detail Rumah</h5>
+								<h5 class="m-b-10">Detail Rumah Kontrakkan</h5>
 							</div>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
@@ -48,7 +48,7 @@
 					<div class="card">
                         <?php foreach($rumah as $row){ ?>
 						<div class="card-header">
-							<h5><?= $row->nama_rumah ?></h5>
+							<h5 class="m-b-10">Detail <?= $row->nama_rumah ?> : </h5> 
 						</div>
 						<div class="card-body">
                             <div class="row">
@@ -64,35 +64,57 @@
                                             </div>
                                         </div>
                                     </div>
-                                <?php $i++; } ?>
-                               
-                                
-                                <div class="w-100"></div>
-								<div class="col-6 col-sm-2"><b> Nama Rumah </b></div><div class="col-6 col-sm-3">: <?= $row->nama_rumah ?></div>
-								<div class="w-100"></div>
-								<div class="col-6 col-sm-2"><b> Harga </b></div> <div class="col-6 col-sm-3">: <?= $row->harga ?></div>
-								<div class="w-100"></div>
-								<div class="col-6 col-sm-2"><b> Jumlah kamar </b></div> <div class="col-6 col-sm-3">: <?= $row->jumlah_kamar ?></div>
-								<div class="w-100"></div>
-								<div class="col-6 col-sm-2"><b> Luas Bangunan </b></div> <div class="col-6 col-sm-3">: <?= $row->luas_bangunan ?></div>
-								<div class="w-100"></div>
-								<div class="col-6 col-sm-2"><b> Listrik </b></div> <div class="col-6 col-sm-3">: <?= $row->listrik ?></div>
-								<div class="w-100"></div>
-								<div class="col-6 col-sm-2"><b> Air </b></div> <div class="col-6 col-sm-3">: <?= $row->air ?></div>
-								<div class="w-100"></div>
-								<div class="col-6 col-sm-2"><b> Alamat </b></div> <div class="col-6 col-sm-3">: <?= $row->alamat ?></div>
-                                <div class="w-100"></div>
-                                <div class="col-6 col-sm-2"><b> Lokasi dekat dengan:</b></div> 
-                                <?php $lokasi = unserialize($row->lokasi);
-                                $i = 1;
-                                foreach ($lokasi as $loc ) { ?>
-                                    <div class="col-6 col-sm-12"><?= $loc ?></div>
-                                <?php $i++; } ?>
-								<div class="w-100"></div>
+                                <?php $i++; } ?><br>
+                              
+                            <div class="w-100"></div>
+ 								
+                                 <div class="col-6 col-sm-2" >
+                                  
+									<table id="setting-default" class="table table-striped table-bordered nowrap">
+										<tr>
+											<th>Nama rumah</th>
+											<td><?= $row->nama_rumah ?></td>
+										</tr>
+										<tr>
+											<th>Alamat</th>
+											<td><?= $row->alamat ?></td>
+										</tr>
+										<tr>
+											<th>Harga Sewa</th>
+											<td><?= $row->harga ?> / tahun</td>
+										</tr>
+										<tr>
+											<th>Jumlah Kamar</th>
+											<td><?= $row->jumlah_kamar ?> Kamar</td>
+										</tr>
+										<tr>
+											<th style="width: 10%">Luas Bangunan</th>
+											<td><?= $row->luas_bangunan ?> m2</td>
+										</tr>
+										<tr>
+											<th>Listrik</th>
+											<td><?= $row->listrik ?></td>
+										</tr>
+										<tr>
+											<th>Air</th>
+											<td><?= $row->air ?></td>
+										</tr>
+										<tr>
+											<th>Lokasi Dekat Dengan</th>
+											<td><ul class="avl-features third">
+		                                        <?php $lokasi = unserialize($row->lokasi);
+		                                        foreach ($lokasi as $key) {
+		                                            echo "<li>$key</li>";
+		                                        } ?>
+												</ul>
+											</td>
+										</tr>
+									</table>
 
 							</div>
 						</div>
 					</div>
+				</div>
 
 					<div class="card">
 						<div class="card-header">
@@ -106,31 +128,11 @@
                         $lang = $row->longitude;
                         $lat = $row->latitude;
                     } ?>
-				</div>
+               </div>
 			</div>
 		</div>
 	</div>
-	<script src="<?= base_url() ?>asset/assets/js/vendor-all.min.js"></script>
-	<script src="<?= base_url() ?>asset/assets/js/plugins/bootstrap.min.js"></script>
-	<script src="<?= base_url() ?>asset/assets/js/pcoded.min.js"></script>
-
-	<script>
-        // Initialize and add the map
-        function initMap() {
-        // The location of Uluru
-        var uluru = {lat: <?= $lat ?>, lng: <?= $lang ?>};
-        // The map, centered at Uluru
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom:16, center: uluru});
-        // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({position: uluru, map: map});
-        }
-    </script>
-	<script src="../../../../developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZIWmrKgy4JT8OjF8CwvzknSLWoTfqE5M&callback=initMap"></script>
-	<script src="<?= base_url() ?>asset/assets/js/plugins/gmaps.min.js"></script>
-	<script src="<?= base_url() ?>asset/assets/js/pages/google-maps.js"></script>
-</body>
+	
 <?php include "footer.php"; ?>
 <!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/sample-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:22:03 GMT -->
 </html>
