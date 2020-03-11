@@ -91,15 +91,8 @@ class Page extends CI_Controller {
 				$value['harga']=1;
 			}
 
-			if ($value['harga']==$C1) {
-				$value['harga']=5;
-			}
-
 			//kamar
 			if ($value['jumlah_kamar']>=2 ) {
-				$value['jumlah_kamar']=5;
-			}
-			if ($value['jumlah_kamar']==$C2) {
 				$value['jumlah_kamar']=5;
 			}else{
 				$value['jumlah_kamar']=4;
@@ -122,9 +115,6 @@ class Page extends CI_Controller {
 			else if ($value['luas_bangunan']>=243 && $value['luas_bangunan']<=300) {
 				$value['luas_bangunan']=5;
 			}
-			if ($value['luas_bangunan']==$C3) {
-				$value['luas_bangunan']=5;
-			}
 
 			//sumber air
 			if ($value['air']=="Pdam") {
@@ -133,21 +123,9 @@ class Page extends CI_Controller {
 			else{
 				$value['air']=4;
 			}
-			if($value['air']==$C4){
-				$value['air']=5;
-			}
-			else{
-				$value['air']=4;
-			}
-
+			
 			//listrik
 			if ($value['listrik']=="Listrik Prabayar") {
-				$value['listrik']=5;
-			}
-			else{
-				$value['listrik']=4;
-			}
-			if($value['listrik']==$C5){
 				$value['listrik']=5;
 			}
 			else{
@@ -170,9 +148,6 @@ class Page extends CI_Controller {
 			}
 			else{
 				$value['lokasi'] = 1;
-			}
-			if ($value['lokasi']==$C6) {
-				$value['lokasi'] = 5;
 			}
 
 			$Matrik[]=array(
@@ -204,15 +179,9 @@ class Page extends CI_Controller {
 				$value['harga']=1;
 			}
 
-			if ($value['harga']==$C1) {
-				$value['harga']=5;
-			}
 
 			//kamar
 			if ($value['jumlah_kamar']>=2 ) {
-				$value['jumlah_kamar']=5;
-			}
-			if ($value['jumlah_kamar']==$C2) {
 				$value['jumlah_kamar']=5;
 			}
 			else{
@@ -235,9 +204,6 @@ class Page extends CI_Controller {
 			else if ($value['luas_bangunan']>=243 && $value['luas_bangunan']<=300) {
 				$value['luas_bangunan']=5;
 			}
-			if ($value['luas_bangunan']==$C3) {
-				$value['luas_bangunan']=5;
-			}
 
 			//sumber air
 			if ($value['air']=="Pdam") {
@@ -246,13 +212,7 @@ class Page extends CI_Controller {
 			else{
 				$value['air']=4;
 			}
-			if($value['air']==$C4){
-				$value['air']=5;
-			}
-			else{
-				$value['air']=4;
-			}
-
+		
 			//listrik
 			if ($value['listrik']=="Listrik Prabayar") {
 				$value['listrik']=5;
@@ -260,12 +220,7 @@ class Page extends CI_Controller {
 			else{
 				$value['listrik']=4;
 			}
-			if($value['listrik']==$C5){
-				$value['listrik']=5;
-			}
-			else{
-				$value['listrik']=4;
-			}
+			
 
 			//lokasi
 			$loc = unserialize($value['lokasi']);
@@ -284,9 +239,7 @@ class Page extends CI_Controller {
 			else{
 				$value['lokasi'] = 1;
 			}
-			if ($value['lokasi']==$C6) {
-				$value['lokasi'] = 5;
-			}
+			
 
 			$MatrikNormalisasi[$no-1]=array(
 				$value['harga']/$pembagiNM[0],
