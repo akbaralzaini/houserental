@@ -75,7 +75,7 @@
 								</table>
 
 								<br>
-							<h6>Sub Kriteria <?= $key->nama_kreteria ?> </h6><br>
+							<h6>Kriteria <?= $key->nama_kreteria ?> </h6><br>
 								<?php if ($key->tipe_pilihan == '1') {?>
 									<table id="setting-default" class="table table-striped table-bordered nowrap">
 									<thead>

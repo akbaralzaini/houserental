@@ -97,7 +97,7 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Paaword</label>
+									<label class="col-sm-3 col-form-label font-weight-bolder">Password</label>
 									<div class="col-sm-9">
 										<input type="password" class="form-control" placeholder="Password" name="password" value="<?= $row->password ?>">
 									</div>
@@ -126,12 +126,7 @@
 										<input type="text" class="form-control" placeholder="telpon" name="telpon" value="<?= $row->tlp ?>">
 									</div>
 								</div>
-								<div class="form-group row">
-									<label class="col-sm-3 col-form-label font-weight-bolder">Foto</label>
-									<div class="col-sm-9">
-										<input type="file" class="form-control" name="file" id="file">
-									</div>
-								</div>
+								
 								<div class="form-group row">
 									<label class="col-sm-3 col-form-label"></label>
 									<div class="col-sm-9">

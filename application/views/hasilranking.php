@@ -45,7 +45,7 @@
 
 			
 				<div class="container">
-					<h2 class="ipt-title">Hasil Pencarian</h2>
+					<h2 class="ipt-title">Rekomendasi Rumah Kontrakan</h2>
 					<br><br>
 					<div class="row">
 						
@@ -67,7 +67,7 @@
 												<?php $foto = unserialize($value['image']); ?>
 												<img src="<?= base_url().$foto[0]; ?>" class="img-fluid mx-auto" alt="fotorumah" />
 											</a>
-											<span class="property-type">For Sale</span>
+											<span class="property-type">Dikontrakkan</span>
 										</div>
 										
 										<div class="listing-content">
@@ -95,7 +95,7 @@
 													<h4 class="list-pr">Rp. <?= $value['harga'] ?></h4>
 												</div>
 												<div class="listing-detail-btn">
-													<a href="<?= base_url()."Page/homedetail?id_rumah=".$value['id_rumah'] ?>" class="more-btn">More Info</a>
+													<a href="<?= base_url()."Page/homedetail?id_rumah=".$value['id_rumah'] ?>" class="more-btn">Detail Rumah</a>
 												</div>
 											</div>
 											
@@ -119,7 +119,8 @@
 								<!-- Find New Property -->
 								<div class="sidebar-widgets">
 									
-								<h4>Pilih berdasarkan kereteria</h4>
+									<h4 align="text-center">Cari Rumah Lainnya!</h4><br>
+
 									
 								<form action="<?= base_url() ?>page/actioncari" method="POST">
 
@@ -217,8 +218,7 @@
 										</div>
 										
 									
-									
-										<button type="submit" style="margin-top:20px" class="btn btn-theme full-width">Find New Home</button>
+										<button type="submit" style="margin-top:20px"  class="btn btn-theme full-width">Search</button>
 									
 									</div>
 							
@@ -235,90 +235,14 @@
 			
 			<!-- ============================ Footer Start ================================== -->
 			<footer class="dark-footer skin-dark-footer">
-				<div>
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-lg-3 col-md-6">
-								<div class="footer-widget">
-									<h4 class="widget-title">About Workio</h4>
-									<p>Themez Hub is a team of young professionals that has been successfully creating Creative Website templates already for several years.</p>
-									<a href="#" class="other-store-link">
-										<div class="other-store-app">
-											<div class="os-app-icon">
-												<i class="ti-android"></i>
-											</div>
-											<div class="os-app-caps">
-												Google Store
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>		
-							<div class="col-lg-3 col-md-6">
-								<div class="footer-widget">
-									<h4 class="widget-title">Useful links</h4>
-									<ul class="footer-menu">
-										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="faq.html">FAQs Page</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="about-us.html">About Us</a></li>
-									</ul>
-								</div>
-							</div>
-									
-							<div class="col-lg-3 col-md-6">
-								<div class="footer-widget">
-									<h4 class="widget-title">Get in Touch</h4>
-									<div class="fw-address-wrap">
-										<div class="fw fw-location">
-											7744 North Park, New York
-										</div>
-										<div class="fw fw-mail">
-											support@drizvato77.com
-										</div>
-										<div class="fw fw-call">
-											+91 254 584 7584
-										</div>
-										<div class="fw fw-skype">
-											drizvato77
-										</div>
-										<div class="fw fw-web">
-											www.Themez Hub.com
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-lg-3 col-md-6">
-								<div class="footer-widget">
-									<h4 class="widget-title">Follow Us</h4>
-									<p>Follow & Subscribe your email to get new business tips.</p>
-									<ul class="footer-bottom-social">
-										<li><a href="#"><i class="ti-facebook"></i></a></li>
-										<li><a href="#"><i class="ti-twitter"></i></a></li>
-										<li><a href="#"><i class="ti-instagram"></i></a></li>
-										<li><a href="#"><i class="ti-linkedin"></i></a></li>
-									</ul>
-									
-									<form class="f-newsletter mt-4">
-										<input type="email" class="form-control sigmup-me" placeholder="Your Email Address" required="required">
-										<button type="submit" class="btn"><i class="ti-arrow-right"></i></button>
-									</form>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
+				
 				
 				<div class="footer-bottom">
 					<div class="container">
 						<div class="row align-items-center">
 							
 							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">© 2019 Rikada. Designd By <a href="https://themezhub.com/">Themez Hub</a> All Rights Reserved</p>
+								<p class="mb-0">© Designed By <a href="#">Ainun Mardliyyah</a> Fakultas Ilmu Komputer Universitas Sriwijaya 2019 </p>
 							</div>
 							
 						</div>

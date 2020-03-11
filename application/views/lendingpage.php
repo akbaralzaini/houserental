@@ -114,7 +114,7 @@
 												<select id="listrik" name="listrik" class="form-control">
 													<option value="null">&nbsp;</option>
 													<option value="1">Pascabayar</option>
-													<option value="2">Prabayar</option>
+													<option value="2">Prabayar / Token</option>
 												</select>
 											</div>
 										</div>
@@ -190,8 +190,8 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<div class="sec-heading center">
-								<h2>New & featured Property</h2>
-								<p>Find new & featured property for you.</p>
+								<h3>Rumah Kontrakkan di Palembang</h3>
+								
 							</div>
 						</div>
 					</div>
@@ -243,7 +243,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<div class="text-center mt-4">
-								<a href="#atasss" class="btn btn-theme-2">Browse More Property</a>
+								<a href="#atasss" class="btn btn-theme-2">Muat Lainnya</a>
 							</div>
 						</div>
 					</div>
@@ -256,90 +256,14 @@
 			
 			<!-- ============================ Footer Start ================================== -->
 			<footer class="dark-footer skin-dark-footer">
-				<div>
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-lg-3 col-md-6">
-								<div class="footer-widget">
-									<h4 class="widget-title">About Workio</h4>
-									<p>Themez Hub is a team of young professionals that has been successfully creating Creative Website templates already for several years.</p>
-									<a href="#" class="other-store-link">
-										<div class="other-store-app">
-											<div class="os-app-icon">
-												<i class="ti-android"></i>
-											</div>
-											<div class="os-app-caps">
-												Google Store
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>		
-							<div class="col-lg-3 col-md-6">
-								<div class="footer-widget">
-									<h4 class="widget-title">Useful links</h4>
-									<ul class="footer-menu">
-										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="faq.html">FAQs Page</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="about-us.html">About Us</a></li>
-									</ul>
-								</div>
-							</div>
-									
-							<div class="col-lg-3 col-md-6">
-								<div class="footer-widget">
-									<h4 class="widget-title">Get in Touch</h4>
-									<div class="fw-address-wrap">
-										<div class="fw fw-location">
-											7744 North Park, New York
-										</div>
-										<div class="fw fw-mail">
-											support@drizvato77.com
-										</div>
-										<div class="fw fw-call">
-											+91 254 584 7584
-										</div>
-										<div class="fw fw-skype">
-											drizvato77
-										</div>
-										<div class="fw fw-web">
-											www.Themez Hub.com
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-lg-3 col-md-6">
-								<div class="footer-widget">
-									<h4 class="widget-title">Follow Us</h4>
-									<p>Follow & Subscribe your email to get new business tips.</p>
-									<ul class="footer-bottom-social">
-										<li><a href="#"><i class="ti-facebook"></i></a></li>
-										<li><a href="#"><i class="ti-twitter"></i></a></li>
-										<li><a href="#"><i class="ti-instagram"></i></a></li>
-										<li><a href="#"><i class="ti-linkedin"></i></a></li>
-									</ul>
-									
-									<form class="f-newsletter mt-4">
-										<input type="email" class="form-control sigmup-me" placeholder="Your Email Address" required="required">
-										<button type="submit" class="btn"><i class="ti-arrow-right"></i></button>
-									</form>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
 				
+							
 				<div class="footer-bottom">
 					<div class="container">
 						<div class="row align-items-center">
 							
 							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">© Designed By <a href="#">Ainun Mardliyyah</a> Fakultas Ilmu Komputer Universitas Sriwijaya 2019 </p>
+								<p class="mb-0">© Designed By <a href="#">Ainun Mardliyyah</a> Fakultas Ilmu Komputer Universitas Sriwijaya 2020 </p>
 							</div>
 							
 						</div>
