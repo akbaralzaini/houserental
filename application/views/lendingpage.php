@@ -76,7 +76,7 @@
 									</div>
 
 
-									<div style="display:none;" id="kr2">
+										<div style="display:none;" id="kr2">
 											<div class="input-with-icon">
 												<select id="jumlah_kamar" name="jumlah_kamar" class="form-control">
 													<option value="null">&nbsp;</option>
@@ -119,7 +119,7 @@
 											</div>
 										</div>
 										<div style="display:none;" id="kr6">
-										<h4>Lokasi dekat dengan</h4>
+											<h4>Lokasi dekat dengan</h4>
 											<ul class="no-ul-list ">
 												<input value="&nbsp;" hidden class="checkbox-custom" name="lokasi[]" type="text">
 													<li>
@@ -144,39 +144,7 @@
 
 
 										<button type="submit" style="margin-top:20px" class="btn btn-theme full-width">Find New Home</button>
-
-									</div>
-
-									</div>
-									</div>
-									<!-- Sidebar End -->
-									</form>
-								
-							
-								<div class="row">
-								
-									<div class="col-lg-4 col-md-6 col-sm-12">
-										<div class="form-group">
-										<a type="reset" class="btn reset-btn-outline">Reset</a>
-										</div>
-									</div>
-									
-									<div class="col-lg-4 col-md-6 col-sm-12">
-										<div class="form-group">
-											<div class="form-group">
-											</div>
-										</div>
-									</div>
-									
-									<div class="col-lg-4 col-md-12 col-sm-12">
-										<div class="form-group">
-											<button type="submit" class="btn search-btn-outline">Cari</button>
-										</div>
-									</div>
-									
-								</div>
-							
-							</div>
+</div>
 						</form>
 					</div>
 				</div>
