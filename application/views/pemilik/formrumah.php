@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<!-- Mirrored from html.codedthemes.com/gradient-able/bootstrap/default/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2019 01:20:48 GMT -->
@@ -147,6 +148,12 @@
 											<div class="checkbox checkbox-primary d-inline">
 												<input type="checkbox" name="lokasi[]" value="Rumah Sakit" id="checkbox-p-4" >
 												<label for="checkbox-p-4" class="cr">Rumah Sakit</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="checkbox checkbox-primary d-inline">
+												<input type="checkbox" name="lokasi[]" value="Tidak Ada" id="checkbox-p-5" >
+												<label for="checkbox-p-5" class="cr">Tidak Ada</label>
 											</div>
 										</div>
                                     </div>

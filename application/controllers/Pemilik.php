@@ -15,7 +15,7 @@ class Pemilik extends CI_Controller {
 
 	public function index()
 	{
-		$id_pemilik = $_SESSION['idpemilik'];
+		$id_pemilik = $_SESSION['id_pemilik'];
 
 		$data['jumlahr']= $this->Rumahmodel->getrumah($id_pemilik)->num_rows();
 		
@@ -42,7 +42,7 @@ class Pemilik extends CI_Controller {
 	public function datarumah()
 	{
 		$data['title'] = "Data rumah";
-		$id_pemilik = $_SESSION['idpemilik'];
+		$id_pemilik = $_SESSION['id_pemilik'];
 		$data['rumah'] = $this->Rumahmodel->getrumah($id_pemilik)->result();
 		$this->load->view('pemilik/daftarrumah',$data);
 	}
@@ -77,7 +77,7 @@ class Pemilik extends CI_Controller {
 				$i++;
 			}
 		}
-		$home = array('id_pemilik' => $_SESSION['idpemilik'], 
+		$home = array('id_pemilik' => $_SESSION['id_pemilik'], 
 				'nama_rumah'=>$_POST['nama'],
 				'alamat'=>$_POST['alamat'],
 				'harga'=>$_POST['harga'], 
@@ -174,7 +174,7 @@ class Pemilik extends CI_Controller {
 				$i++;
 			}
 		}
-		$home = array('id_pemilik' => $_SESSION['idpemilik'], 
+		$home = array('id_pemilik' => $_SESSION['id_pemilik'], 
 				'nama_rumah'=>$_POST['nama'],
 				'alamat'=>$_POST['alamat'],
 				'harga'=>$_POST['harga'], 

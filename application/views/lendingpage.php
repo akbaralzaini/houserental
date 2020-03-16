@@ -51,13 +51,13 @@
 									<div class="form-group">
 										<div class="input-with-icon">
 											<select id="pilihan" name="pilihan"  class="form-control">
-													<option value="">Pilih Kreteria</option>
-													<option value="1">Harga</option>
+													<option value="">Pilih Kriteria</option>
+													<option value="1">Harga Sewa</option>
 													<option value="2">Jumlah Kamar</option>
 													<option value="3">luas</option>
 													<option value="4">Sumber Air</option>
-													<option value="5">Tipe Listrik</option>
-													<!-- <option value="6">Lokasi</option> -->
+													<option value="5">Pembayaran Listrik</option>
+													<option value="6">Lokasi</option> 
 												</select>
 										</div>
 									</div>
@@ -137,6 +137,10 @@
 													<li>
 														<input id="a-4" class="checkbox-custom" name="lokasi[]" type="checkbox">
 														<label for="a-4" class="checkbox-custom-label">Rumah sakit</label>
+													</li>
+													<li>
+														<input id="a-4" class="checkbox-custom" name="lokasi[]" type="checkbox">
+														<label for="a-4" class="checkbox-custom-label">Tidak Ada</label>
 													</li>
 											</ul>
 										</div>
