@@ -53,12 +53,12 @@
 							<div class="row">
 								
 								<?php
-								if($rank == "null"){
+								if($rank == "null"){ 
 									echo "data yang sesuai tidak ditemukan";
 								}
 								else{
 								foreach($rank as $key => $value){ ?>
-								<!-- Single Property Start -->
+								<!-- Single Property ytytt Start -->
 								<div class="col-lg-12 col-md-12">
 									<div class="property-listing property-1">
 											
