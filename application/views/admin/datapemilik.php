@@ -62,9 +62,9 @@
 											<td><?= $row->username ?></td>
 											<td><?= $row->nama ?></td>
 											<td>Pemilik Kontrakan</td>
-											<td>
-												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i></button>
-												<button type="button" class="btn  btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+											<td align="center">
+												<button type="button" class="btn  btn-icon btn-primary"><i class="feather icon-edit"></i> Detail</button>
+												
 											</td>
 										</tr>
 										<?php } ?>

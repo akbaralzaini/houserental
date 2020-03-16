@@ -30,7 +30,7 @@ class Login extends CI_Controller {
 					$this->db->where('id_user',$key->id_user);
 					$pemilik = $this->db->get('pemilik_kontrakan')->result();
 					foreach($pemilik as $rows){
-						$_SESSION['idpemilik'] = $rows->id_pemilik;
+						$_SESSION['id_pemilik'] = $rows->id_pemilik;
 					}
 					$_SESSION['nama'] = $key->nama;
 					$_SESSION['id_userpemilik'] = $key->id_user;
@@ -65,12 +65,12 @@ class Login extends CI_Controller {
 
 		$user = $this->Usermodel->getuser(array('username'=>$_POST['username']))->result();
 		
-		// foreach ($user as $row) {
-		// 	$this->db->insert('pemilik_kontrakan',array('id_user'=>$row->id_user,'nama'=>$_POST['nama'],'alamat'=>$_POST['alamat'],'email'=>$_POST['email'],'tlp'=>$_POST['tlp']));
+		 foreach ($user as $row) {
+		$this->db->insert('pemilik_kontrakan',array('id_user'=>$row->id_user,'nama'=>$_POST['nama'],'alamat'=>$_POST['alamat'],'email'=>$_POST['email'],'tlp'=>$_POST['tlp']));
 		// 	$_SESSION['nama'] = $row->nama;
 		// 	$_SESSION['idpemilik'] = $row->id_user;
 		// 	$_SESSION['level'] = 2;
-		// }
+		}
 
 		redirect(base_url().'login/loginpemilik');
 

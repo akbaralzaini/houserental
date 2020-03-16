@@ -83,7 +83,7 @@
 														</div>
 														<div class="visible-xs mb-md"></div>
 														<div class="col-sm-2">
-															<input type="text" name="bobot[]"class="form-control" placeholder="bobot">
+															<input type="text" name="bobot[]"class="form-control" placeholder="nilai">
 														</div>
 														<div class="col-sm-2">
 															<button class="btn btn-primary" id="add_field_button">add</button>
@@ -108,7 +108,7 @@
 														</div>
 														<div class="visible-xs mb-md"></div>
 														<div class="col-sm-2">
-															<input type="text" name="bobot_range[]" class="form-control" placeholder="bobot">
+															<input type="text" name="bobot_range[]" class="form-control" placeholder="nilai">
 														</div>
 														<div class="col-sm-1">
 															<button class="btn btn-primary" id="add_field_button2">add</button>

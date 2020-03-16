@@ -51,7 +51,6 @@
 						
 						<div class="col-lg-8 col-md-12 list-layout">
 							<div class="row">
-								
 								<?php
 								if($rank == "null"){ 
 									echo "data yang sesuai tidak ditemukan";
@@ -103,8 +102,7 @@
 										
 									</div>
 								</div>
-								<?php } 
-								}?>
+								<?php } ?>
 								<!-- Single Property End -->
 													
 								
@@ -120,52 +118,35 @@
 								<div class="sidebar-widgets">
 									
 									<h4 align="text-center">Cari Rumah Lainnya!</h4><br>
-
 									
 								<form action="<?= base_url() ?>page/actioncari" method="POST">
-
 									<div class="form-group">
 										<div class="input-with-icon">
-											<select id="pilihan" name="pilihan"  class="form-control">
-													<option value="">Pilih Kreteria</option>
-													<option value="1">Harga</option>
-													<option value="2">Jumlah Kamar</option>
-													<option value="3">luas</option>
-													<option value="4">Sumber Air</option>
-													<option value="5">Tipe Listrik</option>
-													<!-- <option value="6">Lokasi</option> -->
-												</select>
-										</div>
-									</div>
-
-									<div style="display:none;" id="kr1">
-										<div class="input-with-icon">
 											<select id="Harga" name="harga"  class="form-control">
-													<option value="null">&nbsp;</option>
-													<option value="5500000 AND 6700000">5.5 – 6.7 juta / tahun</option>
-													<option value="6800000 AND 7900000">6.8 – 7.9 juta / tahun</option>
-													<option value="8000000 AND 9100000">8 – 9.1  juta /tahun</option>
-													<option value="9200000 AND 10300000">9.2 – 10.3 juta / tahun</option>
-													<option value="104000000 AND 11500000">10.4 – 11.5 juta / tahun</option>
+													<option value="">&nbsp;</option>
+													<option value="5">5.5 – 6.7 juta / tahun</option>
+													<option value="4">6.8 – 7.9 juta / tahun</option>
+													<option value="3">8 – 9.1  juta /tahun</option>
+													<option value="2">9.2 – 10.3 juta / tahun</option>
+													<option value="1">10.4 – 11.5 juta / tahun</option>
 												</select>
 										</div>
 									</div>
 									
-									
-									<div style="display:none;" id="kr2">
+									<div class="form-group">
 											<div class="input-with-icon">
 												<select id="jumlah_kamar" name="jumlah_kamar" class="form-control">
-													<option value="null">&nbsp;</option>
+													<option value="">&nbsp;</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 												</select>
 											</div>
 										</div>
 
-										<div style="display:none;" id="kr3">
+										<div class="form-group">
 											<div class="input-with-icon">
 												<select id="luas" name="luas" class="form-control">
-													<option value="null">&nbsp;</option>
+													<option value="">&nbsp;</option>
 													<option value="1">6 – 65 m2</option>
 													<option value="2">66 - 124 m2</option>
 													<option value="3">125 - 183 m2</option>
@@ -175,50 +156,48 @@
 											</div>
 										</div>
 
-										<div style="display:none;" id="kr4">
+										<div class="form-group">
 											<div class="input-with-icon">
 												<select id="sumber_air" name="sumber_air" class="form-control">
-													<option value="null">&nbsp;</option>
+													<option value="">&nbsp;</option>
 													<option value="1">PDAM</option>
 													<option value="2">Sumur</option>
 												</select>
 											</div>
 										</div>
 
-										<div style="display:none;" id="kr5">
+										<div class="form-group">
 											<div class="input-with-icon">
 												<select id="listrik" name="listrik" class="form-control">
-													<option value="null">&nbsp;</option>
+													<option value="">&nbsp;</option>
 													<option value="1">Pascabayar</option>
 													<option value="2">Prabayar</option>
 												</select>
 											</div>
 										</div>
-										<div style="display:none;" id="kr6">
+
 										<h4>Lokasi dekat dengan</h4>
-											<ul class="no-ul-list ">
-												<input value="&nbsp;" hidden class="checkbox-custom" name="lokasi[]" type="text">
-													<li>
-														<input id="a-1" class="checkbox-custom" name="lokasi[]" type="checkbox">
-														<label for="a-1" class="checkbox-custom-label">Sekolah / Kampus</label>
-													</li>
-													<li>
-														<input id="a-2" class="checkbox-custom" name="lokasi[]" type="checkbox">
-														<label for="a-2" class="checkbox-custom-label">Mall/ Pasar</label>
-													</li>
-													<li>
-														<input id="a-3" class="checkbox-custom" name="lokasi[]" type="checkbox">
-														<label for="a-3" class="checkbox-custom-label">Kantor</label>
-													</li>
-													<li>
-														<input id="a-4" class="checkbox-custom" name="lokasi[]" type="checkbox">
-														<label for="a-4" class="checkbox-custom-label">Rumah sakit</label>
-													</li>
-											</ul>
-										</div>
-										
+										<ul class="no-ul-list ">
+											<li>
+												<input id="a-1" class="checkbox-custom" name="lokasi[]" type="checkbox">
+												<label for="a-1" class="checkbox-custom-label">Sekolah / Kampus</label>
+											</li>
+											<li>
+												<input id="a-2" class="checkbox-custom" name="lokasi[]" type="checkbox">
+												<label for="a-2" class="checkbox-custom-label">Mall/ Pasar</label>
+											</li>
+											<li>
+												<input id="a-3" class="checkbox-custom" name="lokasi[]" type="checkbox">
+												<label for="a-3" class="checkbox-custom-label">Kantor</label>
+											</li>
+											<li>
+												<input id="a-4" class="checkbox-custom" name="lokasi[]" type="checkbox">
+												<label for="a-4" class="checkbox-custom-label">Rumah sakit</label>
+											</li>
+										</ul>
 									
-										<button type="submit" style="margin-top:20px"  class="btn btn-theme full-width">Search</button>
+									
+										<button type="submit" class="btn btn-theme full-width">Search</button>
 									
 									</div>
 							
@@ -242,7 +221,7 @@
 						<div class="row align-items-center">
 							
 							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">© Designed By <a href="#">Ainun Mardliyyah</a> Fakultas Ilmu Komputer Universitas Sriwijaya 2019 </p>
+								<p class="mb-0">© Designed By <a href="#">Ainun Mardliyyah</a> Fakultas Ilmu Komputer Universitas Sriwijaya 2020 </p>
 							</div>
 							
 						</div>
@@ -307,64 +286,6 @@
 			allowClear: true
 		});
 		</script>
-
-<script>
-		$('#pilihan').on('change',function(){
-			if( $(this).val()==="1"){
-				$("#kr1").show();
-				$("#kr2").hide();
-				$("#kr3").hide();
-				$("#kr4").hide();
-				$("#kr5").hide();
-				$("#kr6").hide();
-			}
-			else if( $(this).val()==="2"){
-				$("#kr1").hide();
-				$("#kr2").show();
-				$("#kr3").hide();
-				$("#kr4").hide();
-				$("#kr5").hide();
-				$("#kr6").hide();
-			}
-			else if( $(this).val()==="3"){
-				$("#kr1").hide();
-				$("#kr2").hide();
-				$("#kr3").show();
-				$("#kr4").hide();
-				$("#kr5").hide();
-				$("#kr6").hide();
-			}
-			else if($(this).val()==="4"){
-				$("#kr1").hide();
-				$("#kr2").hide();
-				$("#kr3").hide();
-				$("#kr4").show();
-				$("#kr5").hide();
-				$("#kr6").hide();
-			}
-			else if($(this).val()==="5"){
-				$("#kr1").hide();
-				$("#kr2").hide();
-				$("#kr3").hide();
-				$("#kr4").hide();
-				$("#kr5").show();
-				$("#kr6").hide();
-			}
-			else if($(this).val()==="6"){
-				$("#kr1").hide();
-				$("#kr2").hide();
-				$("#kr3").hide();
-				$("#kr4").hide();
-				$("#kr5").hide();
-				$("#kr6").show();
-			}
-			else{
-				$("#kr1").hide();
-				$("#kr2").hide();
-				$("#kr3").hide();
-			}
-		});
-	</script>
 
 	</body>
 

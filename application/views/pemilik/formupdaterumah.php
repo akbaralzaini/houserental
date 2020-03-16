@@ -188,6 +188,12 @@
 												<label for="checkbox-p-4" class="cr">Rumah Sakit</label>
 											</div>
 										</div>
+										<div class="form-group">
+											<div class="checkbox checkbox-primary d-inline">
+												<input type="checkbox" name="lokasi[]" <?php if(in_array("Tidak Ada",$lokasi)){ echo 'checked';} ?> value="Tidak Ada" id="checkbox-p-5" >
+												<label for="checkbox-p-5" class="cr">Tidak Ada</label>
+											</div>
+										</div>
                                     </div>
                                     <div class="tab-pane" id="b-w-tab3">
 										<div id="googleMap" style="width:100%;height:380px;"></div>
