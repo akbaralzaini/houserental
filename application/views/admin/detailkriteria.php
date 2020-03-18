@@ -65,8 +65,13 @@
 											<td><?= $key->bobot ?></td>
 										</tr>
 										<tr>
-											<th>Tipe Pilihan</th>
-											<td><?= $key->tipe_pilihan ?></td>
+											<th>Tipe Kriteria</th>
+											<td><?php if($key->tipe_pilihan==1){ 
+												echo "Kriteria Pilihan"; }
+												elseif($key->tipe_pilihan==2) { 
+													echo "Kriteria Range"; 
+												}  else 
+												echo "multipilihan"; ?></td>
 										</tr>
 										  
 										

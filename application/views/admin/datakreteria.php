@@ -44,7 +44,7 @@
 					<div class="card">
 						<div class="card-header">
                             <h5>Data Kriteria</h5>
-                            <a href="tambahkreteria"><button id="addToTable" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data Kriteria</button></a>
+                            
 						</div>
 						<div class="card-body">
 							<div class="table-responsive dt-responsive">
@@ -53,7 +53,7 @@
 										<tr align="center">
                                             <th>Kode</th>
 											<th>Nama Kriteria</th>
-											<th>Tipe Pilihan</th>
+											<th>Tipe Kriteria</th>
 											<th>Bobot</th>
 											<th>Action</th>
 										</tr>
@@ -63,8 +63,8 @@
 										<tr class="gradeX">
                                             <td align="center"><?= $ket->kd_kreteria ?></td>
 											<td ><?= $ket->nama_kreteria ?></td>
-											<td align="center"><?php if($ket->tipe_pilihan=='1'){echo "tipe pilihan"; }
-																		else if($ket->tipe_pilihan=='2'){echo "tipe range"; }
+											<td align="center"><?php if($ket->tipe_pilihan=='1'){echo "Kriteria Pilihan"; }
+																		else if($ket->tipe_pilihan=='2'){echo "Kriteria Range"; }
 																		else{ echo "tipe multipel"; } ?></td>
                                             <td align="center"><?= $ket->bobot ?></td>
 											<td class="actions" align="center">

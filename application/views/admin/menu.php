@@ -28,7 +28,7 @@
 						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layers"></i></span><span class="pcoded-mtext">Kriteria</span></a>
 						<ul class="pcoded-submenu">
                             <li><a href="viewkreteria">Data Kriteria</a></li>
-                            <li><a href="tambahkreteria">Input Kriteria</a></li>
+                            
 					    </ul>
 				    </li>
 		    </div>

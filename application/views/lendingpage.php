@@ -57,7 +57,7 @@
 													<option value="3">luas</option>
 													<option value="4">Sumber Air</option>
 													<option value="5">Pembayaran Listrik</option>
-													<option value="6">Lokasi</option> 
+													<!-- <option value="6">Lokasi</option>  -->
 												</select>
 										</div>
 									</div>
@@ -67,10 +67,10 @@
 											<select id="Harga" name="harga"  class="form-control">
 													<option value="null">&nbsp;</option>
 													<option value="5500000 AND 6700000">5.5 – 6.7 juta / tahun</option>
-													<option value="6800000 AND 7900000">6.8 – 7.9 juta / tahun</option>
-													<option value="8000000 AND 9100000">8 – 9.1  juta /tahun</option>
-													<option value="9200000 AND 10300000">9.2 – 10.3 juta / tahun</option>
-													<option value="104000000 AND 11500000">10.4 – 11.5 juta / tahun</option>
+													<option value="6800000 AND 7900001">6.8 – 7.9 juta / tahun</option>
+													<option value="8000000 AND 9100001">8 – 9.1  juta /tahun</option>
+													<option value="9200000 AND 10300001">9.2 – 10.3 juta / tahun</option>
+													<option value="10400000 AND 11800001">10.4 – 11.5 juta / tahun</option>
 												</select>
 										</div>
 									</div>
@@ -90,11 +90,11 @@
 											<div class="input-with-icon">
 												<select id="luas" name="luas" class="form-control">
 													<option value="null">&nbsp;</option>
-													<option value="1">6 – 65 m2</option>
-													<option value="2">66 - 124 m2</option>
-													<option value="3">125 - 183 m2</option>
-													<option value="4">184 - 242 m2</option>
-													<option value="5">243 - 300 m2</option>
+													<option value="6 AND 65">6 – 65 m2</option>
+													<option value="66 AND 124">66 - 124 m2</option>
+													<option value="125 AND 183">125 - 183 m2</option>
+													<option value="184 AND 242">184 - 242 m2</option>
+													<option value="243 AND 300">243 - 300 m2</option>
 												</select>
 											</div>
 										</div>
@@ -103,8 +103,8 @@
 											<div class="input-with-icon">
 												<select id="sumber_air" name="sumber_air" class="form-control">
 													<option value="null">&nbsp;</option>
-													<option value="1">PDAM</option>
-													<option value="2">Sumur</option>
+													<option value="Pdam">PDAM</option>
+													<option value="Sumur">Sumur</option>
 												</select>
 											</div>
 										</div>
@@ -113,8 +113,8 @@
 											<div class="input-with-icon">
 												<select id="listrik" name="listrik" class="form-control">
 													<option value="null">&nbsp;</option>
-													<option value="1">Pascabayar</option>
-													<option value="2">Prabayar / Token</option>
+													<option value="Listrik Pascabayar">Pascabayar</option>
+													<option value="Listrik Prabayar">Prabayar / Token</option>
 												</select>
 											</div>
 										</div>

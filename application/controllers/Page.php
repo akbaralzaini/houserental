@@ -76,7 +76,7 @@ class Page extends CI_Controller {
 					$datarumah = $this->db->get('rumah')->result_array();
 				break;
 				case 3:
-					$this->db->where("luas_bangunan",$_POST['luas']);
+					$this->db->where("luas_bangunan BETWEEN ".$_POST['luas']);
 					$datarumah = $this->db->get('rumah')->result_array();
 				break;
 				case 4:
