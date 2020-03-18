@@ -64,6 +64,12 @@ class Pemilik extends CI_Controller {
 		$id_pemilik = $_SESSION['id_pemilik'];
 
 		$data['jumlahr']= $this->Rumahmodel->getrumah($id_pemilik)->num_rows();
+
+		$this->db->select("*");
+		$this->db->from("notifikasi");
+		$this->db->join("rumah"," rumah.id_pemilik=notifikasi.id_pemilik");
+		$this->db->where("rumah.id_pemilik",$id_pemilik);
+		$data['notif']= $this->db->get()->result();
 		
 		$this->load->view('pemilik/dasboard',$data);
 	}

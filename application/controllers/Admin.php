@@ -79,6 +79,16 @@ class Admin extends CI_Controller {
 		$this->db->where('id_rumah',$id_rumah);
 		$this->db->update('rumah',array('status' => 1 ));
 
+		$this->db->select("id_pemilik");
+		$this->db->from("rumah");
+		$this->db->where('id_rumah',$id_rumah);
+		$dats = $this->db->get()->result_array();
+
+		foreach ($dats as $key => $value) {
+			$this->db->insert('notifikasi',array("id_rumah"=>$id_rumah,"id_pemilik"=>$value['id_pemilik']));
+		}
+		
+
 		redirect('admin/viewrumah');
 	}
 

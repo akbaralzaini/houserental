@@ -36,33 +36,17 @@
 								<h6 class="d-inline-block m-b-0">Notifications</h6>
 							</div>
 							<ul class="noti-body">
+								<?php foreach ($notif as $key => $value) { ?>
 								<li class="notification">
 									<div class="media">
 										<img class="img-radius" src="<?= base_url() ?>asset/assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
 										<div class="media-body">
-											<p><strong>Admin house rental</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
-											<p>rumah kontarakan dua putri anda telah di verifikasi</p>
+											<p><strong>Admin house rental</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i><?php echo $value->tanggal ?></span></p>
+											<p>rumah kontarakan <?= $value->nama_rumah ?> anda telah di verifikasi</p>
 										</div>
 									</div>
 								</li>
-								<li class="notification">
-									<div class="media">
-										<img class="img-radius" src="<?= base_url() ?>asset/assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
-										<div class="media-body">
-										<p><strong>Admin house rental</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
-											<p>rumah kontarakan dua putri anda telah di verifikasi</p>
-										</div>
-									</div>
-								</li>
-								<li class="notification">
-									<div class="media">
-										<img class="img-radius" src="<?= base_url() ?>asset/assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
-										<div class="media-body">
-										<p><strong>Admin house rental</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
-											<p>rumah kontarakan dua putri anda telah di verifikasi</p>
-										</div>
-									</div>
-								</li>
+								<?php } ?>
 							</ul>
 							<div class="noti-footer">
 								<a href="#!">show all</a>
